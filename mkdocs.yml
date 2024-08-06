@@ -1,0 +1,34 @@
+site_name: Unykad
+theme:
+  name: material
+  features:
+  - content.code.annotate
+  - content.code.copy
+  - content.tabs.link
+  - header.autohide
+  - announce.dismiss
+  - navigation.indexes
+  - navigation.sections
+  - navigation.tabs
+  - navigation.top
+  - navigation.tracking
+  - search.highlight
+  - search.share
+  - search.suggest
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      primary: indigo
+      accent: blue
+      scheme: default 
+      toggle: 
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      primary: indigo
+      accent: blue
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
