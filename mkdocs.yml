@@ -1,0 +1,50 @@
+site_name: Unykad
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+copyright: What you seek is seeking you.
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/instagram
+      link: https://instagram.com/Unykad
+    - icon: fontawesome/brands/tiktok
+      link: https://tiktok.com/Unykad
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/Unykad
+theme:
+  name: material
+  icon:
+    logo: material/powershell
+  features:
+  - content.code.annotate
+  - content.code.copy
+  - content.tabs.link
+  - header.autohide
+  - announce.dismiss
+  - navigation.indexes
+  - navigation.sections
+  - navigation.tabs
+  - navigation.top
+  - navigation.tracking
+  - search.highlight
+  - search.share
+  - search.suggest
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      primary: black
+      accent: red
+      scheme: default 
+      toggle: 
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      primary: black
+      accent: red
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
