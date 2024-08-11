@@ -1,4 +1,5 @@
 site_name: Unykad
+cname: docs.unykad.com
 markdown_extensions:
   - admonition
   - pymdownx.details
