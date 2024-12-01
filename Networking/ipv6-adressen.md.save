@@ -1,9 +1,0 @@
-# IPv6-Adressen
-
-Die Vergabe der IPv6-Adressen erfolgt durch die IANA (in Europa: RIPE) an die Provider.
-Die ersten 32 Bits (/32) sind dabei festgelegt und bleiben unverändert.
-Innerhalb des verbleibenden Adressraums können die Provider die Adressen flexibel an ihre Endkunden weitergeben, typischerweise in Blöcken wie /48, /56 oder /64.
-
-Bsp.: Die deutsche Telekom vergibt an...
-Privatkunden /56 Blöcke -> 256 Netze
-Firmenkunden /48 Blöcke -> 65536 Netze
