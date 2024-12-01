@@ -617,6 +617,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#vergabe-an-hosts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vergabe an Hosts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vergabe an Hosts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#netzanteil" class="md-nav__link">
+    <span class="md-ellipsis">
+      Netzanteil
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hostanteil" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hostanteil
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -761,6 +794,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#vergabe-an-hosts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vergabe an Hosts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Vergabe an Hosts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#netzanteil" class="md-nav__link">
+    <span class="md-ellipsis">
+      Netzanteil
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hostanteil" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hostanteil
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -786,6 +852,17 @@ Innerhalb des verbleibenden Adressraums können die Provider die Adressen flexib
 <p>Bsp.: Die deutsche Telekom vergibt an...<br />
 Privatkunden /56 Blöcke -&gt; 256 Netze<br />
 Firmenkunden /48 Blöcke -&gt; 65536 Netze</p>
+<h2 id="vergabe-an-hosts">Vergabe an Hosts</h2>
+<ul>
+<li>manuelle Vergabe per Hand (feste IP)  </li>
+<li>per DHCP (Dynamic Host Configuration Protocol)  </li>
+<li>per SLAAC (Stateless Automatic Address Configuration)</li>
+</ul>
+<p>SLAAC ist ein Mechanismus, der es Geräten ermöglicht, ihre eigene weltweit gültige IPv6-Adresse basierend auf dem Netzwerkpräfix zu generieren.  </p>
+<h3 id="netzanteil">Netzanteil</h3>
+<p>Router Advertisement: Router postet in gewissen Zeitabständen den Netzanteil ins Netz herein.</p>
+<h3 id="hostanteil">Hostanteil</h3>
+<p>besteht aus der MAC-Adresse (Herstellerkennung + fffe + Kartennummer) und vorletztes Bit im ersten Byte wird gekippt</p>
 
 
 
