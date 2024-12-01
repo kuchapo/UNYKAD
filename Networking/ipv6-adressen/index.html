@@ -638,18 +638,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#netzanteil" class="md-nav__link">
+  <a href="#prafix-netzanteil" class="md-nav__link">
     <span class="md-ellipsis">
-      Netzanteil
+      Präfix (Netzanteil)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#hostanteil" class="md-nav__link">
+  <a href="#interface-identifier-hostanteil" class="md-nav__link">
     <span class="md-ellipsis">
-      Hostanteil
+      Interface Identifier (Hostanteil)
     </span>
   </a>
   
@@ -830,18 +830,18 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#netzanteil" class="md-nav__link">
+  <a href="#prafix-netzanteil" class="md-nav__link">
     <span class="md-ellipsis">
-      Netzanteil
+      Präfix (Netzanteil)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#hostanteil" class="md-nav__link">
+  <a href="#interface-identifier-hostanteil" class="md-nav__link">
     <span class="md-ellipsis">
-      Hostanteil
+      Interface Identifier (Hostanteil)
     </span>
   </a>
   
@@ -890,10 +890,12 @@ Firmenkunden /48 Blöcke -&gt; 65536 Netze</p>
 </ul>
 <h3 id="slaac">SLAAC</h3>
 <p>SLAAC ist ein Mechanismus, der es Geräten ermöglicht, ihre eigene weltweit gültige IPv6-Adresse basierend auf dem Netzwerkpräfix zu generieren.  </p>
-<h4 id="netzanteil">Netzanteil</h4>
-<p>Router Advertisement: Router postet in gewissen Zeitabständen den Netzanteil ins Netz herein.</p>
-<h4 id="hostanteil">Hostanteil</h4>
-<p>besteht aus der MAC-Adresse (Herstellerkennung + fffe + Kartennummer) und vorletztes Bit im ersten Byte wird gekippt</p>
+<h4 id="prafix-netzanteil">Präfix (Netzanteil)</h4>
+<p>Router Advertisement: Der Router gibt in gewissen Zeitabständen (einstellbar) das vom Provider erhaltene Präfix ins Netz bekannt.
+Router Solicitation: Der Host fragt den Router nach dem Präfix.</p>
+<h4 id="interface-identifier-hostanteil">Interface Identifier (Hostanteil)</h4>
+<p>EUI64: MAC-Adresse (Herstellerkennung + fffe + Kartennummer) und vorletztes Bit im ersten Byte wird gekippt<br />
+Privacy Extensions: Interface Identifier wird per Zufallsgenerator erzeugt</p>
 
 
 
