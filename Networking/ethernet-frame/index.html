@@ -987,29 +987,23 @@
 <p>Wireshark zeigt nur die Felder von "Destination MAC address" bis "User Data" an.</p>
 <h3 id="funktion">Funktion</h3>
 <h4 id="preamble">Preamble</h4>
-<p>7 Byte | Preamble:<br />
-Die Präambel (Englisch: Preamble) in einem Ethernet-Frame ist immer gleich und dient der Taktsynchronisation zwischen dem Sender und dem Empfänger.<br />
+<p>Die Präambel (Englisch: Preamble) in einem Ethernet-Frame ist immer gleich und dient der Taktsynchronisation zwischen dem Sender und dem Empfänger.<br />
 10101010 10101010 10101010 10101010 10101010 10101010 10101010</p>
 <h4 id="start-frame-delimitter-sfd">Start Frame Delimitter (SFD)</h4>
-<p>1 Byte | Start Frame Delimitter (SFD):<br />
-Die SFD folgt direkt auf die Präambel. Sie ist im Ethernet-Frame immer gleich und markiert den eigentlichen Beginn des Frames.<br />
+<p>Die SFD folgt direkt auf die Präambel. Sie ist im Ethernet-Frame immer gleich und markiert den eigentlichen Beginn des Frames.<br />
 10101011</p>
 <h4 id="destination-mac">Destination MAC</h4>
-<p>6 Byte | Destination MAC<br />
-Die Destination MAC ist die Adresse des Ziels.</p>
+<p>Die Destination MAC ist die Adresse des Ziels.</p>
 <h4 id="source-mac">Source MAC</h4>
-<p>2 Byte | Source MACs<br />
-Die Source MAC ist die Adresse des Absenders.</p>
+<p>Die Source MAC ist die Adresse des Absenders.</p>
 <h4 id="type">Type</h4>
-<p>2 Byte | Type<br />
-Der Type beschreibt an welches Schicht 3 Protokoll die Daten beim Auspacken übergeben werden.<br />
+<p>Der Type beschreibt an welches Schicht 3 Protokoll die Daten beim Auspacken übergeben werden.<br />
 Bsp.:<br />
 0x0800 -&gt; IPv4<br />
 0x0806 -&gt; ARP<br />
 0x86dd -&gt; IPv6</p>
 <h4 id="data">Data</h4>
-<p>46-1500 Byte | Data<br />
-Die Daten (Englisch: Data) bestehen einmal aus dem Header der höheren Schichten sowie der Nutzdaten.</p>
+<p>Die Daten (Englisch: Data) bestehen einmal aus dem Header der höheren Schichten sowie der Nutzdaten.</p>
 <p>Ein Ethernet-Frame muss standardmäßig mindestens 64 Byte groß sein, damit die Kollisionserkennung funktioniert, und kann maximal 1.518 Byte groß sein.</p>
 
 
