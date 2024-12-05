@@ -984,7 +984,8 @@
 </tr>
 </tbody>
 </table>
-<p>Wireshark zeigt nur die Felder von "Destination MAC address" bis "User Data" an.</p>
+<p>Wireshark zeigt nur die Felder von "Destination MAC address" bis "User Data" an.<br />
+Ein Ethernet-Frame muss standardmäßig mindestens 64 Byte groß sein, damit die Kollisionserkennung funktioniert, und kann maximal 1.518 Byte groß sein.</p>
 <h3 id="funktion">Funktion</h3>
 <h4 id="preamble">Preamble</h4>
 <p>Die Präambel (Englisch: Preamble) in einem Ethernet-Frame ist immer gleich und dient der Taktsynchronisation zwischen dem Sender und dem Empfänger.<br />
@@ -1004,7 +1005,6 @@ Bsp.:<br />
 0x86dd -&gt; IPv6</p>
 <h4 id="data">Data</h4>
 <p>Die Daten (Englisch: Data) bestehen einmal aus dem Header der höheren Schichten sowie der Nutzdaten.</p>
-<p>Ein Ethernet-Frame muss standardmäßig mindestens 64 Byte groß sein, damit die Kollisionserkennung funktioniert, und kann maximal 1.518 Byte groß sein.</p>
 
 
 
