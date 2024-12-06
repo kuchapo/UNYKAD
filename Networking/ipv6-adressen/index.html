@@ -1197,11 +1197,15 @@ Zweck: Ermöglicht die Kommunikation zwischen IPv6-Netzwerken über ein IPv4-Net
 <h2 id="speziell-reservierte-ipv6-adressen">Speziell reservierte IPv6-Adressen</h2>
 <ul>
 <li>"::" sind nicht spezifierte Adressen, welche als Platzhalter dienen.  </li>
-<li>"::1" sind Loopback-Adressen, ähnlich wie in IPv4 mit "127.0.0.1", mit welchem man den localhost (=eigene Netzwerkschnittstelle) testen kann</li>
+<li>"::1" sind Loopback-Adressen, ähnlich wie in IPv4 mit "127.0.0.1", mit welchem man den localhost (=eigene Netzwerkschnittstelle) testen kann.</li>
 </ul>
 <h2 id="scopes-gultigkeitsbereiche">Scopes (Gültigkeitsbereiche)</h2>
-<p>"fe80:: /10" sind Link-Local-Adressen, welche nur im eigenen LAN (=im eigenen Subnetz) gültig sind und nie geroutet werden -&gt; 1111 1110 . 10|00 0000 "fc00:: /7" sind Unique Local Adressen, welche auch zwischen verschiedenen Subnetzen innerhalb eines privaten Netzwerks kommunizieren können und nicht im Internet geroutet werden<br />
-"ff00:: /8" sind Multicast-Adressen, welche an alle Geräte die Daten verschickt, welche sich für eine Multicast-Gruppe (über Multicast Listener Discovery (MLD)) angemeldet haben</p>
+<ul>
+<li>"fe80::/10" sind Link-Local-Adressen, welche nur im eigenen LAN (=im eigenen Subnetz) gültig sind und nie geroutet werden. -&gt; 1111 1110 . 10|00 0000</li>
+<li>"fc00:: /7" sind Unique Local Adressen, welche auch zwischen verschiedenen Subnetzen innerhalb eines privaten Netzwerks kommunizieren können und nicht im Internet geroutet werden.</li>
+<li>"ff00::/8" sind Multicast-Adressen, welche an alle Geräte die Daten verschickt, welche sich für eine Multicast-Gruppe (über Multicast Listener Discovery (MLD)) angemeldet haben.</li>
+<li>"2000::/3" sind globale Unicast-Adressen, welche weltweit einmalig im Internet aufzufinden sind.</li>
+</ul>
 <h3 id="sonderformen-der-multicast-adressen">Sonderformen der Multicast-Adressen</h3>
 <p>"ff01::1" &amp; "ff02::1" sind All-Nodes-Multicast-Adressen, welche die Daten an alle Nodes (Geräte) im Netzwerk schicken<br />
 "ff01::2" &amp; "ff02::2 - ff05::2" sind All-Routers-Multicast-Adressen, welche die Daten an alle Router schicken</p>
