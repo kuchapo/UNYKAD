@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../private-ipv4-adressen/">
+        <link rel="prev" href="../../osi-modell/">
       
       
-        <link rel="next" href="../../../Notizen/GitHub/">
+        <link rel="next" href="../vlsm/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>VLSM - UNYKAD</title>
+        <title>Private IPv4-Adressen - UNYKAD</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vlsm" class="md-skip">
+        <a href="#private-ipv4-adressen" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              VLSM
+              Private IPv4-Adressen
             
           </span>
         </div>
@@ -695,7 +695,7 @@
             
   
   <span class="md-ellipsis">
-    IPv4 Adressen
+    IPv4
   </span>
   
 
@@ -705,30 +705,9 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_7">
             <span class="md-nav__icon md-icon"></span>
-            IPv4 Adressen
+            IPv4
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../private-ipv4-adressen/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Private IPv4-Adressen
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -750,12 +729,33 @@
         
   
   <span class="md-ellipsis">
-    VLSM
+    Private IPv4-Adressen
   </span>
   
 
       </a>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vlsm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VLSM
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -879,73 +879,11 @@
                   
 
 
-<h1 id="vlsm">VLSM</h1>
-<p>Beispiel:<br />
-Es werden mit Hilfe von VLSM jeweils 800, 400 und 117 Clients in
-voneinander isolierten Netze eingeteilt. Wichtig zu beachten ist, dass die
-Netz-ID und Broadcast-IP bei der Hostanzahl berücksichtigt werden sollten und
-dass man immer mit dem größten Subnetz anfängt und dann immer jeweils das kleinere
-nimmt.</p>
-<p>Tabelle als Hilfestellung benutzen:</p>
-<table>
-<thead>
-<tr>
-<th>Hostanzahl</th>
-<th>1024</th>
-<th>512</th>
-<th>256</th>
-<th>128</th>
-<th>64</th>
-<th>32</th>
-<th>16</th>
-<th>8</th>
-<th>4</th>
-<th>2</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Subnetze</td>
-<td>2</td>
-<td>4</td>
-<td>8</td>
-<td>16</td>
-<td>32</td>
-<td>64</td>
-<td>128</td>
-<td>256</td>
-<td>512</td>
-<td>1024</td>
-</tr>
-<tr>
-<td>binär</td>
-<td>512</td>
-<td>256</td>
-<td>128</td>
-<td>64</td>
-<td>32</td>
-<td>16</td>
-<td>8</td>
-<td>4</td>
-<td>2</td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Wenn man nach Hostanzahl geht, dann wird der Strich links von der Zahl gesetzt.</p>
-</div>
-<p>Das Netz 10.4.0.0 wird folgendermaßen segmentiert:</p>
-<p>für 800 Hosts:<br />
-10.4.000000|00.00000000 Netz-ID 10.4.0.0/22<br />
-10.4.000000|11.11111111 Broadcast-IP 10.4.3.255/22</p>
-<p>für 400 Hosts:<br />
-10.4.0000010|0.00000000 Netz-ID 10.4.4.0/23<br />
-10.4.0000010|1.11111111 Broadcast-IP 10.4.6.127/25</p>
-<p>für 117 Hosts:<br />
-10.4.00000110.0|0000000 Netz-ID 10.4.6.0/25<br />
-10.4.00000110.0|1111111 Broadcast-IP 10.4.6.127/25</p>
+<h1 id="private-ipv4-adressen">Private IPv4-Adressen</h1>
+<p>Private IPv4-Adressen sind IP-Adressen, die innerhalb eines lokalen Netzwerks verwendet werden und nicht direkt über das Internet erreichbar sind. Sie werden typischerweise in Heimnetzwerken oder Unternehmensnetzwerken zur internen Kommunikation zwischen Geräten verwendet.</p>
+<p>10.0.0.0 bis 10.255.255.255 (10.0.0.0/8)<br />
+172.16.0.0 bis 172.31.255.255 (172.16.0.0/12)<br />
+192.168.0.0 bis 192.168.255.255 (192.168.0.0/16)</p>
 
 
 
