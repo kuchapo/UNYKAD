@@ -1,10 +1,9 @@
-site_name: Unykad
-cname: docs.unykad.com
+site_name: UNYKAD
 markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
-copyright: What you seek is seeking you.
+copyright: Being weak is okay, staying isn't.
 extra:
   generator: false
   social:
@@ -25,7 +24,6 @@ theme:
   - header.autohide
   - announce.dismiss
   - navigation.indexes
-  - navigation.sections
   - navigation.tabs
   - navigation.top
   - navigation.tracking
