@@ -3,7 +3,7 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
-copyright: Being weak is okay, staying isn't.
+copyright: Being dumb is okay, staying isn't.
 extra:
   generator: false
   social:
