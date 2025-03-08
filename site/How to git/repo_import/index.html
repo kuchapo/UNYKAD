@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../mac-adressen/">
+        <link rel="prev" href="../einf%C3%BCrung_in_git/">
       
       
-        <link rel="next" href="../IPv4/private-ipv4-adressen/">
+        <link rel="next" href="../MkDocs/erste_schritte/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>OSI-Modell - UNYKAD</title>
+        <title>Repo import - UNYKAD</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#osi-modell" class="md-skip">
+        <a href="#repo-import" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              OSI-Modell
+              Repo import
             
           </span>
         </div>
@@ -223,11 +223,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../How%20to%20git/einf%C3%BCrung_in_git/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../einf%C3%BCrung_in_git/" class="md-tabs__link">
           
   
     
@@ -243,13 +245,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../bluetooth/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../Networking/bluetooth/" class="md-tabs__link">
           
   
     
@@ -340,8 +340,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -354,17 +356,20 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -376,7 +381,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             How to git
@@ -390,7 +395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../How%20to%20git/einf%C3%BCrung_in_git/" class="md-nav__link">
+      <a href="../einf%C3%BCrung_in_git/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -409,10 +414,31 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../How%20to%20git/repo_import/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Repo import
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -422,6 +448,113 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Windows">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#projekt-klonen-und-in-den-hauptzweig-wechseln" class="md-nav__link">
+    <span class="md-ellipsis">
+      Projekt klonen und in den Hauptzweig wechseln:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python-installieren-falls-nicht-vorhanden" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python installieren (falls nicht vorhanden):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#abhangigkeiten-installieren-falls-erforderlich" class="md-nav__link">
+    <span class="md-ellipsis">
+      Abhängigkeiten installieren (falls erforderlich):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#virtuelle-umgebung-erstellen-und-aktivieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      Virtuelle Umgebung erstellen und aktivieren:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anderungen-durchfuhren-und-in-git-hinzufugen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Änderungen durchführen und in Git hinzufügen:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mkdocs-projekt-bauen" class="md-nav__link">
+    <span class="md-ellipsis">
+      MkDocs-Projekt bauen:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment-auf-github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deployment auf GitHub Pages:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anderungen-ins-repository-pushen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Änderungen ins Repository pushen:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -477,7 +610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../How%20to%20git/MkDocs/erste_schritte/" class="md-nav__link">
+      <a href="../MkDocs/erste_schritte/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -511,10 +644,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -535,20 +666,17 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -560,7 +688,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Networking
@@ -574,7 +702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../bluetooth/" class="md-nav__link">
+      <a href="../../Networking/bluetooth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -596,7 +724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cyber-physische_systeme/" class="md-nav__link">
+      <a href="../../Networking/cyber-physische_systeme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -618,7 +746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ethernet-frame/" class="md-nav__link">
+      <a href="../../Networking/ethernet-frame/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -640,7 +768,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ipv6-adressen/" class="md-nav__link">
+      <a href="../../Networking/ipv6-adressen/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -662,7 +790,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mac-adressen/" class="md-nav__link">
+      <a href="../../Networking/mac-adressen/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -681,31 +809,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    OSI-Modell
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Networking/osi-modell/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -715,194 +822,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#schicht-1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Schicht 1
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Schicht 1">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#physical-layer-bitubertragungsschicht" class="md-nav__link">
-    <span class="md-ellipsis">
-      Physical Layer (Bitübertragungsschicht)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#schicht-2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Schicht 2
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Schicht 2">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#data-link-layer-sicherungsschicht" class="md-nav__link">
-    <span class="md-ellipsis">
-      Data Link Layer (Sicherungsschicht)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#schicht-3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Schicht 3
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Schicht 3">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#network-layer-vermittlungsschicht" class="md-nav__link">
-    <span class="md-ellipsis">
-      Network Layer (Vermittlungsschicht)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#schicht-4" class="md-nav__link">
-    <span class="md-ellipsis">
-      Schicht 4
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Schicht 4">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#transport-layer-transportschicht" class="md-nav__link">
-    <span class="md-ellipsis">
-      Transport Layer (Transportschicht)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#schicht-5" class="md-nav__link">
-    <span class="md-ellipsis">
-      Schicht 5
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Schicht 5">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#session-layer-kommunikationssteuerungsschicht" class="md-nav__link">
-    <span class="md-ellipsis">
-      Session Layer (Kommunikationssteuerungsschicht)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#schicht-6" class="md-nav__link">
-    <span class="md-ellipsis">
-      Schicht 6
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Schicht 6">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#presentationlayer-darstellungsschicht" class="md-nav__link">
-    <span class="md-ellipsis">
-      Presentationlayer (Darstellungsschicht)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#schicht-7" class="md-nav__link">
-    <span class="md-ellipsis">
-      Schicht 7
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Schicht 7">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#application-layer-anwendungsschicht" class="md-nav__link">
-    <span class="md-ellipsis">
-      Application Layer (Anwendungsschicht)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -960,7 +879,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../IPv4/private-ipv4-adressen/" class="md-nav__link">
+      <a href="../../Networking/IPv4/private-ipv4-adressen/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -982,7 +901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../IPv4/vlsm/" class="md-nav__link">
+      <a href="../../Networking/IPv4/vlsm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1111,163 +1030,82 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#schicht-1" class="md-nav__link">
+  <a href="#windows" class="md-nav__link">
     <span class="md-ellipsis">
-      Schicht 1
+      Windows
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Schicht 1">
+    <nav class="md-nav" aria-label="Windows">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#physical-layer-bitubertragungsschicht" class="md-nav__link">
+  <a href="#projekt-klonen-und-in-den-hauptzweig-wechseln" class="md-nav__link">
     <span class="md-ellipsis">
-      Physical Layer (Bitübertragungsschicht)
+      Projekt klonen und in den Hauptzweig wechseln:
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#schicht-2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Schicht 2
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Schicht 2">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#data-link-layer-sicherungsschicht" class="md-nav__link">
+  <a href="#python-installieren-falls-nicht-vorhanden" class="md-nav__link">
     <span class="md-ellipsis">
-      Data Link Layer (Sicherungsschicht)
+      Python installieren (falls nicht vorhanden):
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#schicht-3" class="md-nav__link">
-    <span class="md-ellipsis">
-      Schicht 3
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Schicht 3">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#network-layer-vermittlungsschicht" class="md-nav__link">
+  <a href="#abhangigkeiten-installieren-falls-erforderlich" class="md-nav__link">
     <span class="md-ellipsis">
-      Network Layer (Vermittlungsschicht)
+      Abhängigkeiten installieren (falls erforderlich):
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#schicht-4" class="md-nav__link">
-    <span class="md-ellipsis">
-      Schicht 4
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Schicht 4">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#transport-layer-transportschicht" class="md-nav__link">
+  <a href="#virtuelle-umgebung-erstellen-und-aktivieren" class="md-nav__link">
     <span class="md-ellipsis">
-      Transport Layer (Transportschicht)
+      Virtuelle Umgebung erstellen und aktivieren:
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#schicht-5" class="md-nav__link">
-    <span class="md-ellipsis">
-      Schicht 5
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Schicht 5">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#session-layer-kommunikationssteuerungsschicht" class="md-nav__link">
+  <a href="#anderungen-durchfuhren-und-in-git-hinzufugen" class="md-nav__link">
     <span class="md-ellipsis">
-      Session Layer (Kommunikationssteuerungsschicht)
+      Änderungen durchführen und in Git hinzufügen:
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#schicht-6" class="md-nav__link">
-    <span class="md-ellipsis">
-      Schicht 6
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Schicht 6">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#presentationlayer-darstellungsschicht" class="md-nav__link">
+  <a href="#mkdocs-projekt-bauen" class="md-nav__link">
     <span class="md-ellipsis">
-      Presentationlayer (Darstellungsschicht)
+      MkDocs-Projekt bauen:
     </span>
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#schicht-7" class="md-nav__link">
-    <span class="md-ellipsis">
-      Schicht 7
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Schicht 7">
-      <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#application-layer-anwendungsschicht" class="md-nav__link">
+  <a href="#deployment-auf-github-pages" class="md-nav__link">
     <span class="md-ellipsis">
-      Application Layer (Anwendungsschicht)
+      Deployment auf GitHub Pages:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anderungen-ins-repository-pushen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Änderungen ins Repository pushen:
     </span>
   </a>
   
@@ -1294,55 +1132,26 @@
 
 
 
-<h1 id="osi-modell">OSI-Modell</h1>
-<h2 id="schicht-1">Schicht 1</h2>
-<h3 id="physical-layer-bitubertragungsschicht">Physical Layer (Bitübertragungsschicht)</h3>
-<ul>
-<li>Übertragung von Rohdatenbits über ein physisches Medium</li>
-<li>legt elektrische (Ströme, Spannungen), mechanische (Kabel, Stecker), funktionale (Übertragungsrate) und prozedurale (Modulation) Parameter für die physische Verbindung zweier Einheiten fest</li>
-</ul>
-<h2 id="schicht-2">Schicht 2</h2>
-<h3 id="data-link-layer-sicherungsschicht">Data Link Layer (Sicherungsschicht)</h3>
-<ul>
-<li>Sicherstellen einer funktionierenden Verbindung zwischen zwei benachbarten Stationen (im selben LAN)</li>
-<li>Überprüfung auf Fehler</li>
-<li>Daten, die die Schicht 2 verlassen sind fehlerfrei</li>
-</ul>
-<h2 id="schicht-3">Schicht 3</h2>
-<h3 id="network-layer-vermittlungsschicht">Network Layer (Vermittlungsschicht)</h3>
-<ul>
-<li>Wegfindung in andere Netze Routing</li>
-<li>geroutete Protokolle IPv4, IPv6</li>
-<li>Routingprotokolle RIP, OSPF, IS-IS, IRGP, EIRGP, BGP</li>
-<li>Gerät Router</li>
-<li>Dateneinheit Paket</li>
-</ul>
-<h2 id="schicht-4">Schicht 4</h2>
-<h3 id="transport-layer-transportschicht">Transport Layer (Transportschicht)</h3>
-<ul>
-<li>TCP: virtuelle Verbindung auf- und abbauen, fehlende Daten neu anfordern, Daten in die richtige Reihenfolge bringen, Flusskontrolle (Empfänger steuert wieviel er senden darf -&gt; falls Empfänger überlastet ist), Ports</li>
-<li>UDP: Ports, (Best Effort), unzuverlässig  für sehr kurze Kommunikation (DHCP, DNS), Streams, Dateinheit ist Segment</li>
-</ul>
-<h2 id="schicht-5">Schicht 5</h2>
-<h3 id="session-layer-kommunikationssteuerungsschicht">Session Layer (Kommunikationssteuerungsschicht)</h3>
-<ul>
-<li>Auf-, Ab- und Wiederaufbau (nach Verbindungsabbruch) von virtuellen Verbindungen</li>
-<li>Verbindungen</li>
-<li>SyncPoints, Downloadmanager</li>
-</ul>
-<h2 id="schicht-6">Schicht 6</h2>
-<h3 id="presentationlayer-darstellungsschicht">Presentationlayer (Darstellungsschicht)</h3>
-<ul>
-<li>Codierung was bedeuten die Nullen und Einsen</li>
-<li>MP3, JPEG, MPEG, ASCII, PNG,…</li>
-<li>Verschlüsselung AES, RSA,…</li>
-</ul>
-<h2 id="schicht-7">Schicht 7</h2>
-<h3 id="application-layer-anwendungsschicht">Application Layer (Anwendungsschicht)</h3>
-<ul>
-<li>stellt der Anwendung Daten so zur Verfügung, wie die sie braucht</li>
-<li>DHCP, DNS, POP3, IMAP4, SMTP, SNMP,…</li>
-</ul>
+<h1 id="repo-import">Repo import</h1>
+<h2 id="windows">Windows</h2>
+<h3 id="projekt-klonen-und-in-den-hauptzweig-wechseln">Projekt klonen und in den Hauptzweig wechseln:</h3>
+<p>git clone &lt;&gt;</p>
+<h3 id="python-installieren-falls-nicht-vorhanden">Python installieren (falls nicht vorhanden):</h3>
+<p>winget install Python.Python.3.11</p>
+<h3 id="abhangigkeiten-installieren-falls-erforderlich">Abhängigkeiten installieren (falls erforderlich):</h3>
+<p>pip install -r requirements.txt</p>
+<h3 id="virtuelle-umgebung-erstellen-und-aktivieren">Virtuelle Umgebung erstellen und aktivieren:</h3>
+<p>python -m venv venv
+./venv/Scripts/activate</p>
+<h3 id="anderungen-durchfuhren-und-in-git-hinzufugen">Änderungen durchführen und in Git hinzufügen:</h3>
+<p>git add .
+git commit -m "EnterHereWhatYouHaveChanged"</p>
+<h3 id="mkdocs-projekt-bauen">MkDocs-Projekt bauen:</h3>
+<p>mkdocs build</p>
+<h3 id="deployment-auf-github-pages">Deployment auf GitHub Pages:</h3>
+<p>mkdocs gh-deploy</p>
+<h3 id="anderungen-ins-repository-pushen">Änderungen ins Repository pushen:</h3>
+<p>git push</p>
 
 
 
