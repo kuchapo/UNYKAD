@@ -1,7 +1,9 @@
 # Repo import
 ## Windows
 Projekt klonen und in den Hauptzweig wechseln:  
-`git clone <>`  
+```powershell
+   git clone <>
+``` 
 Python installieren (falls nicht vorhanden):  
 `winget install Python.Python.3.11`  
 Abhängigkeiten installieren (falls erforderlich):  
