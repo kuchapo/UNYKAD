@@ -591,6 +591,18 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Arch einrichten
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -601,6 +613,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#konfiguration-grob" class="md-nav__link">
+    <span class="md-ellipsis">
+      Konfiguration (Grob)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -997,6 +1037,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#konfiguration-grob" class="md-nav__link">
+    <span class="md-ellipsis">
+      Konfiguration (Grob)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1012,6 +1069,26 @@
 
 
 <h1 id="arch-einrichten">Arch einrichten</h1>
+<pre><code>              -`  
+             .o+`  
+            `ooo/  
+           `+oooo:  
+          `+oooooo:  
+          -+oooooo+:  
+        `/:-:++oooo+:  
+       `/++++/+++++++:  
+      `/++++++++++++++:  
+     `/+++ooooooooooooo/`  
+    ./ooosssso++osssssso+`  
+   .oossssso-````/ossssss+`  
+  -osssssso.      :ssssssso.  
+ :osssssss/        osssso+++.  
+/ossssssss/        +ssssooo/-
+</code></pre>
+<p><code>/ossssso+/:-        -:/+osssso+-</code>+sso+:-'                 '.-/+oso:<br />
+<code>++:.                           '-/+/  
+.</code>                                 '/  </p>
+<h2 id="konfiguration-grob">Konfiguration (Grob)</h2>
 <p>Deutsches Tastaturlayout:
 <div class="highlight"><pre><span></span><code>loadkeys<span class="w"> </span>de-latin1
 </code></pre></div>
@@ -1031,6 +1108,9 @@ Root Passwort festlegen (sonst funktioniert SSH nicht):
 </code></pre></div>
 Betriebssystem konfigurieren:
 <div class="highlight"><pre><span></span><code>archinstall
+</code></pre></div>
+Um Systemeinstellungen nachzuschlagen:
+<div class="highlight"><pre><span></span><code>pacman<span class="w"> </span>-S<span class="w"> </span>fastfetch
 </code></pre></div></p>
 
 
