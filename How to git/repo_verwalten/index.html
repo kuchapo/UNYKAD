@@ -20,7 +20,7 @@
     
     
       
-        <title>Repo import - UNYKAD</title>
+        <title>Repository verwalten - UNYKAD</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#repo-import" class="md-skip">
+        <a href="#repository-verwalten" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Repo import
+              Repository verwalten
             
           </span>
         </div>
@@ -426,56 +426,16 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Repo import
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Repo import
+    Repository verwalten
     
   </span>
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#windows" class="md-nav__link">
-    <span class="md-ellipsis">
-      Windows
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -945,23 +905,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#windows" class="md-nav__link">
-    <span class="md-ellipsis">
-      Windows
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -976,18 +919,21 @@
 
 
 
-<h1 id="repo-import">Repo import</h1>
-<h2 id="windows">Windows</h2>
+<h1 id="repository-verwalten">Repository verwalten</h1>
 <p>Projekt klonen und in den Hauptzweig wechseln:<br />
 <div class="highlight"><pre><span></span><code><span class="n">git</span> <span class="n">clone</span> <span class="p">&lt;&gt;</span>
 </code></pre></div>
 Python installieren (falls nicht vorhanden):<br />
 <div class="highlight"><pre><span></span><code><span class="n">winget</span> <span class="n">install</span> <span class="n">Python</span><span class="p">.</span><span class="n">Python</span><span class="p">.</span><span class="n">3</span><span class="p">.</span><span class="n">11</span>
 </code></pre></div>
+<div class="highlight"><pre><span></span><code>Bei Linux muss dieser Befehl angepasst werden!&quot;
+</code></pre></div>
 Virtuelle Umgebung erstellen und aktivieren:<br />
 <div class="highlight"><pre><span></span><code><span class="n">python</span> <span class="n">-m</span> <span class="n">venv</span> <span class="n">venv</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="p">./</span><span class="n">venv</span><span class="p">/</span><span class="n">Scripts</span><span class="p">/</span><span class="n">activate</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Bei Linux: &quot;source ./venv/bin/activate&quot;
 </code></pre></div>
 Abhängigkeiten installieren (falls erforderlich):<br />
 <div class="highlight"><pre><span></span><code><span class="n">pip</span> <span class="n">install</span> <span class="n">-r</span> <span class="n">requirements</span><span class="p">.</span><span class="n">txt</span>
