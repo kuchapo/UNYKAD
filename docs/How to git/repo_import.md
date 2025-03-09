@@ -8,16 +8,16 @@ Python installieren (falls nicht vorhanden):
 ```powershell
 winget install Python.Python.3.11
 ```
-Abhängigkeiten installieren (falls erforderlich):  
-```powershell
-pip install -r requirements.txt
-```
 Virtuelle Umgebung erstellen und aktivieren:  
 ```powershell
 python -m venv venv
 ```
 ```powershell
 ./venv/Scripts/activate
+```
+Abhängigkeiten installieren (falls erforderlich):  
+```powershell
+pip install -r requirements.txt
 ```
 Änderungen durchführen und in Git hinzufügen:  
 ```powershell
