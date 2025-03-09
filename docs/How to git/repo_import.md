@@ -5,18 +5,36 @@ Projekt klonen und in den Hauptzweig wechseln:
    git clone <>
 ```
 Python installieren (falls nicht vorhanden):  
-`winget install Python.Python.3.11`  
+```powershell
+winget install Python.Python.3.11
+```
 Abhängigkeiten installieren (falls erforderlich):  
-`pip install -r requirements.txt`  
+```powershell
+pip install -r requirements.txt
+```
 Virtuelle Umgebung erstellen und aktivieren:  
-`python -m venv venv`  
-`./venv/Scripts/activate`  
+```powershell
+python -m venv venv
+```
+```powershell
+./venv/Scripts/activate
+```
 Änderungen durchführen und in Git hinzufügen:  
-`git add .`  
-`git commit -m "EnterHereWhatYouHaveChanged"`  
+```powershell
+git add .
+```
+```powershell
+git commit -m "EnterHereWhatYouHaveChanged"
+```
 MkDocs-Projekt bauen:  
-`mkdocs build`  
+```powershell
+mkdocs build
+```
 Deployment auf GitHub Pages:  
-`mkdocs gh-deploy`  
+```powershell
+mkdocs gh-deploy
+```
 Änderungen ins Repository pushen:  
-`git push`
+```powershell
+git push
+```
