@@ -8,9 +8,8 @@ Python installieren (falls nicht vorhanden):
 ```powershell
 winget install Python.Python.3.11
 ```
-```info
-Bei Linux muss dieser Befehl angepasst werden!"
-```
+!!! info
+    Bei Linux muss dieser Befehl angepasst werden!
 Virtuelle Umgebung erstellen und aktivieren:  
 ```powershell
 python -m venv venv
@@ -18,9 +17,8 @@ python -m venv venv
 ```powershell
 ./venv/Scripts/activate
 ```
-```info
-Bei Linux: "source ./venv/bin/activate"
-```
+!!! info
+    Bei Linux: "source ./venv/bin/activate"
 Abhängigkeiten installieren (falls erforderlich):  
 ```powershell
 pip install -r requirements.txt
