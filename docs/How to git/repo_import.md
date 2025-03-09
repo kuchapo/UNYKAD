@@ -2,7 +2,7 @@
 ## Windows
 Projekt klonen und in den Hauptzweig wechseln:  
 ```powershell
-   git clone <>
+git clone <>
 ```
 Python installieren (falls nicht vorhanden):  
 ```powershell
