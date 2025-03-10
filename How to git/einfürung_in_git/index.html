@@ -1104,36 +1104,36 @@
 <h2 id="wichtige-git-befehle">Wichtige Git-Befehle</h2>
 <ul>
 <li><code>git init</code>: Erstellt ein neues Git-Repository in einem Verzeichnis.</li>
-<li><code>git clone [URL]</code>: Klont ein bestehendes Repository von einer URL in ein neues Verzeichnis.</li>
+<li><code>git clone &lt;URL&gt;</code>: Klont ein bestehendes Repository von einer URL in ein neues Verzeichnis.</li>
 <li><code>git status</code>: Zeigt den aktuellen Status des Arbeitsverzeichnisses und der Staging-Area an.</li>
-<li><code>git add [Datei/Verzeichnis]</code>: Fügt eine Datei oder ein Verzeichnis zur Staging-Area hinzu.</li>
-<li><code>git commit -m "[Nachricht]"</code>: Erstellt einen Commit mit den Dateien in der Staging-Area und fügt eine Commit-Nachricht hinzu.</li>
+<li><code>git add &lt;Datei/Verzeichnis&gt;</code>: Fügt eine Datei oder ein Verzeichnis zur Staging-Area hinzu.</li>
+<li><code>git commit -m "&lt;Nachricht&gt;"</code>: Erstellt einen Commit mit den Dateien in der Staging-Area und fügt eine Commit-Nachricht hinzu.</li>
 <li><code>git commit --amend</code>: Ändert den letzten Commit (z.B. um die Commit-Nachricht zu bearbeiten).</li>
 <li><code>git log</code>: Zeigt die Commit-Historie des aktuellen Branches an.</li>
 <li><code>git log --oneline</code>: Zeigt die Commit-Historie im kompakten Format (eine Zeile pro Commit).</li>
 <li><code>git diff</code>: Zeigt die Änderungen zwischen dem Arbeitsverzeichnis und der Staging-Area an.</li>
 <li><code>git diff --staged</code>: Zeigt die Änderungen an, die zur Staging-Area hinzugefügt wurden, aber noch nicht committet sind.</li>
 <li><code>git branch</code>: Zeigt alle lokalen Branches an.</li>
-<li><code>git branch [Name]</code>: Erstellt einen neuen Branch mit dem angegebenen Namen.</li>
-<li><code>git checkout [Branch]</code>: Wechselt zu einem anderen Branch.</li>
-<li><code>git checkout -b [Name]</code>: Erstellt und wechselt zu einem neuen Branch mit dem angegebenen Namen.</li>
-<li><code>git merge [Branch]</code>: Mergt den angegebenen Branch in den aktuellen Branch.</li>
-<li><code>git rebase [Branch]</code>: Wendet die Commits des aktuellen Branches auf den angegebenen Branch neu an.</li>
+<li><code>git branch &lt;Name&gt;</code>: Erstellt einen neuen Branch mit dem angegebenen Namen.</li>
+<li><code>git checkout &lt;Branch&gt;</code>: Wechselt zu einem anderen Branch.</li>
+<li><code>git checkout -b &lt;Name&gt;</code>: Erstellt und wechselt zu einem neuen Branch mit dem angegebenen Namen.</li>
+<li><code>git merge &lt;Branch&gt;</code>: Mergt den angegebenen Branch in den aktuellen Branch.</li>
+<li><code>git rebase &lt;Branch&gt;</code>: Wendet die Commits des aktuellen Branches auf den angegebenen Branch neu an.</li>
 <li><code>git stash</code>: Speichert uncommittete Änderungen vorübergehend, um mit einem sauberen Arbeitsverzeichnis zu arbeiten.</li>
 <li><code>git stash pop</code>: Stellt die zuletzt gespeicherten Änderungen aus dem Stash wieder her und entfernt sie aus dem Stash.</li>
 <li><code>git stash apply</code>: Stellt die zuletzt gespeicherten Änderungen aus dem Stash wieder her, ohne sie aus dem Stash zu entfernen.</li>
 <li><code>git remote -v</code>: Zeigt die URLs aller Remote-Repositories an.</li>
-<li><code>git remote add [Name] [URL]</code>: Fügt ein Remote-Repository mit dem angegebenen Namen hinzu.</li>
-<li><code>git pull [Remote] [Branch]</code>: Holt die Änderungen von einem Remote-Repository und führt sie mit dem aktuellen Branch zusammen.</li>
-<li><code>git fetch [Remote]</code>: Holt die Änderungen von einem Remote-Repository, ohne sie zu mergen.</li>
-<li><code>git push [Remote] [Branch]</code>: Schiebt die lokalen Commits zum Remote-Repository.</li>
-<li><code>git push -u [Remote] [Branch]</code>: Schiebt die lokalen Commits zum Remote-Repository und setzt den Remote-Branch als Tracking-Branch.</li>
-<li><code>git reset --hard [Commit]</code>: Setzt das Arbeitsverzeichnis, die Staging-Area und den aktuellen Branch auf den angegebenen Commit zurück.</li>
-<li><code>git reset --soft [Commit]</code>: Setzt den aktuellen Branch auf den angegebenen Commit zurück, behält jedoch die Änderungen in der Staging-Area bei.</li>
+<li><code>git remote add &lt;Name&gt; &lt;URL&gt;</code>: Fügt ein Remote-Repository mit dem angegebenen Namen hinzu.</li>
+<li><code>git pull &lt;Remote&gt; &lt;Branch&gt;</code>: Holt die Änderungen von einem Remote-Repository und führt sie mit dem aktuellen Branch zusammen.</li>
+<li><code>git fetch &lt;Remote&gt;</code>: Holt die Änderungen von einem Remote-Repository, ohne sie zu mergen.</li>
+<li><code>git push &lt;Remote&gt; &lt;Branch&gt;</code>: Schiebt die lokalen Commits zum Remote-Repository.</li>
+<li><code>git push -u &lt;Remote&gt; &lt;Branch&gt;</code>: Schiebt die lokalen Commits zum Remote-Repository und setzt den Remote-Branch als Tracking-Branch.</li>
+<li><code>git reset --hard &lt;Commit&gt;</code>: Setzt das Arbeitsverzeichnis, die Staging-Area und den aktuellen Branch auf den angegebenen Commit zurück.</li>
+<li><code>git reset --soft &lt;Commit&gt;</code>: Setzt den aktuellen Branch auf den angegebenen Commit zurück, behält jedoch die Änderungen in der Staging-Area bei.</li>
 <li><code>git clean -f</code>: Entfernt nicht versionierte Dateien aus dem Arbeitsverzeichnis.</li>
-<li><code>git tag [Name]</code>: Erstellt ein neues Tag für den aktuellen Commit.</li>
-<li><code>git tag -d [Name]</code>: Löscht ein lokales Tag.</li>
-<li><code>git push [Remote] --tags</code>: Schiebt alle lokalen Tags zum Remote-Repository.</li>
+<li><code>git tag &lt;Name&gt;</code>: Erstellt ein neues Tag für den aktuellen Commit.</li>
+<li><code>git tag -d &lt;Name&gt;</code>: Löscht ein lokales Tag.</li>
+<li><code>git push &lt;Remote&gt; --tags</code>: Schiebt alle lokalen Tags zum Remote-Repository.</li>
 </ul>
 
 
