@@ -20,7 +20,7 @@
     
     
       
-        <title>Arch einrichten - UNYKAD</title>
+        <title>Arch Linux einrichten - UNYKAD</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#arch-einrichten" class="md-skip">
+        <a href="#arch-linux-einrichten" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Arch einrichten
+              Arch Linux einrichten
             
           </span>
         </div>
@@ -595,7 +595,7 @@
           
   
   <span class="md-ellipsis">
-    Arch einrichten
+    Arch Linux einrichten
     
   </span>
   
@@ -607,7 +607,7 @@
         
   
   <span class="md-ellipsis">
-    Arch einrichten
+    Arch Linux einrichten
     
   </span>
   
@@ -630,11 +630,62 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#konfiguration-grob" class="md-nav__link">
+  <a href="#konfiguration" class="md-nav__link">
     <span class="md-ellipsis">
-      Konfiguration (Grob)
+      Konfiguration
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Konfiguration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tastaturlayout-einstellen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tastaturlayout einstellen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mit-wlan-verbinden" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mit WLAN verbinden
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh-uberprufen-und-aktivieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSH überprüfen und aktivieren
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arch-linux-konfigurieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arch Linux konfigurieren
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systemeinstellungen-anzeigen-lassen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Systemeinstellungen anzeigen lassen
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1044,11 +1095,62 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#konfiguration-grob" class="md-nav__link">
+  <a href="#konfiguration" class="md-nav__link">
     <span class="md-ellipsis">
-      Konfiguration (Grob)
+      Konfiguration
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Konfiguration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tastaturlayout-einstellen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tastaturlayout einstellen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mit-wlan-verbinden" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mit WLAN verbinden
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh-uberprufen-und-aktivieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSH überprüfen und aktivieren
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arch-linux-konfigurieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arch Linux konfigurieren
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systemeinstellungen-anzeigen-lassen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Systemeinstellungen anzeigen lassen
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1068,7 +1170,7 @@
 
 
 
-<h1 id="arch-einrichten">Arch einrichten</h1>
+<h1 id="arch-linux-einrichten">Arch Linux einrichten</h1>
 <div class="highlight"><pre><span></span><code>                  -`  
                  .o+`  
                 `ooo/  
@@ -1089,30 +1191,45 @@
 `++:.                           &#39;-/+/  
 .`                                 &#39;/  
 </code></pre></div>
-<h2 id="konfiguration-grob">Konfiguration (Grob)</h2>
-<p>Deutsches Tastaturlayout:
+<h2 id="konfiguration">Konfiguration</h2>
+<p>Diese Anleitung beschreibt die grundlegende Konfiguration des Betriebssystems Arch Linux.<br />
+Sie zeigt die wichtigsten Befehle, jedoch ohne detaillierte Zwischenschritte<br />
+(z. B. nach dem Ausführen von archinstall).</p>
+<h3 id="tastaturlayout-einstellen">Tastaturlayout einstellen</h3>
+<p>Für ein deutsches Tastaturlayout:</p>
 <div class="highlight"><pre><span></span><code>loadkeys<span class="w"> </span>de-latin1
 </code></pre></div>
-WLAN verbinden:
-<div class="highlight"><pre><span></span><code>iwctl<span class="w"> </span>--passphrase<span class="w"> </span><span class="s2">&quot;YourPasswordHere&quot;</span><span class="w"> </span>station
+<h3 id="mit-wlan-verbinden">Mit WLAN verbinden</h3>
+<p>Öffne iwctl:</p>
+<div class="highlight"><pre><span></span><code>iwctl
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>wlan0<span class="w"> </span>connect<span class="w"> </span>&lt;&gt;
+<p>Scanne nach verfügbaren Netzwerken:</p>
+<div class="highlight"><pre><span></span><code>station<span class="w"> </span>wlan0<span class="w"> </span>get-networks
 </code></pre></div>
-Überprüft, ob SSH ativiert ist:
+<p>Verbinde dich mit einem Netzwerk (ersetze <YourPasswordHere> und <YourSSID> entsprechend):</p>
+<div class="highlight"><pre><span></span><code>iwctl<span class="w"> </span>--passphrase<span class="w"> </span><span class="s2">&quot;&lt;YourPasswordHere&gt;&quot;</span><span class="w"> </span>station<span class="w"> </span>wlan0<span class="w"> </span>connect<span class="w"> </span>&lt;YourSSID&gt;
+</code></pre></div>
+<p>Beende iwctl:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">exit</span>
+</code></pre></div>
+<h3 id="ssh-uberprufen-und-aktivieren">SSH überprüfen und aktivieren</h3>
+<p>Prüfe, ob der SSH-Dienst läuft:</p>
 <div class="highlight"><pre><span></span><code>systemctl<span class="w"> </span>status<span class="w"> </span>sshd
 </code></pre></div>
-Aktiviert SSH:
+<p>Falls nicht aktiv, starte ihn:</p>
 <div class="highlight"><pre><span></span><code>systemctl<span class="w"> </span>start<span class="w"> </span>sshd
 </code></pre></div>
-Root Passwort festlegen (sonst funktioniert SSH nicht):
+<p>Setze ein Root-Passwort (erforderlich für SSH-Zugriff):</p>
 <div class="highlight"><pre><span></span><code>passwd
 </code></pre></div>
-Betriebssystem konfigurieren:
+<h3 id="arch-linux-konfigurieren">Arch Linux konfigurieren</h3>
+<p>Starte den Installationsassistenten:</p>
 <div class="highlight"><pre><span></span><code>archinstall
 </code></pre></div>
-Um Systemeinstellungen nachzuschlagen:
+<h3 id="systemeinstellungen-anzeigen-lassen">Systemeinstellungen anzeigen lassen</h3>
+<p>Installiere das Tool fastfetch (ähnlich wie Neofetch, um Systeminformationen anzuzeigen):</p>
 <div class="highlight"><pre><span></span><code>pacman<span class="w"> </span>-S<span class="w"> </span>fastfetch
-</code></pre></div></p>
+</code></pre></div>
 
 
 
