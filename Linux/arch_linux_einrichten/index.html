@@ -1192,9 +1192,7 @@
 .`                                 &#39;/  
 </code></pre></div>
 <h2 id="konfiguration">Konfiguration</h2>
-<p>Diese Anleitung beschreibt die grundlegende Konfiguration des Betriebssystems Arch Linux.<br />
-Sie zeigt die wichtigsten Befehle, jedoch ohne detaillierte Zwischenschritte<br />
-(z. B. nach dem Ausführen von archinstall).</p>
+<p>Diese Anleitung beschreibt die grundlegende Konfiguration des Betriebssystems Arch Linux. Sie zeigt die wichtigsten Befehle, jedoch ohne detaillierte Zwischenschritte (z. B. nach dem Ausführen von archinstall).</p>
 <h3 id="tastaturlayout-einstellen">Tastaturlayout einstellen</h3>
 <p>Für ein deutsches Tastaturlayout:</p>
 <div class="highlight"><pre><span></span><code>loadkeys<span class="w"> </span>de-latin1
@@ -1206,7 +1204,7 @@ Sie zeigt die wichtigsten Befehle, jedoch ohne detaillierte Zwischenschritte<br 
 <p>Scanne nach verfügbaren Netzwerken:</p>
 <div class="highlight"><pre><span></span><code>station<span class="w"> </span>wlan0<span class="w"> </span>get-networks
 </code></pre></div>
-<p>Verbinde dich mit einem Netzwerk (ersetze <YourPasswordHere> und <YourSSID> entsprechend):</p>
+<p>Verbinde dich mit einem Netzwerk (ersetze <code>&lt;YourPasswordHere&gt;</code> und <code>&lt;YourSSID&gt;</code> entsprechend):</p>
 <div class="highlight"><pre><span></span><code>iwctl<span class="w"> </span>--passphrase<span class="w"> </span><span class="s2">&quot;&lt;YourPasswordHere&gt;&quot;</span><span class="w"> </span>station<span class="w"> </span>wlan0<span class="w"> </span>connect<span class="w"> </span>&lt;YourSSID&gt;
 </code></pre></div>
 <p>Beende iwctl:</p>
