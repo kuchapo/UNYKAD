@@ -1,6 +1,6 @@
 # Arch Linux einrichten
 
-```
+```Arch
                   -`  
                  .o+`  
                 `ooo/  
@@ -24,9 +24,7 @@
 
 ## Konfiguration
 
-Diese Anleitung beschreibt die grundlegende Konfiguration des Betriebssystems Arch Linux.  
-Sie zeigt die wichtigsten Befehle, jedoch ohne detaillierte Zwischenschritte  
-(z. B. nach dem Ausführen von archinstall).
+Diese Anleitung beschreibt die grundlegende Konfiguration des Betriebssystems Arch Linux. Sie zeigt die wichtigsten Befehle, jedoch ohne detaillierte Zwischenschritte (z. B. nach dem Ausführen von archinstall).
 
 ### Tastaturlayout einstellen
 
@@ -50,7 +48,7 @@ Scanne nach verfügbaren Netzwerken:
 station wlan0 get-networks
 ```
 
-Verbinde dich mit einem Netzwerk (ersetze <YourPasswordHere> und <YourSSID> entsprechend):
+  Verbinde dich mit einem Netzwerk (ersetze `<YourPasswordHere>` und `<YourSSID>` entsprechend):
 
 ```bash
 iwctl --passphrase "<YourPasswordHere>" station wlan0 connect <YourSSID>
@@ -89,6 +87,7 @@ Starte den Installationsassistenten:
 ```bash
 archinstall
 ```
+
 ### Systemeinstellungen anzeigen lassen
 
 Installiere das Tool fastfetch (ähnlich wie Neofetch, um Systeminformationen anzuzeigen):
