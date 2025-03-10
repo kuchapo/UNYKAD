@@ -1,5 +1,6 @@
 # Arch einrichten
 
+```
                   -`  
                  .o+`  
                 `ooo/  
@@ -19,6 +20,7 @@
  `+sso+:-'                 '.-/+oso:  
 `++:.                           '-/+/  
 .`                                 '/  
+```
 
 ## Konfiguration (Grob)
 
