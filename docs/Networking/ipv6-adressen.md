@@ -62,13 +62,17 @@ SLAAC ist ein Mechanismus, der es Geräten ermöglicht, ihre eigene weltweit gü
 
 ## Scopes (Gültigkeitsbereiche)
 
-- "**fe80::/10**" sind Link-Local-Adressen, welche nur im eigenen LAN (=im lokalen Subnetz) gültig sind und nie durch den Router weitergeleitet werden.  
+- **fe80::/10**  
+sind Link-Local-Adressen, welche nur im eigenen LAN (=im lokalen Subnetz) gültig sind und nie durch den Router weitergeleitet werden.  
 -> *1111 1110 10|00 0000*
-- "**fc00:: /7**" sind Unique Local Adressen, welche auch zwischen verschiedenen Subnetzen innerhalb eines privaten Netzwerks kommunizieren können und nicht im Internet geroutet werden.  
+- **fc00:: /7**  
+sind Unique Local Adressen, welche auch zwischen verschiedenen Subnetzen innerhalb eines privaten Netzwerks kommunizieren können und nicht im Internet geroutet werden.  
 -> *1111 110|0 0000 0000*
-- "**ff00::/8**" sind Multicast-Adressen, welche an alle Geräte die Daten verschicken, welche sich für eine Multicast-Gruppe (über Multicast Listener Discovery (MLD)) angemeldet haben.  
+- **ff00::/8**  
+sind Multicast-Adressen, welche an alle Geräte die Daten verschicken, welche sich für eine Multicast-Gruppe (über Multicast Listener Discovery (MLD)) angemeldet haben.  
 -> *1111 1111|0000 0000*
-- "**2000::/3**" sind globale Unicast-Adressen, welche weltweit einmalig im Internet aufzufinden sind.  
+- **2000::/3**  
+sind globale Unicast-Adressen, welche weltweit einmalig im Internet aufzufinden sind.  
 -> *001|0 0000 0000 0000*
 
 ### Sonderformen der Multicast-Adressen
