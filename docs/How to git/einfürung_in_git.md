@@ -1,6 +1,6 @@
 # Einführung in GIT
 
-**Git** ist ein verteiltes Versionskontrollsystem, das von Entwicklern verwendet wird, um den Verlauf von Änderungen an Dateien zu verfolgen und gemeinsam an Projekten zu arbeiten. Es ermöglicht die Verwaltung von Quellcode und erleichtert die Zusammenarbeit in Teams, indem es verschiedene Versionen eines Projekts verwaltet und es Benutzern ermöglicht, Änderungen rückgängig zu machen, Branches zu erstellen und zusammenzuführen.
+Git ist ein verteiltes Versionskontrollsystem, das von Entwicklern verwendet wird, um den Verlauf von Änderungen an Dateien zu verfolgen und gemeinsam an Projekten zu arbeiten. Es ermöglicht die Verwaltung von Quellcode und erleichtert die Zusammenarbeit in Teams, indem es verschiedene Versionen eines Projekts verwaltet und es Benutzern ermöglicht, Änderungen rückgängig zu machen, Branches zu erstellen und zusammenzuführen.
 
 ## Wichtige Begriffe
 
