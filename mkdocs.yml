@@ -3,6 +3,8 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
 copyright: Being dumb is okay, staying isn't.
 extra:
   generator: false

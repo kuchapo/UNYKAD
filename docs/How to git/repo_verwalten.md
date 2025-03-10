@@ -8,12 +8,15 @@ git clone <PutYourProjectHere>
 
 Python installieren (falls nicht vorhanden):
 
-```powershell
-winget install Python.Python.3.11
-```
+=== "Windows"
+    ```powershell
+    winget install Python.Python.3.11
+    ```
 
-!!! info
-    Bei Linux muss dieser Befehl angepasst werden!
+=== "Arch Linux"
+    ```bash
+    pacman -S python
+    ```
 
 Virtuelle Umgebung erstellen und aktivieren:
 
@@ -21,12 +24,15 @@ Virtuelle Umgebung erstellen und aktivieren:
 python -m venv venv
 ```
 
-```powershell
-./venv/Scripts/activate
-```
+=== "Windows"
+    ```powershell
+    ./venv/Scripts/activate
+    ```
 
-!!! info
-    Bei Linux: "source ./venv/bin/activate"
+=== "Arch Linux"
+    ```bash
+    source ./venv/bin/activate
+    ```
 
 Abhängigkeiten installieren (falls erforderlich):
 
