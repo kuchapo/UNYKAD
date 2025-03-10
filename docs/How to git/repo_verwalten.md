@@ -47,7 +47,7 @@ git add .
 ```
 
 ```powershell
-git commit -m "EnterHereWhatYouHaveChanged"
+git commit -m "<EnterHereWhatYouHaveChanged>"
 ```
 
 MkDocs-Projekt bauen:

@@ -2,7 +2,11 @@ site_name: UNYKAD
 markdown_extensions:
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
 copyright: Being dumb is okay, staying isn't.
@@ -36,15 +40,15 @@ theme:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       primary: black
-      accent: red
-      scheme: default 
+      accent: purple
+      scheme: default
       toggle: 
         icon: material/brightness-7
         name: Switch to dark mode
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       primary: black
-      accent: red
+      accent: purple
       scheme: slate
       toggle:
         icon: material/brightness-4
