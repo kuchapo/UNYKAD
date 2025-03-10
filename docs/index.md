@@ -1,3 +1,9 @@
+---
+hide:
+  - navigation
+  - toc
+---
+
 # Unykad Documentation Page
 
 ## Some important Commands
