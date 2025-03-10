@@ -3,12 +3,6 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
-nav:
-  - Home: index.md
-  - Programming: programming.md
-  - Software Development: libraries_vs_frameworks.md
-  - Electrical Engineering: electrical_engineering/
-  - Notes: GitHub.md
 copyright: Being dumb is okay, staying isn't.
 extra:
   generator: false
