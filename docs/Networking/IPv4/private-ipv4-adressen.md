@@ -1,4 +1,5 @@
 # Private IPv4-Adressen
+
 Private IPv4-Adressen sind IP-Adressen, die innerhalb eines lokalen Netzwerks verwendet werden und nicht direkt über das Internet erreichbar sind. Sie werden typischerweise in Heimnetzwerken oder Unternehmensnetzwerken zur internen Kommunikation zwischen Geräten verwendet.
 
 10.0.0.0 bis 10.255.255.255 (10.0.0.0/8)  
