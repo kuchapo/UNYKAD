@@ -4,7 +4,7 @@ hide:
   - toc
 ---
 
-# Unykad Documentation Page
+# Home
 
 ## Some important Commands
 
