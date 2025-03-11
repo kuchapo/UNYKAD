@@ -2,7 +2,7 @@
 
 Projekt klonen und in den Hauptzweig wechseln:
 
-```powershell
+```sh
 git clone <PutYourProjectHere>
 ```
 
@@ -20,7 +20,7 @@ Python installieren (falls nicht vorhanden):
 
 Virtuelle Umgebung erstellen und aktivieren:
 
-```powershell
+```sh
 python -m venv venv
 ```
 
@@ -36,34 +36,40 @@ python -m venv venv
 
 Abhängigkeiten installieren (falls erforderlich):
 
-```powershell
+```sh
 pip install -r requirements.txt
+```
+
+Holt Änderungen und integriert sie in die aktuelle lokale Branch:
+
+```sh
+git pull
 ```
 
 Änderungen durchführen und in Git hinzufügen:
 
-```powershell
+```sh
 git add .
 ```
 
-```powershell
+```sh
 git commit -m "<EnterHereWhatYouHaveChanged>"
 ```
 
 MkDocs-Projekt bauen:
 
-```powershell
+```sh
 mkdocs build
 ```
 
 Deployment auf GitHub Pages:
 
-```powershell
+```sh
 mkdocs gh-deploy
 ```
 
 Änderungen ins Repository pushen:
 
-```powershell
+```sh
 git push
 ```
