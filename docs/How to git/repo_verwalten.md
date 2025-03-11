@@ -1,5 +1,9 @@
 # Repository verwalten
 
+In diesem Artikel wird eine empfohlene Best-Practice-Methode vorgestellt, mit der Änderungen am Repository unkompliziert und sicher durchgeführt werden können. Diese Vorgehensweise minimiert das Risiko von Abweichungen oder Fehlern und sorgt für einen reibungslosen Ablauf.
+
+---
+
 Projekt klonen und in den Hauptzweig wechseln:
 
 ```sh
