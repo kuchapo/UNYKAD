@@ -21,7 +21,7 @@ extra:
       link: https://x.com/Unykad
 theme:
   name: material
-  favicon: assets/u1w.svg
+  favicon: assets/u1.svg
   logo: assets/u1w.svg
   features:
   - content.code.annotate
