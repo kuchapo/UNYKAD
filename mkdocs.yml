@@ -21,6 +21,7 @@ extra:
       link: https://x.com/Unykad
 theme:
   name: material
+  favicon: uw.ico
   icon:
     logo: material/powershell
   features:
