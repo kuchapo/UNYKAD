@@ -21,9 +21,8 @@ extra:
       link: https://x.com/Unykad
 theme:
   name: material
-  favicon: uw.ico
-  icon:
-    logo: material/powershell
+  favicon: assets/u1w.svg
+  logo: assets/u1w.svg
   features:
   - content.code.annotate
   - content.code.copy
