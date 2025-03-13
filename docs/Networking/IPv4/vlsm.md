@@ -1,11 +1,11 @@
 # VLSM
 
-Beispiel:  
+## Beispiel
+
 Es werden mit Hilfe von VLSM jeweils 800, 400 und 117 Clients in
-voneinander isolierten Netze eingeteilt. Wichtig zu beachten ist, dass die
-Netz-ID und Broadcast-IP bei der Hostanzahl berücksichtigt werden sollten und
-dass man immer mit dem größten Subnetz anfängt und dann immer jeweils das kleinere
-nimmt.
+voneinander isolierten Netze eingeteilt.
+
+Wichtig zu beachten ist, dass die Netz-ID und Broadcast-IP bei der Hostanzahl berücksichtigt werden sollten und dass man immer mit dem größten Subnetz anfängt und dann immer jeweils das kleinere nimmt.
 
 Tabelle als Hilfestellung benutzen:
 

@@ -83,3 +83,14 @@ Mechanismus, der Ereignisbenachrichtigungen automatisch an andere Dienste sendet
 ## Zero Trust
 
 Sicherheitsmodell, das kein automatisches Vertrauen voraussetzt.
+
+## DNS
+
+Ein DNS-Server (Domain Name System) übersetzt Domainnamen wie "www.example.com" in ihre entsprechenden IP-Adressen,
+um Netzgeräten die Verbindungsaufnahme zu ermöglichen. Domain Name Service ist der eigentlich bereitgestellte Dienst
+vom DNS-Server.
+
+## Azure AD Application Proxy
+
+It allows to publish on-premises applications to the web.  
+Remote users can access internal apps in a secure manner.
