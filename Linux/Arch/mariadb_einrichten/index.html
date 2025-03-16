@@ -1564,9 +1564,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sicherung-grundkonfiguration" class="md-nav__link">
+  <a href="#grund-sicherheitskonfigurationen" class="md-nav__link">
     <span class="md-ellipsis">
-      Sicherung &amp; Grundkonfiguration
+      Grund- &amp; Sicherheitskonfigurationen
     </span>
   </a>
   
@@ -1923,9 +1923,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#sicherung-grundkonfiguration" class="md-nav__link">
+  <a href="#grund-sicherheitskonfigurationen" class="md-nav__link">
     <span class="md-ellipsis">
-      Sicherung &amp; Grundkonfiguration
+      Grund- &amp; Sicherheitskonfigurationen
     </span>
   </a>
   
@@ -1991,11 +1991,11 @@
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>mariadb.service
 </code></pre></div>
 <hr />
-<h2 id="sicherung-grundkonfiguration">Sicherung &amp; Grundkonfiguration</h2>
+<h2 id="grund-sicherheitskonfigurationen">Grund- &amp; Sicherheitskonfigurationen</h2>
 <p>Nach der Installation solltest du das Sicherheitsskript ausführen:</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>mariadb-secure-installation
 </code></pre></div>
-<p>Dies ermöglicht dir:
+<p>Dies ermöglicht dir:<br />
 ✅ Root-Passwort festzulegen<br />
 ✅ Anonyme Benutzer zu entfernen<br />
 ✅ Test-Datenbanken zu löschen<br />
@@ -2025,9 +2025,11 @@
 <p>Gib dein Passwort ein und du solltest Zugriff auf die Datenbank haben! ✅</p>
 <hr />
 <h2 id="mariadb-stoppen-oder-neu-starten">MariaDB stoppen oder neu starten</h2>
-<p>Falls du MariaDB stoppen oder neustarten musst:</p>
+<p>Falls du MariaDB stoppen musst:</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>stop<span class="w"> </span>mariadb.service
-sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>mariadb.service
+</code></pre></div>
+<p>Falls du MariaDB neustarten musst:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>mariadb.service
 </code></pre></div>
 
 
