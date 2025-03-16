@@ -32,7 +32,7 @@ MariaDB beim Booten automatisch starten
 
 ---
 
-## Sicherung & Grundkonfiguration
+## Grund- & Sicherheitskonfigurationen
 
 Nach der Installation solltest du das Sicherheitsskript ausführen:
 
@@ -40,7 +40,7 @@ Nach der Installation solltest du das Sicherheitsskript ausführen:
 sudo mariadb-secure-installation
 ```
 
-Dies ermöglicht dir:
+Dies ermöglicht dir:  
 ✅ Root-Passwort festzulegen  
 ✅ Anonyme Benutzer zu entfernen  
 ✅ Test-Datenbanken zu löschen  
@@ -96,9 +96,14 @@ Gib dein Passwort ein und du solltest Zugriff auf die Datenbank haben! ✅
 
 ## MariaDB stoppen oder neu starten
 
-Falls du MariaDB stoppen oder neustarten musst:
+Falls du MariaDB stoppen musst:
 
 ```bash
 sudo systemctl stop mariadb.service
+```
+
+Falls du MariaDB neustarten musst:
+
+```bash
 sudo systemctl restart mariadb.service
 ```
