@@ -9,7 +9,7 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
-copyright: Being dumb is okay, staying isn't.
+copyright: We have two lives, and the second begins when we relize we only have one.
 extra:
   generator: false
   social:

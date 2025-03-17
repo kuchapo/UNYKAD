@@ -44,10 +44,6 @@ Bereitstellung von IT-Ressourcen über das Internet.
 
 Isolierte Umgebung zur Ausführung von Software (z. B. Docker).
 
-## DNS (Domain Name System)
-
-Übersetzt Domainnamen in IP-Adressen.
-
 ## Firewall
 
 Sicherheitsmechanismus zur Überwachung und Kontrolle des Netzwerkverkehrs.
@@ -89,6 +85,10 @@ Sicherheitsmodell, das kein automatisches Vertrauen voraussetzt.
 Ein DNS-Server (Domain Name System) übersetzt Domainnamen wie "www.example.com" in ihre entsprechenden IP-Adressen,
 um Netzgeräten die Verbindungsaufnahme zu ermöglichen. Domain Name Service ist der eigentlich bereitgestellte Dienst
 vom DNS-Server.
+
+## Peripherie
+
+Die innerhalb einer Computer-Umgebung genutzten externen Geräte werden als Peripheriegeräte bezeichnet. Hierbei handelt es sich um Komponenten, die den Funktionsumfang eines Rechners erweitern. Sie befinden sich grundsätzlich außerhalb des Computers.
 
 ## Azure AD Application Proxy
 
