@@ -1,4 +1,4 @@
-# Was ist ARP?
+# Address Resolution Protocol (ARP)
 
 ARP (Address Resolution Protocol) ist ein Netzwerkprotokoll, das verwendet wird, um die MAC-Adresse (Media Access Control) eines Geräts anhand seiner IP-Adresse zu ermitteln. Es ist ein entscheidender Bestandteil der Kommunikation in lokalen Netzwerken (LAN).
 
