@@ -9,7 +9,7 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
-copyright: We have two lives, and the second begins when we relize we only have one.
+copyright: UNYKAD. All Rights Reserved. © 2025.
 extra:
   generator: false
   social:

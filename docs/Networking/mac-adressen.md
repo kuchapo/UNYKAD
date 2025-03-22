@@ -1,6 +1,6 @@
 # MAC-Adressen
 
-Eine MAC Adresse ist ein “weltweit eindeutige”, “unveränderliche” Hardware Adresse, welche vom Hersteller in den Netzwerk-Chip eingebrannt wird.
+Eine MAC Adresse (Media Access Control) ist ein “weltweit eindeutige”, “unveränderliche” Hardware Adresse, welche vom Hersteller in den Netzwerk-Chip eingebrannt wird.
 
 Format Bsp.: 00:2B:33:F7:CA:1B  
 6 Byte in hex-Darstellung
