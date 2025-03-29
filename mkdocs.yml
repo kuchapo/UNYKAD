@@ -1,7 +1,6 @@
 site_name: UNYKAD
 markdown_extensions:
   - admonition
-  - attr_list
   - pymdownx.details
   - pymdownx.superfences:
       custom_fences:
@@ -57,4 +56,3 @@ theme:
 plugins:
   - search
   - awesome-pages
-  - mkdocs-pdf
