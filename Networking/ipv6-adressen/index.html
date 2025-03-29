@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../assets/u1icofullSize.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.8">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -337,7 +337,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../BWL/kostenstellenrechnung/" class="md-tabs__link">
+        <a href="../../BWL/kostenartenrechnung/" class="md-tabs__link">
           
   
     
@@ -1984,6 +1984,8 @@
       
         
       
+        
+      
     
     
       
@@ -2015,6 +2017,28 @@
             BWL
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BWL/kostenartenrechnung/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kostenartenrechnung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -2418,13 +2442,13 @@
 
 
 
-<h1 id="ipv6-adressen">IPv6-Adressen</h1>
+<div><h1 id="ipv6-adressen">IPv6-Adressen</h1>
 <h2 id="vergabe-der-adressen">Vergabe der Adressen</h2>
 <p>Die Vergabe der IPv6-Adressen erfolgt durch die IANA (in Europa: RIPE) an die Provider.
 Die ersten 32 Bits (/32) werden von der IANA an die Provider vergeben, sie sind festgelegt und bleiben unverändert.
 Innerhalb des verbleibenden Adressraums können die Provider die Adressen flexibel an ihre Endkunden weitergeben, typischerweise in Blöcken wie /48, /56 oder /64. Als Standart wurde festgelegt, dass man bis zum 64. Bit Subnetze bilden kann.</p>
-<p>Bsp.: Die deutsche Telekom vergibt an...<br />
-Privatkunden /56 Blöcke -&gt; 256 Netze<br />
+<p>Bsp.: Die deutsche Telekom vergibt an...<br>
+Privatkunden /56 Blöcke -&gt; 256 Netze<br>
 Firmenkunden /48 Blöcke -&gt; 65536 Netze</p>
 <h2 id="vergabe-an-hosts">Vergabe an Hosts</h2>
 <ul>
@@ -2435,7 +2459,7 @@ Firmenkunden /48 Blöcke -&gt; 65536 Netze</p>
 <h3 id="slaac">SLAAC</h3>
 <p>SLAAC ist ein Mechanismus, der es Geräten ermöglicht, ihre eigene weltweit gültige IPv6-Adresse basierend auf dem Netzwerkpräfix zu generieren.  </p>
 <h4 id="prafix-netzanteil">Präfix (Netzanteil)</h4>
-<p><strong>Router Advertisement (RA)</strong>: Der Router gibt in gewissen Zeitabständen (einstellbar) das vom Provider erhaltene Präfix ins Netz bekannt.<br />
+<p><strong>Router Advertisement (RA)</strong>: Der Router gibt in gewissen Zeitabständen (einstellbar) das vom Provider erhaltene Präfix ins Netz bekannt.<br>
 <strong>Router Solicitation (RS)</strong>: Der Host fragt den Router nach dem Präfix.</p>
 <h4 id="interface-identifier-hostanteil">Interface Identifier (Hostanteil)</h4>
 <ul>
@@ -2451,13 +2475,13 @@ Firmenkunden /48 Blöcke -&gt; 65536 Netze</p>
 </ul>
 <h2 id="gemischte-ipv6ipv4-adressen">Gemischte IPv6/IPv4-Adressen</h2>
 <h3 id="ipv4-mapped-ipv6-adressen">IPv4-Mapped IPv6-Adressen</h3>
-<p><strong>Darstellung Bsp.</strong>: "<em>::ffff:166.207.88.26</em>"<br />
+<p><strong>Darstellung Bsp.</strong>: "<em>::ffff:166.207.88.26</em>"<br>
 <strong>Zweck</strong>: Dient zur Darstellung von IPv4-Adressen in IPv6-Netzwerken. Wird häufig von Dual-Stack-Systemen genutzt, um IPv4-Clients mit IPv6-Servern zu verbinden.</p>
 <h3 id="ipv4-compatible-ipv6-adressen">IPv4-Compatible IPv6-Adressen</h3>
-<p><strong>Darstellung Bsp.</strong>: "<em>::166.207.88.26</em>"<br />
+<p><strong>Darstellung Bsp.</strong>: "<em>::166.207.88.26</em>"<br>
 <strong>Zweck</strong>: Wurde früher verwendet, um IPv6-Adressen in IPv4-only-Netzwerken zu kapseln. Hier ist nur eine einseitige Kommunikation ohne zusätzlicher Mechanismen möglich (von IPv6 nach IPv4)</p>
 <h3 id="6to4-adressen">6to4-Adressen</h3>
-<p><strong>Darstellung Bsp.</strong>: "<em>2002:166.207.88.26::/48</em>"<br />
+<p><strong>Darstellung Bsp.</strong>: "<em>2002:166.207.88.26::/48</em>"<br>
 <strong>Zweck</strong>: Ermöglicht die Kommunikation zwischen IPv6-Netzwerken über ein IPv4-Netzwerk (6to4-Tunneling). Hier ist keine direkte Kommunikation mit mit einer IPv4-Adresse möglich.</p>
 <h2 id="speziell-reservierte-ipv6-adressen">Speziell reservierte IPv6-Adressen</h2>
 <ul>
@@ -2466,22 +2490,22 @@ Firmenkunden /48 Blöcke -&gt; 65536 Netze</p>
 </ul>
 <h2 id="scopes-gultigkeitsbereiche">Scopes (Gültigkeitsbereiche)</h2>
 <ul>
-<li><strong>fe80::/10</strong><br />
-sind Link-Local-Adressen, welche nur im eigenen LAN (=im lokalen Subnetz) gültig sind und nie durch den Router weitergeleitet werden.<br />
+<li><strong>fe80::/10</strong><br>
+sind Link-Local-Adressen, welche nur im eigenen LAN (=im lokalen Subnetz) gültig sind und nie durch den Router weitergeleitet werden.<br>
 -&gt; <em>1111 1110 10|00 0000</em></li>
-<li><strong>fc00:: /7</strong><br />
-sind Unique Local Adressen, welche auch zwischen verschiedenen Subnetzen innerhalb eines privaten Netzwerks kommunizieren können und nicht im Internet geroutet werden.<br />
+<li><strong>fc00:: /7</strong><br>
+sind Unique Local Adressen, welche auch zwischen verschiedenen Subnetzen innerhalb eines privaten Netzwerks kommunizieren können und nicht im Internet geroutet werden.<br>
 -&gt; <em>1111 110|0 0000 0000</em></li>
-<li><strong>ff00::/8</strong><br />
-sind Multicast-Adressen, welche an alle Geräte die Daten verschicken, welche sich für eine Multicast-Gruppe (über Multicast Listener Discovery (MLD)) angemeldet haben.<br />
+<li><strong>ff00::/8</strong><br>
+sind Multicast-Adressen, welche an alle Geräte die Daten verschicken, welche sich für eine Multicast-Gruppe (über Multicast Listener Discovery (MLD)) angemeldet haben.<br>
 -&gt; <em>1111 1111|0000 0000</em></li>
-<li><strong>2000::/3</strong><br />
-sind globale Unicast-Adressen, welche weltweit einmalig im Internet aufzufinden sind.<br />
+<li><strong>2000::/3</strong><br>
+sind globale Unicast-Adressen, welche weltweit einmalig im Internet aufzufinden sind.<br>
 -&gt; <em>001|0 0000 0000 0000</em></li>
 </ul>
 <h3 id="sonderformen-der-multicast-adressen">Sonderformen der Multicast-Adressen</h3>
-<p>"<strong>ff01::1</strong>" &amp; "<strong>ff02::1</strong>" sind All-Nodes-Multicast-Adressen, welche die Daten an alle Nodes (Geräte) im Netzwerk schicken<br />
-"<strong>ff01::2</strong>" &amp; "<strong>ff02::2</strong>" bis "<strong>ff05::2</strong>" sind All-Routers-Multicast-Adressen, welche die Daten an alle Router schicken</p>
+<p>"<strong>ff01::1</strong>" &amp; "<strong>ff02::1</strong>" sind All-Nodes-Multicast-Adressen, welche die Daten an alle Nodes (Geräte) im Netzwerk schicken<br>
+"<strong>ff01::2</strong>" &amp; "<strong>ff02::2</strong>" bis "<strong>ff05::2</strong>" sind All-Routers-Multicast-Adressen, welche die Daten an alle Router schicken</p></div>
 
 
 

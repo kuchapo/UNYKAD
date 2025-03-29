@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../assets/u1icofullSize.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.8">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -337,7 +337,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../BWL/kostenstellenrechnung/" class="md-tabs__link">
+        <a href="../../BWL/kostenartenrechnung/" class="md-tabs__link">
           
   
     
@@ -1936,6 +1936,8 @@
       
         
       
+        
+      
     
     
       
@@ -1967,6 +1969,28 @@
             BWL
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BWL/kostenartenrechnung/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kostenartenrechnung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -2322,7 +2346,7 @@
 
 
 
-<h1 id="ethernet-frame">Ethernet-Frame</h1>
+<div><h1 id="ethernet-frame">Ethernet-Frame</h1>
 <h2 id="aufbau">Aufbau</h2>
 <table>
 <thead>
@@ -2357,30 +2381,30 @@
 </tr>
 </tbody>
 </table>
-<p>Wireshark zeigt nur die Felder von "Destination MAC address" bis "User Data" an.<br />
+<p>Wireshark zeigt nur die Felder von "Destination MAC address" bis "User Data" an.<br>
 Ein Ethernet-Frame muss standardmäßig mindestens 64 Byte groß sein, damit die Kollisionserkennung funktioniert, und kann maximal 1.518 Byte groß sein.</p>
 <h3 id="funktion">Funktion</h3>
 <h4 id="preamble">Preamble</h4>
-<p>Die Präambel (englisch: Preamble) in einem Ethernet-Frame ist immer gleich und dient der Taktsynchronisation zwischen dem Sender und dem Empfänger.<br />
+<p>Die Präambel (englisch: Preamble) in einem Ethernet-Frame ist immer gleich und dient der Taktsynchronisation zwischen dem Sender und dem Empfänger.<br>
 10101010 10101010 10101010 10101010 10101010 10101010 10101010</p>
 <h4 id="start-frame-delimitter-sfd">Start Frame Delimitter (SFD)</h4>
-<p>Die SFD folgt direkt auf die Präambel. Sie ist im Ethernet-Frame immer gleich und markiert den eigentlichen Beginn des Frames.<br />
+<p>Die SFD folgt direkt auf die Präambel. Sie ist im Ethernet-Frame immer gleich und markiert den eigentlichen Beginn des Frames.<br>
 10101011</p>
 <h4 id="destination-mac">Destination MAC</h4>
 <p>Die Destination MAC ist die Adresse des Ziels.</p>
 <h4 id="source-mac">Source MAC</h4>
 <p>Die Source MAC ist die Adresse des Absenders.</p>
 <h4 id="type">Type</h4>
-<p>Der Type beschreibt an welches Schicht 3 Protokoll die Daten beim Auspacken übergeben werden.<br />
-Bsp.:<br />
-0x0800 -&gt; IPv4<br />
-0x0806 -&gt; ARP<br />
+<p>Der Type beschreibt an welches Schicht 3 Protokoll die Daten beim Auspacken übergeben werden.<br>
+Bsp.:<br>
+0x0800 -&gt; IPv4<br>
+0x0806 -&gt; ARP<br>
 0x86dd -&gt; IPv6</p>
 <h4 id="data">Data</h4>
 <p>Die Daten (Englisch: Data) bestehen einmal aus dem Header der höheren Schichten sowie der Nutzdaten.</p>
-<p><img alt="Kapselung der Daten" src="../pics/kapselung.PNG" /></p>
+<p><img alt="Kapselung der Daten" src="../pics/kapselung.PNG"></p>
 <h4 id="frame-check-sequence-fcs">Frame Check Sequence (FCS)</h4>
-<p>Die Blockprüfzeichenfolge (BPF)(englisch: Frame Check Sequence (FCS)) ermöglicht eine Fehlererkennung und eine Fehlerkorrektur auf dem Ethernet-Frame.</p>
+<p>Die Blockprüfzeichenfolge (BPF)(englisch: Frame Check Sequence (FCS)) ermöglicht eine Fehlererkennung und eine Fehlerkorrektur auf dem Ethernet-Frame.</p></div>
 
 
 
