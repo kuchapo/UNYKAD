@@ -2390,13 +2390,13 @@
 
 
 
-<div><h1 id="ssh-in-windows-aktivieren-client-server">SSH in Windows aktivieren (Client &amp; Server)</h1>
+<h1 id="ssh-in-windows-aktivieren-client-server">SSH in Windows aktivieren (Client &amp; Server)</h1>
 <p>SSH (Secure Shell) ist in Windows integriert und kann sowohl <strong>clientseitig</strong> (zum Verbinden mit anderen Servern) als auch <strong>serverseitig</strong> (zum Fernzugriff auf den eigenen Windows-PC) aktiviert werden.</p>
-<hr>
+<hr />
 <h2 id="1-ssh-client-aktivieren-windows-als-ssh-client"><strong>1. SSH-Client aktivieren (Windows als SSH-Client)</strong></h2>
 <h3 id="uberprufen-ob-der-ssh-client-installiert-ist"><strong>Überprüfen, ob der SSH-Client installiert ist</strong></h3>
 <p>Öffne eine <strong>PowerShell</strong> mit Administratorrechten und gib ein:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">Get-WindowsCapability</span> <span class="n">-Online</span> <span class="p">|</span> <span class="nb">Where-Object</span> <span class="n">Name</span> <span class="o">-like</span> <span class="s1">'OpenSSH.Client*'</span>
+<div class="highlight"><pre><span></span><code><span class="nb">Get-WindowsCapability</span> <span class="n">-Online</span> <span class="p">|</span> <span class="nb">Where-Object</span> <span class="n">Name</span> <span class="o">-like</span> <span class="s1">&#39;OpenSSH.Client*&#39;</span>
 </code></pre></div>
 <p>Falls die Ausgabe <strong>"State: Installed"</strong> anzeigt, ist der SSH-Client bereits installiert.</p>
 <p>Falls <strong>nicht</strong>, installiere ihn mit:</p>
@@ -2410,11 +2410,11 @@
 <div class="highlight"><pre><span></span><code><span class="n">ssh</span> <span class="n">benutzer</span><span class="nv">@server</span><span class="n">-ip</span>
 </code></pre></div>
 <p>Ersetze <code>benutzer</code> mit deinem Nutzernamen und <code>server-ip</code> mit der IP-Adresse des Servers.</p>
-<hr>
+<hr />
 <h2 id="2-ssh-server-aktivieren-windows-als-ssh-server"><strong>2. SSH-Server aktivieren (Windows als SSH-Server)</strong></h2>
 <p>Damit dein Windows-PC per SSH erreichbar ist, musst du den <strong>SSH-Server installieren</strong>.</p>
 <h3 id="uberprufen-ob-der-ssh-server-installiert-ist"><strong>Überprüfen, ob der SSH-Server installiert ist</strong></h3>
-<div class="highlight"><pre><span></span><code><span class="nb">Get-WindowsCapability</span> <span class="n">-Online</span> <span class="p">|</span> <span class="nb">Where-Object</span> <span class="n">Name</span> <span class="o">-like</span> <span class="s1">'OpenSSH.Server*'</span>
+<div class="highlight"><pre><span></span><code><span class="nb">Get-WindowsCapability</span> <span class="n">-Online</span> <span class="p">|</span> <span class="nb">Where-Object</span> <span class="n">Name</span> <span class="o">-like</span> <span class="s1">&#39;OpenSSH.Server*&#39;</span>
 </code></pre></div>
 <p>Falls nicht installiert, installiere ihn mit:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">Add-WindowsCapability</span> <span class="n">-Online</span> <span class="n">-Name</span> <span class="n">OpenSSH</span><span class="p">.</span><span class="n">Server</span><span class="p">~~~~</span><span class="n">0</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">1</span><span class="p">.</span><span class="n">0</span>
@@ -2422,24 +2422,24 @@
 <h3 id="ssh-server-als-dienst-aktivieren"><strong>SSH-Server als Dienst aktivieren</strong></h3>
 <p>Starte den SSH-Server und setze ihn auf "automatisch starten":</p>
 <div class="highlight"><pre><span></span><code><span class="nb">Start-Service</span> <span class="n">sshd</span>
-<span class="nb">Set-Service</span> <span class="n">-Name</span> <span class="n">sshd</span> <span class="n">-StartupType</span> <span class="s1">'Automatic'</span>
+<span class="nb">Set-Service</span> <span class="n">-Name</span> <span class="n">sshd</span> <span class="n">-StartupType</span> <span class="s1">&#39;Automatic&#39;</span>
 </code></pre></div>
 <p>➡ <strong>Prüfen, ob der SSH-Server läuft:</strong></p>
 <div class="highlight"><pre><span></span><code><span class="nb">Get-Service</span> <span class="n">sshd</span>
 </code></pre></div>
-<hr>
+<hr />
 <h2 id="3-firewall-fur-ssh-anpassen"><strong>3. Firewall für SSH anpassen</strong></h2>
 <p>Standardmäßig nutzt SSH <strong>Port 22</strong>. Um Verbindungen zuzulassen, musst du die Firewall konfigurieren.</p>
 <h3 id="port-22-in-der-windows-firewall-freigeben"><strong>Port 22 in der Windows-Firewall freigeben</strong></h3>
-<div class="highlight"><pre><span></span><code><span class="nb">New-NetFirewallRule</span> <span class="n">-Name</span> <span class="s2">"SSH-Zugriff"</span> <span class="n">-DisplayName</span> <span class="s2">"SSH-Zugriff"</span> <span class="n">-Enabled</span> <span class="n">True</span> <span class="n">-Direction</span> <span class="n">Inbound</span> <span class="n">-Protocol</span> <span class="n">TCP</span> <span class="n">-Action</span> <span class="n">Allow</span> <span class="n">-LocalPort</span> <span class="n">22</span>
+<div class="highlight"><pre><span></span><code><span class="nb">New-NetFirewallRule</span> <span class="n">-Name</span> <span class="s2">&quot;SSH-Zugriff&quot;</span> <span class="n">-DisplayName</span> <span class="s2">&quot;SSH-Zugriff&quot;</span> <span class="n">-Enabled</span> <span class="n">True</span> <span class="n">-Direction</span> <span class="n">Inbound</span> <span class="n">-Protocol</span> <span class="n">TCP</span> <span class="n">-Action</span> <span class="n">Allow</span> <span class="n">-LocalPort</span> <span class="n">22</span>
 </code></pre></div>
 <p>➡ <strong>Regeln überprüfen:</strong></p>
-<div class="highlight"><pre><span></span><code><span class="nb">Get-NetFirewallRule</span> <span class="p">|</span> <span class="nb">Where-Object</span> <span class="n">DisplayName</span> <span class="o">-like</span> <span class="s2">"*SSH*"</span>
+<div class="highlight"><pre><span></span><code><span class="nb">Get-NetFirewallRule</span> <span class="p">|</span> <span class="nb">Where-Object</span> <span class="n">DisplayName</span> <span class="o">-like</span> <span class="s2">&quot;*SSH*&quot;</span>
 </code></pre></div>
 <p>Falls du die Regel später löschen willst:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">Remove-NetFirewallRule</span> <span class="n">-Name</span> <span class="s2">"SSH-Zugriff"</span>
+<div class="highlight"><pre><span></span><code><span class="nb">Remove-NetFirewallRule</span> <span class="n">-Name</span> <span class="s2">&quot;SSH-Zugriff&quot;</span>
 </code></pre></div>
-<hr>
+<hr />
 <h2 id="4-verbindung-zum-windows-ssh-server-testen"><strong>4. Verbindung zum Windows-SSH-Server testen</strong></h2>
 <p>Auf einem anderen Gerät (Linux, Mac oder Windows mit SSH-Client) kannst du dich nun verbinden:</p>
 <div class="highlight"><pre><span></span><code><span class="n">ssh</span> <span class="n">benutzer</span><span class="nv">@windows</span><span class="n">-ip</span>
@@ -2459,16 +2459,16 @@
 </ul>
 <div class="highlight"><pre><span></span><code><span class="nb">Test-NetConnection</span> <span class="n">-ComputerName</span> <span class="n">localhost</span> <span class="n">-Port</span> <span class="n">22</span>
 </code></pre></div>
-<hr>
+<hr />
 <h2 id="5-ssh-server-deaktivieren-falls-nicht-mehr-benotigt"><strong>5. SSH-Server deaktivieren (Falls nicht mehr benötigt)</strong></h2>
 <p>Falls du SSH nicht mehr brauchst, kannst du den Dienst stoppen und deaktivieren:</p>
 <h3 id="ssh-server-beenden-deaktivieren"><strong>SSH-Server beenden &amp; deaktivieren</strong></h3>
 <div class="highlight"><pre><span></span><code><span class="nb">Stop-Service</span> <span class="n">sshd</span>
-<span class="nb">Set-Service</span> <span class="n">-Name</span> <span class="n">sshd</span> <span class="n">-StartupType</span> <span class="s1">'Disabled'</span>
+<span class="nb">Set-Service</span> <span class="n">-Name</span> <span class="n">sshd</span> <span class="n">-StartupType</span> <span class="s1">&#39;Disabled&#39;</span>
 </code></pre></div>
 <p>Falls du den SSH-Server komplett entfernen möchtest:</p>
 <div class="highlight"><pre><span></span><code><span class="nb">Remove-WindowsCapability</span> <span class="n">-Online</span> <span class="n">-Name</span> <span class="n">OpenSSH</span><span class="p">.</span><span class="n">Server</span><span class="p">~~~~</span><span class="n">0</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">1</span><span class="p">.</span><span class="n">0</span>
-</code></pre></div></div>
+</code></pre></div>
 
 
 

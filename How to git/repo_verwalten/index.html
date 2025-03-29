@@ -2121,14 +2121,14 @@
 
 
 
-<div><h1 id="repository-verwalten">Repository verwalten</h1>
+<h1 id="repository-verwalten">Repository verwalten</h1>
 <p>In diesem Artikel wird eine empfohlene Best-Practice-Methode vorgestellt, mit der Änderungen am Repository unkompliziert und sicher durchgeführt werden können. Diese Vorgehensweise minimiert das Risiko von Abweichungen oder Fehlern und sorgt für einen reibungslosen Ablauf.</p>
-<hr>
+<hr />
 <p>Projekt klonen und in den Hauptzweig wechseln:</p>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>&lt;PutYourProjectHere&gt;
 </code></pre></div>
 <p>Python installieren (falls nicht vorhanden):</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Windows</label><label for="__tabbed_1_2">Arch Linux</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Windows</label><label for="__tabbed_1_2">Arch Linux</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="n">winget</span> <span class="n">install</span> <span class="n">Python</span><span class="p">.</span><span class="n">Python</span><span class="p">.</span><span class="n">3</span><span class="p">.</span><span class="n">11</span>
@@ -2143,7 +2143,7 @@
 <p>Virtuelle Umgebung erstellen und aktivieren:</p>
 <div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
 </code></pre></div>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Windows</label><label for="__tabbed_2_2">Arch Linux</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Windows</label><label for="__tabbed_2_2">Arch Linux</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="p">./</span><span class="n">venv</span><span class="p">/</span><span class="n">Scripts</span><span class="p">/</span><span class="n">activate</span>
@@ -2164,7 +2164,7 @@
 <p>Änderungen durchführen und in Git hinzufügen:</p>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>.
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"&lt;EnterHereWhatYouHaveChanged&gt;"</span>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;&lt;EnterHereWhatYouHaveChanged&gt;&quot;</span>
 </code></pre></div>
 <p>MkDocs-Projekt bauen:</p>
 <div class="highlight"><pre><span></span><code>mkdocs<span class="w"> </span>build
@@ -2174,7 +2174,7 @@
 </code></pre></div>
 <p>Änderungen ins Repository pushen:</p>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>push
-</code></pre></div></div>
+</code></pre></div>
 
 
 

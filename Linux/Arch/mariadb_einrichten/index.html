@@ -2254,9 +2254,9 @@
 
 
 
-<div><h1 id="mariadb-installation-einrichtung">MariaDB Installation &amp; Einrichtung</h1>
+<h1 id="mariadb-installation-einrichtung">MariaDB Installation &amp; Einrichtung</h1>
 <p>MariaDB ist eine leistungsstarke Open-Source-Datenbank. Diese Anleitung hilft dir, sie auf Arch Linux zu installieren und sicher einzurichten.</p>
-<hr>
+<hr />
 <h2 id="installation-von-mariadb">Installation von MariaDB</h2>
 <p>MariaDB installieren</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>pacman<span class="w"> </span>-S<span class="w"> </span>mariadb
@@ -2270,47 +2270,47 @@
 <p>MariaDB beim Booten automatisch starten</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>mariadb.service
 </code></pre></div>
-<hr>
+<hr />
 <h2 id="grund-sicherheitskonfigurationen">Grund- &amp; Sicherheitskonfigurationen</h2>
 <p>Nach der Installation solltest du das Sicherheitsskript ausführen:</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>mariadb-secure-installation
 </code></pre></div>
-<p>Dies ermöglicht dir:<br>
-✅ Root-Passwort festzulegen<br>
-✅ Anonyme Benutzer zu entfernen<br>
-✅ Test-Datenbanken zu löschen<br>
+<p>Dies ermöglicht dir:<br />
+✅ Root-Passwort festzulegen<br />
+✅ Anonyme Benutzer zu entfernen<br />
+✅ Test-Datenbanken zu löschen<br />
 ✅ Remote-Root-Login zu deaktivieren  </p>
 <p><strong>Nach Abschluss der Sicherung kannst du dich mit MariaDB verbinden:</strong></p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>mysql<span class="w"> </span>-u<span class="w"> </span>root
 </code></pre></div>
-<hr>
+<hr />
 <h2 id="neue-datenbank-benutzer-erstellen">Neue Datenbank &amp; Benutzer erstellen</h2>
 <p>Neue Datenbank anlegen</p>
 <div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="o">&lt;</span><span class="n">meine_datenbank</span><span class="o">&gt;</span><span class="p">;</span>
 </code></pre></div>
 <p>Neuen Benutzer erstellen &amp; Passwort setzen</p>
-<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="s1">'&lt;mein_benutzer&gt;'</span><span class="o">@</span><span class="s1">'localhost'</span><span class="w"> </span><span class="n">IDENTIFIED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="s1">'&lt;mein_passwort&gt;'</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="s1">&#39;&lt;mein_benutzer&gt;&#39;</span><span class="o">@</span><span class="s1">&#39;localhost&#39;</span><span class="w"> </span><span class="n">IDENTIFIED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="s1">&#39;&lt;mein_passwort&gt;&#39;</span><span class="p">;</span>
 </code></pre></div>
 <p>Benutzer Berechtigungen für die Datenbank geben</p>
-<div class="highlight"><pre><span></span><code><span class="k">GRANT</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="o">&lt;</span><span class="n">meine_datenbank</span><span class="o">&gt;</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="s1">'&lt;mein_benutzer&gt;'</span><span class="o">@</span><span class="s1">'localhost'</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="k">GRANT</span><span class="w"> </span><span class="k">ALL</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="o">&lt;</span><span class="n">meine_datenbank</span><span class="o">&gt;</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="s1">&#39;&lt;mein_benutzer&gt;&#39;</span><span class="o">@</span><span class="s1">&#39;localhost&#39;</span><span class="p">;</span>
 </code></pre></div>
 <p>Änderungen übernehmen</p>
 <div class="highlight"><pre><span></span><code><span class="n">FLUSH</span><span class="w"> </span><span class="k">PRIVILEGES</span><span class="p">;</span>
 </code></pre></div>
-<hr>
+<hr />
 <h2 id="verbindung-zur-datenbank-testen">Verbindung zur Datenbank testen</h2>
 <p>Melde dich mit dem neu erstellten Benutzer an:</p>
 <div class="highlight"><pre><span></span><code>mysql<span class="w"> </span>-u<span class="w"> </span>&lt;mein_benutzer&gt;<span class="w"> </span>-p<span class="w"> </span>&lt;meine_datenbank&gt;
 </code></pre></div>
 <p>Gib dein Passwort ein und du solltest Zugriff auf die Datenbank haben! ✅</p>
-<hr>
+<hr />
 <h2 id="mariadb-stoppen-oder-neu-starten">MariaDB stoppen oder neu starten</h2>
 <p>Falls du MariaDB stoppen musst:</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>stop<span class="w"> </span>mariadb.service
 </code></pre></div>
 <p>Falls du MariaDB neustarten musst:</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>mariadb.service
-</code></pre></div></div>
+</code></pre></div>
 
 
 
