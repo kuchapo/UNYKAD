@@ -68,7 +68,7 @@ graph LR
     Zum Beispiel: Ein signed char (1 Byte) kann Werte von –128 bis 127 speichern,
     ein unsigned char von 0 bis 255.
 
-## Intrinsische (primitive) Datentypen
+## Intrinsische Datentypen
 
 Typen, die vom Compiler eingebaut sind und zur Sprache selbst gehören:
 
@@ -91,6 +91,9 @@ Typen, die vom Compiler eingebaut sind und zur Sprache selbst gehören:
 | `T*`                  | Zeiger auf beliebigen Typ                   | 4 oder 8 Bytes*                 |
 | `T&`                  | Referenz auf einen Typ                      | Wie Zieltyp (Referenzmodell)    |
 | `T[]`                 | Array eines Typs                            | Abhängig von der Länge          |
+
+Alle intrinsischen Datentypen bezeichnet man auch als primitive Datentypen, außer:  
+`Zeiger`, `Referenzen`, `Arrays` und `std::nullptr_t`
 
 ---
 
