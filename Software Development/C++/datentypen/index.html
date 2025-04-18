@@ -2597,27 +2597,16 @@
     A1a --&gt; A1a1
     A1a --&gt; A1a2
 
-    %% Integrale Typen vollständig
+    %% Integrale Typen
     A1a1 --&gt; I1[int]
-    I1 --&gt; I5[unsigned int]
-
     A1a1 --&gt; I2[short]
-    I2 --&gt; I6[unsigned short]
-
     A1a1 --&gt; I3[long]
-    I3 --&gt; I7[unsigned long]
-
     A1a1 --&gt; I4[long long]
-    I4 --&gt; I8[unsigned long long]
-
-    A1a1 --&gt; I9[char]
-    I9 --&gt; I10[signed char]
-    I9 --&gt; I11[unsigned char]
-
-    A1a1 --&gt; I12[bool]
-    A1a1 --&gt; I13[wchar_t]
-    A1a1 --&gt; I14[char16_t]
-    A1a1 --&gt; I15[char32_t]
+    A1a1 --&gt; I5[char]
+    A1a1 --&gt; I6[bool]
+    A1a1 --&gt; I7[wchar_t]
+    A1a1 --&gt; I8[char16_t]
+    A1a1 --&gt; I9[char32_t]
 
     %% Fließkomma-Typen
     A1a2 --&gt; F1[float]
@@ -2640,6 +2629,14 @@
     A2 --&gt; U4[enum]
     A2 --&gt; U5[typedef / using]
     A2 --&gt; U6["template&amp;lt;class T&amp;gt;"]</code></pre>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Die Typen int, short, long, long long und char gibt es als <code>signed</code> oder <code>unsigned</code>.
+Standardmäßig sind sie signed, also für positive und negative Zahlen gedacht.
+Mit unsigned lassen sich nur positive Zahlen speichern – aber in einem größeren Bereich.
+Zum Beispiel: Ein signed char (1 Byte) kann Werte von –128 bis 127 speichern,
+ein unsigned char von 0 bis 255.</p>
+</div>
 <h2 id="intrinsische-primitive-datentypen">Intrinsische (primitive) Datentypen</h2>
 <p>Typen, die vom Compiler eingebaut sind und zur Sprache selbst gehören:</p>
 <table>
@@ -2672,38 +2669,8 @@
 <td>8 Bytes</td>
 </tr>
 <tr>
-<td><code>unsigned int</code></td>
-<td>Ganze Zahlen ohne Vorzeichen</td>
-<td>4 Bytes</td>
-</tr>
-<tr>
-<td><code>unsigned short</code></td>
-<td>Kleine ganze Zahlen ohne Vorzeichen</td>
-<td>2 Bytes</td>
-</tr>
-<tr>
-<td><code>unsigned long</code></td>
-<td>Große ganze Zahlen ohne Vorzeichen</td>
-<td>4 oder 8 Bytes*</td>
-</tr>
-<tr>
-<td><code>unsigned long long</code></td>
-<td>Sehr große ganze Zahlen ohne Vorzeichen</td>
-<td>8 Bytes</td>
-</tr>
-<tr>
 <td><code>char</code></td>
 <td>Einzelne Zeichen (signed oder unsigned)</td>
-<td>1 Byte</td>
-</tr>
-<tr>
-<td><code>signed char</code></td>
-<td>Zeichen mit Vorzeichen (–128 bis 127)</td>
-<td>1 Byte</td>
-</tr>
-<tr>
-<td><code>unsigned char</code></td>
-<td>Zeichen ohne Vorzeichen (0 bis 255)</td>
 <td>1 Byte</td>
 </tr>
 <tr>
