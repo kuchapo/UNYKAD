@@ -2642,40 +2642,176 @@
     A2 --&gt; U6["template&amp;lt;class T&amp;gt;"]</code></pre>
 <h2 id="intrinsische-primitive-datentypen">Intrinsische (primitive) Datentypen</h2>
 <p>Typen, die vom Compiler eingebaut sind und zur Sprache selbst gehören:</p>
-<p>Datentyp | Beschreibung | Speichergröße
-int | Ganze Zahlen | 4 Bytes
-short | Kleine ganze Zahlen | 2 Bytes
-long | Große ganze Zahlen | 4 oder 8 Bytes<em>
-long long | Sehr große ganze Zahlen | 8 Bytes
-unsigned int | Ganze Zahlen ohne Vorzeichen | 4 Bytes
-unsigned short | Kleine ganze Zahlen ohne Vorzeichen | 2 Bytes
-unsigned long | Große ganze Zahlen ohne Vorzeichen | 4 oder 8 Bytes</em>
-unsigned long long | Sehr große ganze Zahlen ohne Vorzeichen | 8 Bytes
-char | Einzelne Zeichen (signed oder unsigned) | 1 Byte
-signed char | Zeichen mit Vorzeichen (–128 bis 127) | 1 Byte
-unsigned char | Zeichen ohne Vorzeichen (0 bis 255) | 1 Byte
-bool | Wahrheitswerte (true / false) | 1 Byte
-wchar_t | Breitere Zeichen (plattformabhängig) | 2 oder 4 Bytes<em>
-char16_t | UTF-16 Zeichen | 2 Bytes
-char32_t | UTF-32 Zeichen | 4 Bytes
-float | Gleitkommazahl (einfache Genauigkeit) | 4 Bytes
-double | Gleitkommazahl (doppelte Genauigkeit) | 8 Bytes
-long double | Präzisere Gleitkommazahl | 8, 12 oder 16 Bytes</em>
-void | Kein Wert | Keine Speichergröße
-std::nullptr_t | Typ von nullptr | Wie ein Zeiger (4 oder 8 Bytes)
-T<em> | Zeiger auf beliebigen Typ | 4 oder 8 Bytes</em>
-T&amp; | Referenz auf einen Typ | Wie Zieltyp (Referenzmodell)
-T[] | Array eines Typs | Abhängig von der Länge</p>
+<table>
+<thead>
+<tr>
+<th><strong>Datentyp</strong></th>
+<th><strong>Beschreibung</strong></th>
+<th><strong>Speichergröße</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td>Ganze Zahlen</td>
+<td>4 Bytes</td>
+</tr>
+<tr>
+<td><code>short</code></td>
+<td>Kleine ganze Zahlen</td>
+<td>2 Bytes</td>
+</tr>
+<tr>
+<td><code>long</code></td>
+<td>Große ganze Zahlen</td>
+<td>4 oder 8 Bytes*</td>
+</tr>
+<tr>
+<td><code>long long</code></td>
+<td>Sehr große ganze Zahlen</td>
+<td>8 Bytes</td>
+</tr>
+<tr>
+<td><code>unsigned int</code></td>
+<td>Ganze Zahlen ohne Vorzeichen</td>
+<td>4 Bytes</td>
+</tr>
+<tr>
+<td><code>unsigned short</code></td>
+<td>Kleine ganze Zahlen ohne Vorzeichen</td>
+<td>2 Bytes</td>
+</tr>
+<tr>
+<td><code>unsigned long</code></td>
+<td>Große ganze Zahlen ohne Vorzeichen</td>
+<td>4 oder 8 Bytes*</td>
+</tr>
+<tr>
+<td><code>unsigned long long</code></td>
+<td>Sehr große ganze Zahlen ohne Vorzeichen</td>
+<td>8 Bytes</td>
+</tr>
+<tr>
+<td><code>char</code></td>
+<td>Einzelne Zeichen (signed oder unsigned)</td>
+<td>1 Byte</td>
+</tr>
+<tr>
+<td><code>signed char</code></td>
+<td>Zeichen mit Vorzeichen (–128 bis 127)</td>
+<td>1 Byte</td>
+</tr>
+<tr>
+<td><code>unsigned char</code></td>
+<td>Zeichen ohne Vorzeichen (0 bis 255)</td>
+<td>1 Byte</td>
+</tr>
+<tr>
+<td><code>bool</code></td>
+<td>Wahrheitswerte (<code>true</code> / <code>false</code>)</td>
+<td>1 Byte</td>
+</tr>
+<tr>
+<td><code>wchar_t</code></td>
+<td>Breitere Zeichen (plattformabhängig)</td>
+<td>2 oder 4 Bytes*</td>
+</tr>
+<tr>
+<td><code>char16_t</code></td>
+<td>UTF-16 Zeichen</td>
+<td>2 Bytes</td>
+</tr>
+<tr>
+<td><code>char32_t</code></td>
+<td>UTF-32 Zeichen</td>
+<td>4 Bytes</td>
+</tr>
+<tr>
+<td><code>float</code></td>
+<td>Gleitkommazahl (einfache Genauigkeit)</td>
+<td>4 Bytes</td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td>Gleitkommazahl (doppelte Genauigkeit)</td>
+<td>8 Bytes</td>
+</tr>
+<tr>
+<td><code>long double</code></td>
+<td>Präzisere Gleitkommazahl</td>
+<td>8, 12 oder 16 Bytes*</td>
+</tr>
+<tr>
+<td><code>void</code></td>
+<td>Kein Wert</td>
+<td>Keine Speichergröße</td>
+</tr>
+<tr>
+<td><code>std::nullptr_t</code></td>
+<td>Typ von <code>nullptr</code></td>
+<td>Wie ein Zeiger (4 oder 8 Bytes)</td>
+</tr>
+<tr>
+<td><code>T*</code></td>
+<td>Zeiger auf beliebigen Typ</td>
+<td>4 oder 8 Bytes*</td>
+</tr>
+<tr>
+<td><code>T&amp;</code></td>
+<td>Referenz auf einen Typ</td>
+<td>Wie Zieltyp (Referenzmodell)</td>
+</tr>
+<tr>
+<td><code>T[]</code></td>
+<td>Array eines Typs</td>
+<td>Abhängig von der Länge</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2 id="nicht-intrinsische-abgeleitete-datentypen">Nicht-intrinsische (abgeleitete) Datentypen</h2>
 <p>Typen, die du selbst definierst:</p>
-<p>Datentyp | Beschreibung | Speichergröße
-class | Benutzerdefinierte Klasse | Abhängig von enthaltenen Mitgliedern
-struct | Struktur (ähnlich wie class, aber public) | Abhängig von enthaltenen Feldern
-union | Speicher für mehrere Typen (nur einer aktiv) | Größe des größten Elements
-enum | Aufzählung fester benannter Konstanten | Typabhängig, oft wie int (4 Bytes)
-typedef / using | Alias für bestehenden Typ | Wie Zieltyp
-template<class T> | Generischer Typ, bei Benutzung konkretisiert | Wie spezifizierter Zieltyp</p>
+<table>
+<thead>
+<tr>
+<th><strong>Datentyp</strong></th>
+<th><strong>Beschreibung</strong></th>
+<th><strong>Speichergröße</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>class</code></td>
+<td>Benutzerdefinierte Klasse</td>
+<td>Abhängig von enthaltenen Mitgliedern</td>
+</tr>
+<tr>
+<td><code>struct</code></td>
+<td>Struktur (ähnlich wie <code>class</code>, aber <code>public</code>)</td>
+<td>Abhängig von enthaltenen Feldern</td>
+</tr>
+<tr>
+<td><code>union</code></td>
+<td>Speicher für mehrere Typen (nur einer aktiv)</td>
+<td>Größe des größten Elements</td>
+</tr>
+<tr>
+<td><code>enum</code></td>
+<td>Aufzählung fester benannter Konstanten</td>
+<td>Typabhängig, oft wie <code>int</code> (4 Bytes)</td>
+</tr>
+<tr>
+<td><code>typedef</code> / <code>using</code></td>
+<td>Alias für bestehenden Typ</td>
+<td>Wie Zieltyp</td>
+</tr>
+<tr>
+<td><code>template&lt;class T&gt;</code></td>
+<td>Generischer Typ, bei Benutzung konkretisiert</td>
+<td>Wie spezifizierter Zieltyp</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <p><strong>Hinweise:</strong>
 - Speichergrößen mit einem Sternchen (<code>*</code>) können je nach <strong>Systemarchitektur</strong> variieren:
