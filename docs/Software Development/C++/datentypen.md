@@ -27,27 +27,16 @@ graph LR
     A1a --> A1a1
     A1a --> A1a2
 
-    %% Integrale Typen vollständig
+    %% Integrale Typen
     A1a1 --> I1[int]
-    I1 --> I5[unsigned int]
-
     A1a1 --> I2[short]
-    I2 --> I6[unsigned short]
-
     A1a1 --> I3[long]
-    I3 --> I7[unsigned long]
-
     A1a1 --> I4[long long]
-    I4 --> I8[unsigned long long]
-
-    A1a1 --> I9[char]
-    I9 --> I10[signed char]
-    I9 --> I11[unsigned char]
-
-    A1a1 --> I12[bool]
-    A1a1 --> I13[wchar_t]
-    A1a1 --> I14[char16_t]
-    A1a1 --> I15[char32_t]
+    A1a1 --> I5[char]
+    A1a1 --> I6[bool]
+    A1a1 --> I7[wchar_t]
+    A1a1 --> I8[char16_t]
+    A1a1 --> I9[char32_t]
 
     %% Fließkomma-Typen
     A1a2 --> F1[float]
@@ -72,6 +61,13 @@ graph LR
     A2 --> U6["template&lt;class T&gt;"]
 ```
 
+!!! info
+    Die Typen int, short, long, long long und char gibt es als `signed` oder `unsigned`.
+    Standardmäßig sind sie signed, also für positive und negative Zahlen gedacht.
+    Mit unsigned lassen sich nur positive Zahlen speichern – aber in einem größeren Bereich.
+    Zum Beispiel: Ein signed char (1 Byte) kann Werte von –128 bis 127 speichern,
+    ein unsigned char von 0 bis 255.
+
 ## Intrinsische (primitive) Datentypen
 
 Typen, die vom Compiler eingebaut sind und zur Sprache selbst gehören:
@@ -82,13 +78,7 @@ Typen, die vom Compiler eingebaut sind und zur Sprache selbst gehören:
 | `short`               | Kleine ganze Zahlen                         | 2 Bytes                         |
 | `long`                | Große ganze Zahlen                          | 4 oder 8 Bytes*                 |
 | `long long`           | Sehr große ganze Zahlen                     | 8 Bytes                         |
-| `unsigned int`        | Ganze Zahlen ohne Vorzeichen                | 4 Bytes                         |
-| `unsigned short`      | Kleine ganze Zahlen ohne Vorzeichen         | 2 Bytes                         |
-| `unsigned long`       | Große ganze Zahlen ohne Vorzeichen          | 4 oder 8 Bytes*                 |
-| `unsigned long long`  | Sehr große ganze Zahlen ohne Vorzeichen     | 8 Bytes                         |
 | `char`                | Einzelne Zeichen (signed oder unsigned)     | 1 Byte                          |
-| `signed char`         | Zeichen mit Vorzeichen (–128 bis 127)       | 1 Byte                          |
-| `unsigned char`       | Zeichen ohne Vorzeichen (0 bis 255)         | 1 Byte                          |
 | `bool`                | Wahrheitswerte (`true` / `false`)           | 1 Byte                          |
 | `wchar_t`             | Breitere Zeichen (plattformabhängig)        | 2 oder 4 Bytes*                 |
 | `char16_t`            | UTF-16 Zeichen                              | 2 Bytes                         |
