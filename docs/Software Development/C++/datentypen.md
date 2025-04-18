@@ -120,8 +120,8 @@ Typen, die du selbst definierst:
 
 ---
 
-**Hinweise:**
-- Speichergrößen mit einem Sternchen (`*`) können je nach **Systemarchitektur** variieren:
-  - **32-Bit-Systeme**: Hier sind Speichergrößen oft kleiner, z. B. `long` = 4 Bytes, Zeiger = 4 Bytes.
-  - **64-Bit-Systeme**: Hier sind Speichergrößen größer, z. B. `long` = 8 Bytes, Zeiger = 8 Bytes.
+**Hinweise:**  
+- Speichergrößen mit einem Sternchen (`*`) können je nach **Systemarchitektur** variieren:  
+  - **32-Bit-Systeme**: Hier sind Speichergrößen oft kleiner, z. B. `long` = 4 Bytes, Zeiger = 4 Bytes.  
+  - **64-Bit-Systeme**: Hier sind Speichergrößen größer, z. B. `long` = 8 Bytes, Zeiger = 8 Bytes.  
 - Die Größe von `long double` kann ebenfalls je nach Compiler und Plattform variieren (z. B. 8, 12 oder 16 Bytes).
