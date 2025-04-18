@@ -94,7 +94,7 @@ Typen, die vom Compiler eingebaut sind und zur Sprache selbst gehören:
 
 ---
 
-## Nicht-intrinsische (abgeleitete) Datentypen
+## Nicht-intrinsische (benutzerdefinierte) Datentypen
 
 Typen, die du selbst definierst:
 
