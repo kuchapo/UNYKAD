@@ -2633,30 +2633,26 @@
 <h2 id="wie-funktioniert-stp">Wie funktioniert STP?</h2>
 <p>STP arbeitet nach folgendem Prinzip:</p>
 <ol>
-<li><strong>Bestimmung des Root-Switches</strong>  </li>
-<li>Einer der Switches wird als <strong>Root Bridge</strong> (Wurzel-Switch) gewählt.  </li>
 <li>
-<p>Der Switch mit der niedrigsten Bridge-ID wird Root.</p>
+<p><strong>Bestimmung des Root-Switches</strong><br />
+        - Einer der Switches wird als <strong>Root Bridge</strong> (Wurzel-Switch) gewählt.<br />
+        - Der Switch mit der niedrigsten Bridge-ID wird Root.</p>
 </li>
 <li>
-<p><strong>Berechnung der besten Pfade</strong>  </p>
-</li>
-<li>Jeder Switch bestimmt den <strong>kürzesten Weg</strong> zur Root Bridge.  </li>
-<li>
-<p>Die Ports mit den besten Pfaden bleiben <strong>aktiv</strong>.</p>
+<p><strong>Berechnung der besten Pfade</strong><br />
+        - Jeder Switch bestimmt den <strong>kürzesten Weg</strong> zur Root Bridge.<br />
+        - Die Ports mit den besten Pfaden bleiben <strong>aktiv</strong>.</p>
 </li>
 <li>
-<p><strong>Blockierung redundanter Links</strong>  </p>
-</li>
-<li>Verbindungen, die zu Loops führen könnten, werden <strong>deaktiviert</strong> (in den „Blocking“-Zustand versetzt).  </li>
-<li>
-<p>Nur die beste Verbindung bleibt offen.</p>
+<p><strong>Blockierung redundanter Links</strong><br />
+        - Verbindungen, die zu Loops führen könnten, werden <strong>deaktiviert</strong> (in den „Blocking“-Zustand versetzt).<br />
+        - Nur die beste Verbindung bleibt offen.</p>
 </li>
 <li>
-<p><strong>Neuberechnung bei Änderungen</strong>  </p>
+<p><strong>Neuberechnung bei Änderungen</strong><br />
+        - Falls ein Switch oder eine Verbindung ausfällt, berechnet STP die Netzwerkstruktur neu.<br />
+        - Blockierte Verbindungen können wieder aktiviert werden.</p>
 </li>
-<li>Falls ein Switch oder eine Verbindung ausfällt, berechnet STP die Netzwerkstruktur neu.  </li>
-<li>Blockierte Verbindungen können wieder aktiviert werden.</li>
 </ol>
 <h2 id="vorteile-von-stp">Vorteile von STP</h2>
 <p>✅ Verhindert <strong>Loops</strong> in geswitchten Netzwerken<br />

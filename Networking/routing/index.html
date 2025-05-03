@@ -827,6 +827,18 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Routing
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -837,6 +849,79 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#typ-woher-kennt-der-router-die-route" class="md-nav__link">
+    <span class="md-ellipsis">
+      Typ (Woher kennt der Router die Route?)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zielnetz-mit-subnetzmaske" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zielnetz mit Subnetzmaske
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ausgangsport" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ausgangsport
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-hop" class="md-nav__link">
+    <span class="md-ellipsis">
+      next Hop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metrik" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metrik
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beispiel-einer-routingtabelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beispiel einer Routingtabelle
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2500,6 +2585,68 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#typ-woher-kennt-der-router-die-route" class="md-nav__link">
+    <span class="md-ellipsis">
+      Typ (Woher kennt der Router die Route?)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zielnetz-mit-subnetzmaske" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zielnetz mit Subnetzmaske
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ausgangsport" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ausgangsport
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-hop" class="md-nav__link">
+    <span class="md-ellipsis">
+      next Hop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metrik" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metrik
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beispiel-einer-routingtabelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beispiel einer Routingtabelle
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2519,8 +2666,62 @@
 <p>Layer 3 im OSI-Modell</p>
 <p>Router entscheiden auf Grund ihrer Routingtabelle und der Destination IP.
 Im IP Header des Paketes an welchem ihrer Routerports sie das Paket raus schicken.</p>
-<p>Routintabelle
-Typ | Woher kennt der Router die Route C Connect (Router hat einen Anschluss in diesem Netz)</p>
+<h2 id="typ-woher-kennt-der-router-die-route">Typ (Woher kennt der Router die Route?)</h2>
+<p>C bedeutet Connected (Router hat einen Anschluss in diesem Netz)
+S bedeutet Static Route, wurde vom Admin per Hand eingegeben
+R ist RIP (Routingprotokoll)
+O ist OSPF (Routingprotokoll)
+...</p>
+<h2 id="zielnetz-mit-subnetzmaske">Zielnetz mit Subnetzmaske</h2>
+<p>Netz! Nicht einzelne Hosts!</p>
+<h2 id="ausgangsport">Ausgangsport</h2>
+<p>Der Ausgangsport kann, muss allerdings nicht in der Routingtabelle stehen.</p>
+<h2 id="next-hop">next Hop</h2>
+<p>IP der nächsten Routerschnittstelle (anderer Router) auf dem Weg zum Ziel</p>
+<h2 id="metrik">Metrik</h2>
+<p>Ganze Zahl &gt;= 0, die angibt, wie gut die Route ist (kleinere Zahl -&gt; besser)</p>
+<h2 id="beispiel-einer-routingtabelle">Beispiel einer Routingtabelle</h2>
+<table>
+<thead>
+<tr>
+<th>Typ</th>
+<th>Zielnetz</th>
+<th>Subnetzmaske</th>
+<th>(Ausgangsport)</th>
+<th>next Hop</th>
+<th>Metrik</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C</td>
+<td>192.168.1.0</td>
+<td>255.255.255.0</td>
+<td>fa0/0</td>
+<td>-</td>
+<td>0</td>
+</tr>
+<tr>
+<td>S</td>
+<td>192.168.3.0</td>
+<td>255.255.255.0</td>
+<td>fa1/0</td>
+<td>192.168.2.2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>S</td>
+<td>0.0.0.0</td>
+<td>0.0.0.0</td>
+<td>(5fa1/1)</td>
+<td>(82.137.5.9)</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Letzte Route ist die Default Route.</p>
+<p>Router kennt standartmäßig nur die Netze die direkt an ihn angeschlossen sind. Weiter entfernte Zielnetze müssen eingetragen werden (statisch  (Admin) oder dynamisch (Routingprotokoll)). Wenn ein Router ein Zielnetz nicht kennt, wirft er das Paket weg. Abhilfe default route: Alles, was nicht in der Routingtabelle steht, schicke an next hop,...
+DIe Reihenfolge der EInträge ist egal.</p>
 
 
 
