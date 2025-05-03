@@ -10,7 +10,7 @@ Eine Sache ist frei von Sachmängeln, wenn sie bei Gefahrenübergang folgenden A
 
 #### a) subjektive Anforderungen
 
-- vereinfachte Beschaffenheit
+- vereinbarte Beschaffenheit
 - zur vertragsmäßigen Verwendung geeignet
 - mit vereinbartem Zubehör und entsprechenden Anleitungen geliefert
 
@@ -30,7 +30,7 @@ Eine Sache ist frei von Sachmängeln, wenn sie bei Gefahrenübergang folgenden A
 
 ### 1.2 Rechtsmängel (§ 435 BGB)
 
-Ein dritter kann in Bezug auf die Sache Rechte gegen den Käufer geltend machen, die nicht im Kaufvertrag vereinbart wurden.
+Ein Dritter kann in Bezug auf die Sache Rechte gegen den Käufer geltend machen, die nicht im Kaufvertrag vereinbart wurden.
 
 ### 1.3 Rechte des Käufers
 
@@ -90,7 +90,7 @@ Bei Geschäften zwischen Unternehmen dürfen keine Zahlungsfristen über 60 Tage
 - Zahlungszeitpunkt nach dem Kalender (§ 286 || BGB) - Genau bestimmt, Verzug entsteht nach dem Überschreiten des Zahlungstermins. Bsp.: Kaufpreis ist bis zum 15.11. d. J. auf das Konto des Verkäufers zu überweisen.
 - Zahlungszeitpunkt berechenbar. Nach einem der Leistungen vorangehenden Ergebnisses. Bsp.: Kaufpreis ist 10 Tage nach Rechnungsdatum zu leisten.
 - Keine Vereinbarung über Zahlungstermin (§ 286 | BGB) - Käufer in Verzug, wenn er auf Mahnung des Käufers nicht zahlt.
-- Verzichtet der Käufer auf eine Mahnung oder verweigert der Käufer die Zahlung endgültig, dann ist er spätestens 30 Tage nach Fälligkeit und Zugang der Rechnung in Verzug (Verbraucher müssen auf diese Reglungen in der Rechnungen hingewiesen werden, sonst gilt diese nicht) § 286 ||| BGB
+- Verzichtet der Käufer auf eine Mahnung oder verweigert der Käufer die Zahlung endgültig, dann ist er spätestens 30 Tage nach Fälligkeit und Zugang der Rechnung in Verzug (Verbraucher müssen auf diese Reglungen in der Rechnung hingewiesen werden, sonst gilt diese nicht) § 286 ||| BGB
 
 ### 3.2 Rechte des Verkäufers
 
@@ -110,13 +110,13 @@ Bei Geschäften zwischen Unternehmen dürfen keine Zahlungsfristen über 60 Tage
 
 ### 4.1 Voraussetzungen
 
-- Gläubiger nicht die Ware nicht ab. (§ 293 BGB)
+- Gläubiger nimmt die Ware nicht ab. (§ 293 BGB)
 - Tatsächliches Angebot der Ware (§ 294 BGB)
 
 ### 4.2 Rechte des Verkäufers
 
 - Klage auf Abnahme
-- Ware sofort verkaufen, wenn es sich um verderblich Ware handelt (§ 373 || HGB)
+- Ware sofort verkaufen, wenn es sich um verderbliche Ware handelt (§ 373 || HGB)
 - Ware versteigern (§ 373 || HGB)
 
 -> Belastung des Käufers mit den entstandenen Kosten (§ 304 BGB)
