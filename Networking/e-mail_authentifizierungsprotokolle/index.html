@@ -2623,17 +2623,17 @@
 <ul>
 <li>
 <p>SPF prüft, ob eine E-Mail von einem autorisierten Server gesendet wurde.</p>
-<p>Beispiel für einen SPF-Eintrag:
+<p>Beispiel für einen SPF-Eintrag:<br />
 v=spf1 ip4:192.168.0.1 -all</p>
 </li>
 <li>
 <p>DKIM stellt sicher, dass eine E-Mail nicht verändert wurde und vom angegebenen Absender stammt.</p>
-<p>Beispiel für einen DKIM-Eintrag:
+<p>Beispiel für einen DKIM-Eintrag:<br />
 default._domainkey.example.com IN TXT "v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GN..."</p>
 </li>
 <li>
 <p>DMARC gibt an, wie E-Mails behandelt werden sollen, die SPF oder DKIM nicht bestehen, und ermöglicht Berichterstattung.</p>
-<p>Beispiel für einen DMARC-Eintrag:
+<p>Beispiel für einen DMARC-Eintrag:<br />
 _dmarc.example.com IN TXT "v=DMARC1; p=reject; rua=mailto:dmarc-reports@example.com"</p>
 </li>
 </ul>
