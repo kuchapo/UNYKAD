@@ -2,17 +2,17 @@
 
 - SPF prüft, ob eine E-Mail von einem autorisierten Server gesendet wurde.
 
-    Beispiel für einen SPF-Eintrag:
+    Beispiel für einen SPF-Eintrag:  
     v=spf1 ip4:192.168.0.1 -all
 
 - DKIM stellt sicher, dass eine E-Mail nicht verändert wurde und vom angegebenen Absender stammt.
 
-    Beispiel für einen DKIM-Eintrag:
+    Beispiel für einen DKIM-Eintrag:  
     default._domainkey.example.com IN TXT "v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GN..."
 
 - DMARC gibt an, wie E-Mails behandelt werden sollen, die SPF oder DKIM nicht bestehen, und ermöglicht Berichterstattung.
 
-    Beispiel für einen DMARC-Eintrag:
+    Beispiel für einen DMARC-Eintrag:  
     _dmarc.example.com IN TXT "v=DMARC1; p=reject; rua=mailto:dmarc-reports@example.com"
 
 ## Gründe, warum SPF alleine nicht ausreicht
