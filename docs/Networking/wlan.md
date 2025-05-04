@@ -116,6 +116,6 @@ Alle von WLAN genutzten Frequenzen sind lizenzfrei
 
 ### MU-MIMO – Multi-User MIMO
 
-    - Multiple User MIMO, funktioniert in den Standards ac ax und ay
-    - Damit können einzelne Clients ihre „eigenen“ Datenströme (Frequenzen) erhalten und damit gleichzeitig statt nacheinander mit dem Access Point kommunizieren.
-    - Theoretisch bis zu 8 Clients.
+        - Multiple User MIMO, funktioniert in den Standards ac ax und ay
+        - Damit können einzelne Clients ihre „eigenen“ Datenströme (Frequenzen) erhalten und damit gleichzeitig statt nacheinander mit dem Access Point kommunizieren.
+        - Theoretisch bis zu 8 Clients.
