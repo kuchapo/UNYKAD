@@ -5,7 +5,7 @@
 - Ausfallsicherheit durch Sterntopologie
 - genormter Aufbau des Netzes (EN 50173-1 von 2003)
 
-![Verkabelung](./assets/verkabelung.svg)
+![Verkabelung](./assets/verkabelung.drawio.svg)
 
 ## Arten der Verkabelung
 
@@ -33,6 +33,6 @@
 
 ## Verteilergeräte
 
-Standortverteiler: Core-Switches, Layer3-Switches, Router
-Gebäudeverteiler: Layer3-Switches, Router, VLAN-fähige Layer2 Switches
+Standortverteiler: Core-Switches, Layer3-Switches, Router  
+Gebäudeverteiler: Layer3-Switches, Router, VLAN-fähige Layer2 Switches  
 Etagenverteiler: Layer3-Switches, VLAN-fähige Layer2 Switches, Layer2 Switches
