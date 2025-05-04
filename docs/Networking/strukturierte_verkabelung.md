@@ -5,7 +5,7 @@
 - Ausfallsicherheit durch Sterntopologie
 - genormter Aufbau des Netzes (EN 50173-1 von 2003)
 
-[Verkabelung](./assets/verkabelung.svg)
+![Verkabelung](./assets/verkabelung.svg)
 
 ## Arten der Verkabelung
 
