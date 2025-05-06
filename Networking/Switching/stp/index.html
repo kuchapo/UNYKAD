@@ -1381,21 +1381,27 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#funktionsweise-von-stp" class="md-nav__link">
+    <nav class="md-nav" aria-label="Port-Rollen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#port-rollen-ubersicht" class="md-nav__link">
     <span class="md-ellipsis">
-      Funktionsweise von STP
+      Port-Rollen Übersicht
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#port-zustande" class="md-nav__link">
+  <a href="#kurze-zusammenfassung-zur-funktionsweise-von-stp" class="md-nav__link">
     <span class="md-ellipsis">
-      Port-Zustände
+      Kurze Zusammenfassung zur Funktionsweise von STP
     </span>
   </a>
   
@@ -2918,21 +2924,27 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#funktionsweise-von-stp" class="md-nav__link">
+    <nav class="md-nav" aria-label="Port-Rollen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#port-rollen-ubersicht" class="md-nav__link">
     <span class="md-ellipsis">
-      Funktionsweise von STP
+      Port-Rollen Übersicht
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#port-zustande" class="md-nav__link">
+  <a href="#kurze-zusammenfassung-zur-funktionsweise-von-stp" class="md-nav__link">
     <span class="md-ellipsis">
-      Port-Zustände
+      Kurze Zusammenfassung zur Funktionsweise von STP
     </span>
   </a>
   
@@ -3060,20 +3072,18 @@
 <p>Jetzt können Dedignated-Ports überall ergänzt werden, wo auf der anderen Seite auch ein Root-Port bereits eingetragen ist.</p>
 <p><img alt="Ohne redundante Verbindungen" src="../assets/portrollen1.drawio.svg" /></p>
 <p>Dort wo auf beiden Seiten keine Root-Ports festgelegt worden waren, muss nun geschaut werden, welcher Pfad von der Root-Bridge aus gesehen, der kürzeste ist. Der wird zum Designated-Port und der andere entsprechend zum Blocking-Port.</p>
-<h2 id="funktionsweise-von-stp">Funktionsweise von STP</h2>
+<h3 id="port-rollen-ubersicht">Port-Rollen Übersicht</h3>
+<ul>
+<li>Root-Port: Der Port mit dem kürzesten Weg zur Root-Bridge. Jeder Switch (bis auf die Root-Bridge) weist diese Rolle genau einem Port zu.</li>
+<li>Designated-Port: Alle Ports, die den Verkehr weiterleiten, aber keine Root-Ports sind. Allen Ports des Root-Bridge wird diese Rolle zugewiesen.</li>
+<li>Blocking-/Alternate-Ports: Diese Ports lösen die Schleifen auf. Wenn ein Trunk an beiden Enden keine Root-Ports aufweist, nimmt ein Port diese Rolle Rolle ein.</li>
+</ul>
+<h2 id="kurze-zusammenfassung-zur-funktionsweise-von-stp">Kurze Zusammenfassung zur Funktionsweise von STP</h2>
 <ul>
 <li><strong>Root Bridge wählen</strong>: Switch mit niedrigster Bridge-ID (Priorität + MAC-Adresse).</li>
 <li><strong>Root Ports</strong>: Jeder Switch bestimmt den besten Weg zur Root Bridge.</li>
 <li><strong>Designated Ports</strong>: Für jedes Segment wird ein bevorzugter Weiterleitungsport festgelegt.</li>
 <li><strong>Blocking Ports</strong>: Überflüssige Pfade werden deaktiviert, um Schleifen zu vermeiden.</li>
-</ul>
-<h2 id="port-zustande">Port-Zustände</h2>
-<ul>
-<li><strong>Blocking</strong>: Port ist deaktiviert, um Loops zu verhindern.</li>
-<li><strong>Listening</strong>: Port hört BPDUs, leitet aber keine Frames weiter.</li>
-<li><strong>Learning</strong>: Port lernt MAC-Adressen, leitet aber noch keine Frames weiter.</li>
-<li><strong>Forwarding</strong>: Port leitet Frames weiter und lernt MAC-Adressen.</li>
-<li><strong>Disabled</strong>: Port ist manuell deaktiviert.</li>
 </ul>
 
 
