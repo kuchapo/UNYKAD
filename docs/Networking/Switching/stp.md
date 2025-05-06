@@ -77,17 +77,15 @@ Jetzt können Dedignated-Ports überall ergänzt werden, wo auf der anderen Seit
 
 Dort wo auf beiden Seiten keine Root-Ports festgelegt worden waren, muss nun geschaut werden, welcher Pfad von der Root-Bridge aus gesehen, der kürzeste ist. Der wird zum Designated-Port und der andere entsprechend zum Blocking-Port.
 
-## Funktionsweise von STP
+### Port-Rollen Übersicht
+
+* Root-Port: Der Port mit dem kürzesten Weg zur Root-Bridge. Jeder Switch (bis auf die Root-Bridge) weist diese Rolle genau einem Port zu.
+* Designated-Port: Alle Ports, die den Verkehr weiterleiten, aber keine Root-Ports sind. Allen Ports des Root-Bridge wird diese Rolle zugewiesen.
+* Blocking-/Alternate-Ports: Diese Ports lösen die Schleifen auf. Wenn ein Trunk an beiden Enden keine Root-Ports aufweist, nimmt ein Port diese Rolle Rolle ein.
+
+## Kurze Zusammenfassung zur Funktionsweise von STP
 
 - **Root Bridge wählen**: Switch mit niedrigster Bridge-ID (Priorität + MAC-Adresse).
 - **Root Ports**: Jeder Switch bestimmt den besten Weg zur Root Bridge.
 - **Designated Ports**: Für jedes Segment wird ein bevorzugter Weiterleitungsport festgelegt.
 - **Blocking Ports**: Überflüssige Pfade werden deaktiviert, um Schleifen zu vermeiden.
-
-## Port-Zustände
-
-- **Blocking**: Port ist deaktiviert, um Loops zu verhindern.
-- **Listening**: Port hört BPDUs, leitet aber keine Frames weiter.
-- **Learning**: Port lernt MAC-Adressen, leitet aber noch keine Frames weiter.
-- **Forwarding**: Port leitet Frames weiter und lernt MAC-Adressen.
-- **Disabled**: Port ist manuell deaktiviert.
