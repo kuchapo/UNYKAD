@@ -3054,6 +3054,12 @@
 </table>
 <h2 id="port-rollen">Port-Rollen</h2>
 <p><img alt="Ohne redundante Verbindungen" src="../assets/portrollen.drawio.svg" /></p>
+<p>Der Root-Port R wird vergeben, indem geschaut wird, welcher der Ports unter Berücksichtingung der Metrik näher am Router ist.  <br />
+(z. B. Metrik-Berechnung bei S4: blaue Strecke 4+4=8, grüne Strecke 19+19=38) -&gt; R auf der blauen Strecke</p>
+<p>Die Root-Bridge kann keine Ports im Blocking-Zustand haben. Folglich sind bei der Root-Bridge alle Ports Designated-Ports.</p>
+<p>Jetzt können Dedignated-Ports überall ergänzt werden, wo auf der anderen Seite auch ein Root-Port bereits eingetragen ist.</p>
+<p><img alt="Ohne redundante Verbindungen" src="../assets/portrollen1.drawio.svg" /></p>
+<p>Dort wo auf beiden Seiten keine Root-Ports festgelegt worden waren, muss nun geschaut werden, welcher Pfad von der Root-Bridge aus gesehen, der kürzeste ist. Der wird zum Designated-Port und der andere entsprechend zum Blocking-Port.</p>
 <h2 id="funktionsweise-von-stp">Funktionsweise von STP</h2>
 <ul>
 <li><strong>Root Bridge wählen</strong>: Switch mit niedrigster Bridge-ID (Priorität + MAC-Adresse).</li>
