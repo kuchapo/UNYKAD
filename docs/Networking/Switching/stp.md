@@ -1,39 +1,82 @@
 # Spanning Tree Protocol (STP)
 
-## Was ist STP?
+Das **Spanning Tree Protocol (STP)** verhindert Netzwerkschleifen in redundanten Verbindungen zwischen Switches, indem es automatisch eine logische Baumstruktur erstellt. Es erkennt doppelte Verbindungen und deaktiviert sie vorübergehend, sodass Pakete nur über eine aktive, störungsfreie Route laufen.
 
-Das **Spanning Tree Protocol (STP)** ist ein Netzwerkprotokoll, das Loops in geswitchten Netzwerken verhindert. Es sorgt dafür, dass es keine Endlosschleifen gibt, wenn mehrere Switches miteinander verbunden sind.
+## Das Problem ohne redundante Verbindungen
 
-## Wie funktioniert STP?
+![Ohne redundante Verbindungen](./assets/ohne_redundante_verbindungen.drawio.svg)
 
-STP arbeitet nach folgendem Prinzip:
+### Single Point of Failure
 
-1. **Bestimmung des Root-Switches**  
-        - Einer der Switches wird als **Root Bridge** (Wurzel-Switch) gewählt.  
-        - Der Switch mit der niedrigsten Bridge-ID wird Root.
+Ein **Single Point of Failure (SPOF)** ist eine kritische Verbindung oder Komponente, die im Netzwerk ohne Redundanz existiert und deren Ausfall das gesamte System beeinträchtigen kann.
 
-2. **Berechnung der besten Pfade**  
-        - Jeder Switch bestimmt den **kürzesten Weg** zur Root Bridge.  
-        - Die Ports mit den besten Pfaden bleiben **aktiv**.
+Beispiele:
 
-3. **Blockierung redundanter Links**  
-        - Verbindungen, die zu Loops führen könnten, werden **deaktiviert** (in den „Blocking“-Zustand versetzt).  
-        - Nur die beste Verbindung bleibt offen.
+- **Switches** – Eine einzelne Verbindung ohne Backup
+- **Router** – Kein redundanter Gateway-Router
+- **Server** – Keine Failover-Lösung für Web-, Datenbank- oder DNS-Server
+- **Firewalls** – Nur eine zentrale Firewall ohne Ersatz
+- **Stromversorgung** – Kein Backup-Netzteil oder USV
+- **Internetanbindung** – Eine einzige Internetverbindung ohne Ausweichmöglichkeit
 
-4. **Neuberechnung bei Änderungen**  
-        - Falls ein Switch oder eine Verbindung ausfällt, berechnet STP die Netzwerkstruktur neu.  
-        - Blockierte Verbindungen können wieder aktiviert werden.
+## Das Problem mit redundanten Verbindungen ohne STP
 
-## Vorteile von STP
+![Mit redundante Verbindungen](./assets/mit_redundante_verbindungen.drawio.svg)
 
-✅ Verhindert **Loops** in geswitchten Netzwerken  
-✅ **Erhöht Stabilität** durch automatische Anpassung  
-✅ **Redundanz** bleibt erhalten, ohne das Netzwerk zu stören  
+!!! info
+	In der Grafik hätte man genauso gut nur zwei doppelt miteinander verbundene Switches verwenden können.
 
-## Varianten von STP
+Bei redundanten Verbindungen ohne STP kann es bei einem Broadcast zu einem Broadcast-Sturm kommen. Dabei entsteht eine Endlosschleife, die das gesamte Netzwerk belastet. Der Sender ist in diesem Beispiel nicht vom Flooding betroffen, wäre es aber, wenn er z. B. mit einem anderen Switch verbunden wäre, der ebenfalls vom Sturm betroffen ist.
 
-- **RSTP (Rapid Spanning Tree Protocol)** → Schnellere Reaktionszeit  
-- **PVSTP (Per VLAN STP)** → Separate STP-Instanzen pro VLAN  
-- **PVRSTP (Per VLAN RSTP)** → Kombination aus PVSTP und RSTP  
+## Versionen von STP
 
-STP ist essenziell für stabilen **Layer 2-Switching-Betrieb** in Netzwerken.
+| Protokoll/Technologie                              | Netzwerkstandard | Beschreibung                                                                                     |
+| -------------------------------------------------- | ---------------- | ------------------------------------------------------------------------------------------------ |
+| **STP** (Spanning Tree Protocol)                   | IEEE 802.1D      | Standardprotokoll zur Vermeidung von Netzwerkschleifen.                                          |
+| **RSTP** (Rapid Spanning Tree Protocol)            | IEEE 802.1w      | Schnellere STP-Variante mit kürzerer Konvergenzzeit.                                             |
+| **PVST** (Per VLAN Spanning Tree)                  | Cisco proprietär | Ältere Cisco-Version von STP mit separaten Instanzen pro VLAN.                                   |
+| **PVST+** (Per VLAN Spanning Tree Plus)            | Cisco proprietär | Weiterentwicklung von PVST mit 802.1D-Kompatibilität.                                            |
+| **PVRSTP** (Per VLAN Rapid Spanning Tree Protocol) | Cisco proprietär | PVST+, aber mit schnelleren STP-Reaktionen durch RSTP.                                           |
+| **MSTP** (Multiple Spanning Tree Protocol)         | IEEE 802.1s      | Gruppiert mehrere VLANs in eine einzelne STP-Instanz für bessere Skalierung. (selten vorkommend) |
+
+## Bridge Protocol Data Units (BPDU)
+
+![BPDUs](./assets/bpdus.drawio.svg)
+
+Die Kommunikation bei STP verläuft über sogenannte BPDUs. Sie enthalten immer eine Bridge ID (BID) bestehend aus der Priorität, der MAC-Adresse und der Extended System ID.
+
+## Auswahl der Root-Bridge
+
+![Ohne redundante Verbindungen](./assets/auswahl.drawio.svg)
+
+Niedrigste Priorität gewinnt. Falls alle Prioritäten gleich sind, dann gewinnt der Switch, welcher die kleinste MAC-Adresse hat.
+
+## Metriken für die Berechnung des kürzesten Pfads zur Root-Bridge
+
+![Ohne redundante Verbindungen](./assets/metriken.drawio.svg)
+
+| **Link-Geschwindigkeit** | **Standard-Kostenwert** |
+|--------------------------|-------------------------|
+| 10 Mbps                  | 100                     |
+| 100 Mbps                 | 19                      |
+| 1 Gbps                   | 4                       |
+| 10 Gbps                  | 2                       |
+
+## Port-Rollen
+
+![Ohne redundante Verbindungen](./assets/portrollen.drawio.svg)
+
+## Funktionsweise von STP
+
+- **Root Bridge wählen**: Switch mit niedrigster Bridge-ID (Priorität + MAC-Adresse).
+- **Root Ports**: Jeder Switch bestimmt den besten Weg zur Root Bridge.
+- **Designated Ports**: Für jedes Segment wird ein bevorzugter Weiterleitungsport festgelegt.
+- **Blocking Ports**: Überflüssige Pfade werden deaktiviert, um Schleifen zu vermeiden.
+
+## Port-Zustände
+
+- **Blocking**: Port ist deaktiviert, um Loops zu verhindern.
+- **Listening**: Port hört BPDUs, leitet aber keine Frames weiter.
+- **Learning**: Port lernt MAC-Adressen, leitet aber noch keine Frames weiter.
+- **Forwarding**: Port leitet Frames weiter und lernt MAC-Adressen.
+- **Disabled**: Port ist manuell deaktiviert.
