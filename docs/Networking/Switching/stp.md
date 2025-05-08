@@ -71,7 +71,7 @@ Der Root-Port R wird vergeben, indem geschaut wird, welcher der Ports unter Ber�
 
 Die Root-Bridge kann keine Ports im Blocking-Zustand haben. Folglich sind bei der Root-Bridge alle Ports Designated-Ports.
 
-Jetzt können Dedignated-Ports überall ergänzt werden, wo auf der anderen Seite auch ein Root-Port bereits eingetragen ist.
+Jetzt können Designated-Ports überall ergänzt werden, wo auf der anderen Seite auch ein Root-Port bereits eingetragen ist.
 
 ![Ohne redundante Verbindungen](./assets/portrollen1.drawio.svg)
 
