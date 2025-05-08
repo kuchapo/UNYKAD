@@ -9,10 +9,10 @@ Im IP Header des Paketes an welchem ihrer Routerports sie das Paket raus schicke
 
 ## Typ (Woher kennt der Router die Route?)
 
-C bedeutet Connected (Router hat einen Anschluss in diesem Netz)
-S bedeutet Static Route, wurde vom Admin per Hand eingegeben
-R ist RIP (Routingprotokoll)
-O ist OSPF (Routingprotokoll)
+C bedeutet Connected (Router hat einen Anschluss in diesem Netz)  
+S bedeutet Static Route, wurde vom Admin per Hand eingegeben  
+R ist RIP (Routingprotokoll)  
+O ist OSPF (Routingprotokoll)  
 ...
 
 ## Zielnetz mit Subnetzmaske
