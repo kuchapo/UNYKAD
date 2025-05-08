@@ -52,3 +52,7 @@ Seit 2003 entspricht Cat5 Kabel der Spezifikation von Cat5e.
 ### FEXT (Far-End Crosstalk)
 
 - Übersprechen am entfernten Ende des Kabels dort wo das Signal empfangen wird (am Anschluss nicht im Gerät)
+
+## Verdrillung
+
+Man verdrillt das Kabelpaar, damit die Daten, die von einem Kabel als positive und vom anderen als negative Signale übertragen werden, vor externen elektromagnetischen Feldern geschützt sind. Die Verdrillung verhindert somit Crosstalk.
