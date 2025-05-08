@@ -12,13 +12,13 @@ markdown_extensions:
 copyright: An idiot admires complexity, a genius admires simplicity. - Terry Davis
 extra:
   generator: false
-  social:
-    - icon: fontawesome/brands/instagram
-      link: https://instagram.com/Unykad
-    - icon: fontawesome/brands/tiktok
-      link: https://tiktok.com/Unykad
-    - icon: fontawesome/brands/x-twitter
-      link: https://x.com/Unykad
+#  social:
+#    - icon: fontawesome/brands/instagram
+#      link: https://instagram.com/Unykad
+#    - icon: fontawesome/brands/tiktok
+#      link: https://tiktok.com/Unykad
+#    - icon: fontawesome/brands/x-twitter
+#      link: https://x.com/Unykad
 theme:
   name: material
   favicon: assets/u1icofullSize.svg
