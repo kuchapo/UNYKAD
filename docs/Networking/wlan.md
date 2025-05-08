@@ -222,14 +222,15 @@ Das Netz bekommt einen Namen: die **SSID** (Service Set Identifier, bis 32 Bytes
 
 ## Anmeldung
 
-### WPA2 Personal (Preshared Key)
+### Preshared Key (WPA2 Personal)
 
 * Passwort auf jedem Gerät manuell eintragen  
 * Einfach einzurichten  
 * Admin kennt nur das Gerät, nicht den Benutzer
 
-## WPA2 Enterprise (RADIUS)
+### RADIUS (WPA2 Enterprise)
 
+* RADIUS (=Remote Authentication Dial In User Service)
 * Anmeldung mit Benutzername und Passwort über Anmeldeserver  
 * Admin erkennt den konkreten Nutzer  
 * Zentral verwaltete Benutzerrechte  
