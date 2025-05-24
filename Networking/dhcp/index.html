@@ -20,7 +20,7 @@
     
     
       
-        <title>Dynamic Host Configuration Protocol - UNYKAD</title>
+        <title>Dynamic Host Configuration Protocol (DHCP) - UNYKAD</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dynamic-host-configuration-protocol" class="md-skip">
+        <a href="#dynamic-host-configuration-protocol-dhcp" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Dynamic Host Configuration Protocol
+              Dynamic Host Configuration Protocol (DHCP)
             
           </span>
         </div>
@@ -705,29 +705,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../cisco-router/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Cisco Router
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../cyber-physische_systeme/" class="md-nav__link">
         
   
@@ -765,7 +742,7 @@
   
   
   <span class="md-ellipsis">
-    Dynamic Host Configuration Protocol
+    Dynamic Host Configuration Protocol (DHCP)
     
   </span>
   
@@ -778,7 +755,7 @@
   
   
   <span class="md-ellipsis">
-    Dynamic Host Configuration Protocol
+    Dynamic Host Configuration Protocol (DHCP)
     
   </span>
   
@@ -1077,6 +1054,82 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_14" id="__nav_3_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Cisco
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_14">
+            <span class="md-nav__icon md-icon"></span>
+            Cisco
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cisco/cisco-router/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cisco Router
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -3170,21 +3223,21 @@
 
 
 
-<h1 id="dynamic-host-configuration-protocol">Dynamic Host Configuration Protocol</h1>
-<p>DHCP dient zur auomatischen IP-Konfiguration.</p>
+<h1 id="dynamic-host-configuration-protocol-dhcp">Dynamic Host Configuration Protocol (DHCP)</h1>
+<p>DHCP dient zur automatischen IP-Konfiguration. Betroffen sind:</p>
 <ul>
 <li>IP</li>
 <li>Subnetzmaske</li>
 <li>Standard Gateway</li>
-<li>DNS</li>
-<li>WINS, NTP</li>
+<li>DNS-Server</li>
+<li>WINS-Server, NTP-Server</li>
 </ul>
 <h2 id="vorteile">Vorteile</h2>
-<p>Admin spart sehr viel Arbeit, wenn es einmal richtig eingerichtet ist, macht es keine Fehler. Mobile Geräte bekommen in jedem Netz eine gültige IP. Benutzer müssen keine Ahnung von IPs haben.</p>
+<p>Der Admin spart sehr viel Arbeit und wenn es einmal richtig eingerichtet ist, macht es keine Fehler. Mobile Geräte bekommen in jedem Netz eine gültige IP und Benutzer müssen keine Ahnung von IPs haben.</p>
 <h2 id="funktion">Funktion</h2>
-<p>Client schickt ein DHCP Discover (Broadcast 255.255.255.255) an den DHCP Server. Der DHCP Server schickt als Antwort einen DHCP Offer (als Unicast oder Broadcast). Dann schickt der Client ein DHCP Request als Broadcast (immer!). Der DHCP Server schickt dann ein DHCP Acknowledge (als Unicast oder Broadcast).</p>
+<p>Client schickt ein DHCP Discover (Broadcast 255.255.255.255) an den DHCP Server. Der DHCP-Server schickt als Antwort einen DHCP Offer (als Unicast oder Broadcast). Dann schickt der Client ein DHCP Request als Broadcast (immer!). Der DHCP-Server schickt dann ein DHCP Acknowledge (als Unicast oder Broadcast).</p>
 <h3 id="leasetime">Leasetime</h3>
-<p>Zeit, für die die IP vergeben wird. Wenn sie zur Hälfte abgelaufen wird, dann wird der Client wieder einen Request schicken und der DHCP Server bestätigt sie mit einem Acknowledge und verlängert die Leasetime so immer wieder. Wenn der Server nicht antwortet bei 87,5%, dann schmeißt er die IP-Konfiguration weg.</p>
+<p>Die Zeitspanne, für die die IP-Adresse vergeben wird. Sobald die Hälfte der Lease-Zeit verstrichen ist, sendet der Client eine erneute Anfrage. Der DHCP-Server bestätigt diese mit einem Acknowledge und verlängert dadurch die Leasetime kontinuierlich. Sollte der Server bei 87,5 % der Lease-Zeit nicht antworten, wird letztmalig eine Broadcast-Anfrage gesendet. Bleibt auch diese unbeantwortet, verwirft der Client die aktuelle IP-Konfiguration.</p>
 <h3 id="adressvergabe">Adressvergabe</h3>
 <ul>
 <li>Manuelle Zuordnung (statisches DHCP): Admin legt eine Liste mit MAC und IP an und der Client bekommt immer die gleiche IP z. B. für Drucker, Scanner, Server,...</li>
@@ -3192,12 +3245,14 @@
 <li>Dynamische Zuordnung: Client bekommt jedes Mal irgend eine freie IP aus dem Pool</li>
 </ul>
 <h4 id="adressvergabe-uber-mehrere-netze">Adressvergabe über mehrere Netze</h4>
-<p>Problem:
-- Router leiten niemals Broadcasts weiter! DHCP Discover aus dem linken Netz kommt nicht beim Server an
-Lösung:
+<p><img alt="DHCP" src="../assets/dhcp.drawio.svg" /></p>
+<p>Problem:<br />
+- Router leiten niemals Broadcasts weiter! DHCP Discover aus dem linken Netz kommt nicht beim Server an</p>
+<p>Lösung:<br />
 - Relay Agent: Routerschnittstelle macht aus dem Broadcast einen Unicast gezielt an die IP des DHCP Servers. DHCP Server braucht für jedes Netz einen eigenen Pool</p>
 <h2 id="angriffe-auf-dhcp">Angriffe auf DHCP</h2>
 <p>DHCP Starvation: DHCP Server wird mit Anfragen überhäuft bis er keine IPs mehr hat (DoS Attack), dann springt ein Rogue Server ein und vergibt IPs mit z. B. falschem Standard Gateway oder DNS Server (DNS Spoofing). -&gt; Man in the middle Attack</p>
+<p>Abhilfe: DHCP Snooping: Switch lässt DHCP Offers und Acknowledge nur an bestimmten Ports zu (Port Security)</p>
 
 
 
