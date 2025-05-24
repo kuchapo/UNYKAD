@@ -30,11 +30,14 @@ In binär: `0010 0001 0000 0010`
 Die letzten vier Bits sind Boot Fields. Wenn diese vier letzten Bits wie in der Standart-Einstellung genauso verbleiben, dann bedeutet es, dass so gebootet werden soll, wie es in der Startup-Config File drin steht.
 
 Wenn man nun diese Bits manipuliert, kann man folgende Ergebnisse erzielen:
-- 0000: boots into ROM Monitor Mode
-- 0001: boots first image in Flash Memory
-- 0010 - 1111: boots Startup-Config
 
-Das siebte Bit von rechts sorgt für das Laden des NVRAMs
+- `0000`: Bootet in den ROM Monitor Mode
+- `0001`: Bootet erstes Boot-Image aus dem Flash Memory
+- `0010` - `1111`: Prüft, ob in der Startup-Config ein Boot-Image angegeben ist. Wenn nicht, wird das erste Image im Flash gebootet.
+
+Wenn das siebte Bit von rechts auf `0` steht, dann bedeutet das, dass der Inhalt des NVRAMs ausgelesen wird und die Startup-Config geladen wird. Es wird die Startup-Config File in die Running-Config File kopiert.
+
+Falls das siebte Bit auf `1` gesetzt wird, dann heißt es, dass die Startup-Config nicht geladen wird.
 
 ## Internetworking Operating System (IOS)
 
@@ -74,21 +77,23 @@ Wenn man ein Feature Set hat, wie z. B. das ipbase-image, und man benötigt dann
 #### Beispiel 1
 
 `c1841-adventerprisek9-mz.124-24.T5.bin`
--> c1841: Cisco 1800 Series router model 1841
--> adventerprisek9-mz: Advanced Enterprise Feature Set
--> 124: Train
--> 24: Throttle
--> T5: Rebuild
+
+-> c1841: Cisco 1800 Series router model 1841  
+-> adventerprisek9-mz: Advanced Enterprise Feature Set  
+-> 124: Train  
+-> 24: Throttle  
+-> T5: Rebuild  
 -> .bin: Binary File System
 
 #### Beispiel 2
 
 `c1900-universalk9-mz.SPA.153-3.M4.bin`
--> c1900: All 1900 Series Routers
--> universalk9-mz.SPA: Universal Feature Set ('k9' ermöglicht kryptographische Funktionen wie SSH und VPN)
--> 153: Train
--> 3: Throttle
--> M4: Rebuild
+
+-> c1900: All 1900 Series Routers  
+-> universalk9-mz.SPA: Universal Feature Set ('k9' ermöglicht kryptographische Funktionen wie SSH und VPN)  
+-> 153: Train  
+-> 3: Throttle  
+-> M4: Rebuild  
 -> .bin: Binary File System
 
 ## Konfiguration

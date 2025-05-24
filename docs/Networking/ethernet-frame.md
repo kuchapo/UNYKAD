@@ -42,7 +42,7 @@ Bsp.:
 
 Die Daten (Englisch: Data) bestehen einmal aus dem Header der höheren Schichten sowie der Nutzdaten.
 
-![Kapselung der Daten](pics/kapselung.PNG)
+![Kapselung der Daten](assets/kapselung.PNG)
 
 #### Frame Check Sequence (FCS)
 

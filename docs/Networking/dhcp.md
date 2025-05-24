@@ -1,24 +1,24 @@
-# Dynamic Host Configuration Protocol
+# Dynamic Host Configuration Protocol (DHCP)
 
-DHCP dient zur auomatischen IP-Konfiguration.
+DHCP dient zur automatischen IP-Konfiguration. Betroffen sind:
 
 - IP
 - Subnetzmaske
 - Standard Gateway
-- DNS
-- WINS, NTP
+- DNS-Server
+- WINS-Server, NTP-Server
 
 ## Vorteile
 
-Admin spart sehr viel Arbeit, wenn es einmal richtig eingerichtet ist, macht es keine Fehler. Mobile Geräte bekommen in jedem Netz eine gültige IP. Benutzer müssen keine Ahnung von IPs haben.
+Der Admin spart sehr viel Arbeit und wenn es einmal richtig eingerichtet ist, macht es keine Fehler. Mobile Geräte bekommen in jedem Netz eine gültige IP und Benutzer müssen keine Ahnung von IPs haben.
 
 ## Funktion
 
-Client schickt ein DHCP Discover (Broadcast 255.255.255.255) an den DHCP Server. Der DHCP Server schickt als Antwort einen DHCP Offer (als Unicast oder Broadcast). Dann schickt der Client ein DHCP Request als Broadcast (immer!). Der DHCP Server schickt dann ein DHCP Acknowledge (als Unicast oder Broadcast).
+Client schickt ein DHCP Discover (Broadcast 255.255.255.255) an den DHCP Server. Der DHCP-Server schickt als Antwort einen DHCP Offer (als Unicast oder Broadcast). Dann schickt der Client ein DHCP Request als Broadcast (immer!). Der DHCP-Server schickt dann ein DHCP Acknowledge (als Unicast oder Broadcast).
 
 ### Leasetime
 
-Zeit, für die die IP vergeben wird. Wenn sie zur Hälfte abgelaufen wird, dann wird der Client wieder einen Request schicken und der DHCP Server bestätigt sie mit einem Acknowledge und verlängert die Leasetime so immer wieder. Wenn der Server nicht antwortet bei 87,5%, dann schmeißt er die IP-Konfiguration weg.
+Die Zeitspanne, für die die IP-Adresse vergeben wird. Sobald die Hälfte der Lease-Zeit verstrichen ist, sendet der Client eine erneute Anfrage. Der DHCP-Server bestätigt diese mit einem Acknowledge und verlängert dadurch die Leasetime kontinuierlich. Sollte der Server bei 87,5 % der Lease-Zeit nicht antworten, wird letztmalig eine Broadcast-Anfrage gesendet. Bleibt auch diese unbeantwortet, verwirft der Client die aktuelle IP-Konfiguration.
 
 ### Adressvergabe
 
@@ -28,11 +28,16 @@ Zeit, für die die IP vergeben wird. Wenn sie zur Hälfte abgelaufen wird, dann 
 
 #### Adressvergabe über mehrere Netze
 
-Problem:
+![DHCP](assets/dhcp.drawio.svg)
+
+Problem:  
 - Router leiten niemals Broadcasts weiter! DHCP Discover aus dem linken Netz kommt nicht beim Server an
-Lösung:
+
+Lösung:  
 - Relay Agent: Routerschnittstelle macht aus dem Broadcast einen Unicast gezielt an die IP des DHCP Servers. DHCP Server braucht für jedes Netz einen eigenen Pool
 
 ## Angriffe auf DHCP
 
 DHCP Starvation: DHCP Server wird mit Anfragen überhäuft bis er keine IPs mehr hat (DoS Attack), dann springt ein Rogue Server ein und vergibt IPs mit z. B. falschem Standard Gateway oder DNS Server (DNS Spoofing). -> Man in the middle Attack
+
+Abhilfe: DHCP Snooping: Switch lässt DHCP Offers und Acknowledge nur an bestimmten Ports zu (Port Security)
