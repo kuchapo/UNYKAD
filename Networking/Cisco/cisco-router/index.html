@@ -3574,10 +3574,12 @@
 
 
 <h1 id="cisco-router">Cisco Router</h1>
-<p>Ein Cisco Router besitzt drei Modi:
-- User EXEC Mode (<code>Router&gt;</code>)
-- Privileged EXEC Mode (<code>Router#</code>)
-- Global Configuration Mode (<code>Router(config)#</code>)</p>
+<p>Ein Cisco Router besitzt drei Modi:</p>
+<ul>
+<li>User EXEC Mode (<code>Router&gt;</code>)</li>
+<li>Privileged EXEC Mode (<code>Router#</code>)</li>
+<li>Global Configuration Mode (<code>Router(config)#</code>)</li>
+</ul>
 <h2 id="boot-prozess">Boot Prozess</h2>
 <h3 id="vergleich-zum-herkommlichen-pc">Vergleich zum herkömmlichen PC</h3>
 <table>
@@ -3610,7 +3612,7 @@
 <p>Die Unterbrechung des Boot Prozesses zum richtigen Zeitpunkt hat den Vorteil, dass man im  ROM Monitor Mode (Bootstraps CLI) stecken bleibt und Zugriff auf das Configuration Register bekommt.</p>
 <h4 id="configuration-register">Configuration Register</h4>
 <p>Das Configuration Register im ROMmon-Modus eines Cisco-Routers ist eine spezielle 16-Bit-Einstellung in Hexadezimalform, die das Verhalten des Routers beim Booten steuert. Es kann verwendet werden, um verschiedene Startoptionen zu konfigurieren.</p>
-<p>Standard-Einstellung: <code>0x2102</code>
+<p>Standard-Einstellung: <code>0x2102</code><br />
 In binär: <code>0010 0001 0000 0010</code></p>
 <p>Die letzten vier Bits sind Boot Fields. Wenn diese vier letzten Bits wie in der Standart-Einstellung genauso verbleiben, dann bedeutet es, dass so gebootet werden soll, wie es in der Startup-Config File drin steht.</p>
 <p>Wenn man nun diese Bits manipuliert, kann man folgende Ergebnisse erzielen:</p>
@@ -3660,11 +3662,15 @@ In binär: <code>0010 0001 0000 0010</code></p>
 <h4 id="beispiel-2">Beispiel 2</h4>
 <p><code>c1900-universalk9-mz.SPA.153-3.M4.bin</code></p>
 <p>-&gt; c1900: All 1900 Series Routers<br />
--&gt; universalk9-mz.SPA: Universal Feature Set ('k9' ermöglicht kryptographische Funktionen wie SSH und VPN)<br />
+-&gt; universalk9-mz.SPA: Universal Feature Set  <br />
 -&gt; 153: Train<br />
 -&gt; 3: Throttle<br />
 -&gt; M4: Rebuild<br />
 -&gt; .bin: Binary File System</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p><code>k9</code> im Feature Set ermöglicht kryptographische Funktionen wie SSH und VPN.</p>
+</div>
 <h2 id="konfiguration">Konfiguration</h2>
 <h3 id="hostnamen-vergeben">Hostnamen vergeben</h3>
 <div class="highlight"><pre><span></span><code>enable
@@ -3708,7 +3714,7 @@ enable secret &lt;YourPassword&gt;
 <div class="highlight"><pre><span></span><code>copy running-config startup-config
 </code></pre></div>
 <h3 id="ssh-aktivieren">SSH aktivieren</h3>
-<p>Um SSH zu konfigurieren, kann man das mit folgender Methode konfigurieren:</p>
+<p>Um SSH zu konfigurieren, kann man das mit folgender Methode machen:</p>
 <div class="highlight"><pre><span></span><code>enable
 configure terminal
 
@@ -3762,9 +3768,11 @@ interface &lt;InterfaceName&gt;
 ipv6 address &lt;IPv6 address&gt;
 </code></pre></div>
 <h3 id="ios-upgrade">IOS-Upgrade</h3>
-<p>Man kann ein IOS-Upgrade auf verschiede Weisen ausführen. Einer dieser Methoden benötigt:
-- Rollover- und Ethernetkabel zwischen dem Router und dem PC
-- TFTP Server (z. B. http://tftpd32.jounin.net)</p>
+<p>Man kann ein IOS-Upgrade auf verschiede Weisen ausführen. Einer dieser Methoden benötigt:</p>
+<ul>
+<li>Rollover- und Ethernetkabel zwischen dem Router und dem PC</li>
+<li>TFTP Server (z. B. http://tftpd32.jounin.net)</li>
+</ul>
 <p>Version des Routers anzeigen:</p>
 <div class="highlight"><pre><span></span><code>show version
 </code></pre></div>
