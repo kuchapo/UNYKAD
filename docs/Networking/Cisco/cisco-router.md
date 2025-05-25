@@ -1,6 +1,7 @@
 # Cisco Router
 
 Ein Cisco Router besitzt drei Modi:
+
 - User EXEC Mode (`Router>`)
 - Privileged EXEC Mode (`Router#`)
 - Global Configuration Mode (`Router(config)#`)
@@ -24,7 +25,7 @@ Die Unterbrechung des Boot Prozesses zum richtigen Zeitpunkt hat den Vorteil, da
 
 Das Configuration Register im ROMmon-Modus eines Cisco-Routers ist eine spezielle 16-Bit-Einstellung in Hexadezimalform, die das Verhalten des Routers beim Booten steuert. Es kann verwendet werden, um verschiedene Startoptionen zu konfigurieren.
 
-Standard-Einstellung: `0x2102`
+Standard-Einstellung: `0x2102`  
 In binär: `0010 0001 0000 0010`
 
 Die letzten vier Bits sind Boot Fields. Wenn diese vier letzten Bits wie in der Standart-Einstellung genauso verbleiben, dann bedeutet es, dass so gebootet werden soll, wie es in der Startup-Config File drin steht.
@@ -90,11 +91,14 @@ Wenn man ein Feature Set hat, wie z. B. das ipbase-image, und man benötigt dann
 `c1900-universalk9-mz.SPA.153-3.M4.bin`
 
 -> c1900: All 1900 Series Routers  
--> universalk9-mz.SPA: Universal Feature Set ('k9' ermöglicht kryptographische Funktionen wie SSH und VPN)  
+-> universalk9-mz.SPA: Universal Feature Set    
 -> 153: Train  
 -> 3: Throttle  
 -> M4: Rebuild  
 -> .bin: Binary File System
+
+!!! info
+	`k9` im Feature Set ermöglicht kryptographische Funktionen wie SSH und VPN.
 
 ## Konfiguration
 
@@ -158,7 +162,7 @@ copy running-config startup-config
 
 ### SSH aktivieren
 
-Um SSH zu konfigurieren, kann man das mit folgender Methode konfigurieren:
+Um SSH zu konfigurieren, kann man das mit folgender Methode machen:
 
 ```cli
 enable
@@ -229,6 +233,7 @@ ipv6 address <IPv6 address>
 ### IOS-Upgrade
 
 Man kann ein IOS-Upgrade auf verschiede Weisen ausführen. Einer dieser Methoden benötigt:
+
 - Rollover- und Ethernetkabel zwischen dem Router und dem PC
 - TFTP Server (z. B. http://tftpd32.jounin.net)
 

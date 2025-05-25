@@ -15,7 +15,7 @@ ARP (Address Resolution Protocol) ist ein Netzwerkprotokoll, das verwendet wird,
 
 ## Beispiel für eine ARP-Anfrage
 
-Ein Computer möchte Daten an die IP-Adresse 192.168.1.10 senden und fragt:
+Ein Computer möchte Daten an die IP-Adresse 192.168.1.10 senden und fragt:  
 „Wer hat die IP-Adresse 192.168.1.10? Bitte melde deine MAC-Adresse.“
 
 ---
