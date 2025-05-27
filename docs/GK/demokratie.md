@@ -1,0 +1,47 @@
+# Demokratie
+
+- Voraussetzungen
+	- Meinungsfreiheit (Pluralismus)
+	- Rechtsstaatlichkeit (Gesetze müssen auch von Politikern eingehalten werden)
+	- Gewaltenteilung
+	- freie Wahlen
+	- Bildung & politische Partizipation
+- Sonstige Regierungsformen
+	- **Demokratie**: Macht vom Volk, Wahlen, Grundrechte
+	- **Diktatur**: Macht bei einer Person oder kleinen Gruppe, keine Opposition
+	- **Monarchie**: Herrschaft durch König/Königin, kann demokratisch oder autoritär sein
+- Demokratieformen
+	- **Direkte Demokratie**: Bürger entscheiden selbst (z. B. Volksabstimmungen)
+	- **Repräsentative Demokratie**: Bürger wählen Vertreter (z. B. Bundestag)
+- Wahlen und Wahlgrundsätze
+	- **Allgemein** (jeder darf wählen)
+	- **Unmittelbar** (keine Zwischenstufe)
+	- **Frei** (keine Beeinflussung)
+	- **Gleich** (jede Stimme zählt gleich)
+	- **Geheim** (Stimmabgabe ist anonym)
+- Bundestagswahl
+	- Alle 4 Jahre
+	- Erststimme = Direktkandidat im Wahlkreis
+	- Zweitstimme = Partei → bestimmt Sitzverteilung
+	- 5%-Hürde
+- weitere Möglichkeiten sich politisch zu engagieren
+	- Wahlen
+	- Petitionen
+	- Demonstrationen
+	- Mitgliedschaft in Parteien oder Vereinen
+- Institutionen der BRD und ihre Aufgaben
+	- **Bundestag** (Gesetze beschließen)
+	- **Bundesrat** (Vertreter der Länder, muss bei vielen Gesetzen zustimmen)
+	- **Bundesregierung** (Kanzler + Minister, führen Gesetze aus)
+	- **Bundespräsident** (repräsentiert das Land, ernennt Kanzler)
+	- **Bundesverfassungsgericht** (prüft Gesetze auf Verfassungsmäßigkeit)
+- Gewaltenteilung
+	- **Legislative** (Gesetzgebende Gewalt)
+		- Bundesebene: Bundestag, Bundesrat
+		- Länderebene: Parlamente der Länder
+	- **Exekutive** (Vollziehende Gewalt)
+		- Bundesebene: Bundeskanzler, Bundesregierung
+		- Länderebene: Länderregierungen
+	- **Judikative** (Rechtsprechende Gewalt)
+		- Bundesebene: Bundesverfassungsgericht
+		- Länderebene: Gerichte der Länder 
