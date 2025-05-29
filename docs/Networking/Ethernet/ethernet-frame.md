@@ -45,4 +45,4 @@ Die Daten (Englisch: Data) bestehen einmal aus dem Header der höheren Schichten
 
 #### Frame Check Sequence (FCS)
 
-Die Blockprüfzeichenfolge (BPF)(englisch: Frame Check Sequence (FCS)) ermöglicht eine Fehlererkennung und eine Fehlerkorrektur auf dem Ethernet-Frame.
+Die Blockprüfzeichenfolge (BPF)(englisch: Frame Check Sequence (FCS)) ermöglicht eine Fehlererkennung und eine Fehlerkorrektur auf dem Ethernet-Frame. Wenn die empfangene FCS nicht mit der berechneten Prüfsumme des gesendeten Frames übereinstimmt, wird der komplette Frame verworfen. Es erfolgt keine automatische Wiederholung der Übertragung auf Ethernet-Ebene. Stattdessen liegt die Fehlerkorrektur in der Verantwortung höherer Protokolle im OSI-Modell, wie beispielsweise TCP, das durch Mechanismen wie Retransmission (erneute Übertragung) für eine korrekte Zustellung sorgt.

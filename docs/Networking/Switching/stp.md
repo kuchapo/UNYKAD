@@ -71,11 +71,11 @@ Der Root-Port R wird vergeben, indem geschaut wird, welcher der Ports unter Ber�
 
 Die Root-Bridge kann keine Ports im Blocking-Zustand haben. Folglich sind bei der Root-Bridge alle Ports Designated-Ports.
 
-Jetzt können Designated-Ports überall ergänzt werden, wo auf der anderen Seite auch ein Root-Port bereits eingetragen ist.
+Jetzt können Designated-Ports überall ergänzt werden, wo auf der anderen Seite (beim anderen Gerät) auch ein Root-Port bereits eingetragen ist.
 
 ![Ohne redundante Verbindungen](./assets/portrollen1.drawio.svg)
 
-Dort wo auf beiden Seiten keine Root-Ports festgelegt worden waren, muss nun geschaut werden, welcher Pfad von der Root-Bridge aus gesehen, der kürzeste ist. Der wird zum Designated-Port und der andere entsprechend zum Blocking-Port.
+Dort wo auf beiden Seiten der Verbindung keine Root-Ports festgelegt worden waren, muss nun geschaut werden, welcher Pfad von der Root-Bridge aus gesehen, der kürzeste ist. Der kürzeste wird zum Designated-Port und der andere entsprechend zum Blocking-Port.
 
 ### Port-Rollen Übersicht
 

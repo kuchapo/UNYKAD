@@ -1,7 +1,7 @@
 # CSMA (Carrier Sense Multiple Access)
 
-Carrier Sense = Das Gerät "hört" erst, ob das Medium frei ist.  
-Multiple Access = Mehrere Geräte teilen sich das Medium (z. B. das Funknetz oder ein Kabel)
+**Carrier Sense** = Das Gerät "hört" erst, ob das Medium frei ist.  
+**Multiple Access** = Mehrere Geräte teilen sich das Medium (z. B. das Funknetz oder ein Kabel)
 
 ## CSMA/CD
 
