@@ -11,5 +11,5 @@
 
 ## Notes
 
-- **Hubs** are always **Half-Duplex** (they cannot support Full-Duplex).
-- **Switches** support both **Half-Duplex and Full-Duplex**, but modern switches always use Full-Duplex.
+- **Hubs** are always *Half-Duplex* (they cannot support Full-Duplex).
+- **Switches** support both *Half-Duplex and Full-Duplex*, but modern switches always use *Full-Duplex*.
