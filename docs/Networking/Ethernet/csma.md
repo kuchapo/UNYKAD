@@ -9,7 +9,7 @@
 
 Wenn zwei Geräte zur gleichen Zeit senden, erfolgt eine Kollision. Durch ein Amplituden-Ausschlag werden beide Geräte informiert, dass die Daten nicht angekommen sind. Aus diesem Grund senden die Geräte nach Zufallszeit erneut ihre Daten.
 
-Beispiel: FastEthernet (nur bei Halb-Duplex)
+**Beispiel**: FastEthernet (nur bei Halb-Duplex)
 
 ## CSMA/CA
 
@@ -17,4 +17,4 @@ Beispiel: FastEthernet (nur bei Halb-Duplex)
 
 Kollisionen werden hier nicht erkannt, sie werden vermieden, indem die Geräte sich über die benötigte Übertragungsdauer gegenseitig informieren. Andere Geräte wissen somit wie lange das Medium nicht erreichbar ist.
 
-Beipiel: WLAN
+**Beispiel**: WLAN
