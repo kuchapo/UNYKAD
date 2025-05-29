@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../allgemeines_zu_kabeln/">
+        <link rel="prev" href="../../Dynamisches%20Routing/OSPF/OSPF/">
       
       
-        <link rel="next" href="../strukturierte_verkabelung/">
+        <link rel="next" href="../collision_domains/">
       
       
       <link rel="icon" href="../../../assets/u1icofullSize.svg">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Glasfaserkabel - UNYKAD</title>
+        <title>Address Resolution Protocol (ARP) - UNYKAD</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#glasfaserkabel" class="md-skip">
+        <a href="#address-resolution-protocol-arp" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Glasfaserkabel
+              Address Resolution Protocol (ARP)
             
           </span>
         </div>
@@ -1159,8 +1159,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -1181,11 +1183,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_14" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_14" checked>
         
           
           <label class="md-nav__link" for="__nav_3_14" id="__nav_3_14_label" tabindex="0">
@@ -1201,7 +1203,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_14_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_14_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_14">
             <span class="md-nav__icon md-icon"></span>
             Ethernet
@@ -1212,10 +1214,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../Ethernet/arp/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Address Resolution Protocol (ARP)
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1226,6 +1250,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#funktionsweise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funktionsweise
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wichtige-punkte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wichtige Punkte
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beispiel-fur-eine-arp-anfrage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beispiel für eine ARP-Anfrage
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1238,7 +1309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ethernet/collision_domains/" class="md-nav__link">
+      <a href="../collision_domains/" class="md-nav__link">
         
   
   
@@ -1261,7 +1332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ethernet/csma/" class="md-nav__link">
+      <a href="../csma/" class="md-nav__link">
         
   
   
@@ -1284,7 +1355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ethernet/ethernet-frame/" class="md-nav__link">
+      <a href="../ethernet-frame/" class="md-nav__link">
         
   
   
@@ -1307,7 +1378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ethernet/ethernet_speed/" class="md-nav__link">
+      <a href="../ethernet_speed/" class="md-nav__link">
         
   
   
@@ -1436,10 +1507,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -1458,11 +1527,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_16" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_16" >
         
           
           <label class="md-nav__link" for="__nav_3_16" id="__nav_3_16_label" tabindex="0">
@@ -1478,7 +1547,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_16_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_16_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_16">
             <span class="md-nav__icon md-icon"></span>
             Kabel
@@ -1492,7 +1561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../allgemeines_zu_kabeln/" class="md-nav__link">
+      <a href="../../Kabel/allgemeines_zu_kabeln/" class="md-nav__link">
         
   
   
@@ -1512,32 +1581,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Glasfaserkabel
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Kabel/glasfaser/" class="md-nav__link">
         
   
   
@@ -1548,62 +1595,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#totalreflexion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Totalreflexion
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#multimode-kabel" class="md-nav__link">
-    <span class="md-ellipsis">
-      Multimode Kabel
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#monomode-singlemode-kabel" class="md-nav__link">
-    <span class="md-ellipsis">
-      Monomode (Singlemode) Kabel
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#multimode-und-monomode-kabel" class="md-nav__link">
-    <span class="md-ellipsis">
-      Multimode und Monomode Kabel
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1616,7 +1607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../strukturierte_verkabelung/" class="md-nav__link">
+      <a href="../../Kabel/strukturierte_verkabelung/" class="md-nav__link">
         
   
   
@@ -1639,7 +1630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../twisted_pair_kabel/" class="md-nav__link">
+      <a href="../../Kabel/twisted_pair_kabel/" class="md-nav__link">
         
   
   
@@ -3389,36 +3380,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#totalreflexion" class="md-nav__link">
+  <a href="#funktionsweise" class="md-nav__link">
     <span class="md-ellipsis">
-      Totalreflexion
+      Funktionsweise
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#multimode-kabel" class="md-nav__link">
+  <a href="#wichtige-punkte" class="md-nav__link">
     <span class="md-ellipsis">
-      Multimode Kabel
+      Wichtige Punkte
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#monomode-singlemode-kabel" class="md-nav__link">
+  <a href="#beispiel-fur-eine-arp-anfrage" class="md-nav__link">
     <span class="md-ellipsis">
-      Monomode (Singlemode) Kabel
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#multimode-und-monomode-kabel" class="md-nav__link">
-    <span class="md-ellipsis">
-      Multimode und Monomode Kabel
+      Beispiel für eine ARP-Anfrage
     </span>
   </a>
   
@@ -3440,33 +3422,24 @@
 
 
 
-<h1 id="glasfaserkabel">Glasfaserkabel</h1>
-<p>Das Glasfaserkabel ist ein Lichtwellenleiter (LWL), welcher zur Datenübertragung Licht benutzt (Licht an: 1, Licht aus: 0).</p>
-<h2 id="totalreflexion">Totalreflexion</h2>
-<p><strong>Brechung</strong> tritt auf, wenn Licht von einem Medium in ein anderes übergeht und dabei seine Richtung ändert. <strong>Totalreflexion</strong> passiert, wenn Licht von einem dichteren Medium (z. B. Wasser) in ein weniger dichtes Medium (z. B. Luft) trifft und der Einfallswinkel größer als der kritische Winkel ist, denn dann wird das Licht komplett reflektiert. Dieser Effekt wird in Glasfasern genutzt, um Licht verlustfrei durch Kurven zu übertragen.</p>
-<h2 id="multimode-kabel">Multimode Kabel</h2>
+<h1 id="address-resolution-protocol-arp">Address Resolution Protocol (ARP)</h1>
+<p>ARP (Address Resolution Protocol) ist ein Netzwerkprotokoll, das verwendet wird, um die MAC-Adresse (Media Access Control) eines Geräts anhand seiner IP-Adresse zu ermitteln. Es ist ein entscheidender Bestandteil der Kommunikation in lokalen Netzwerken (LAN).</p>
+<h2 id="funktionsweise">Funktionsweise</h2>
+<ol>
+<li><strong>Anfrage:</strong> Ein Gerät sendet eine ARP-Anfrage, um die MAC-Adresse eines anderen Geräts mit einer bekannten IP-Adresse zu finden.</li>
+<li><strong>Antwort:</strong> Das Zielgerät antwortet mit seiner MAC-Adresse.</li>
+<li><strong>Kommunikation:</strong> Nach der Zuordnung können die Geräte miteinander kommunizieren.</li>
+</ol>
+<h2 id="wichtige-punkte">Wichtige Punkte</h2>
 <ul>
-<li>Faser 50µm oder 62,5µm dick (ungefähr wie ein menschliches Haar)</li>
-<li>können bis ca. 5 km lang sein</li>
-<li>Lichtquelle LED, streuendes Licht (viele Lichtstrahlen desselben Lichts), LED strahlt einen Frequenzbereich aus</li>
-<li>Dispersion: Die unterschiedlichen Lichtstrahlen gehen verschiedene Wege durch die Glasfaser, dadurch kommen sie nicht genau gleichzeitig am Ende der Glasfaser an (Einser gehen ineinander über und die Nullen verschwinden). Das Signal „verschwimmt“. Je länger das Kabel und je höher die Datenrate, desto stärker wirkt sich das aus.</li>
-<li>Für jedes Multimode-Kabel wird ein sogenanntes Bandbreiten-Längen-Produkt in MHz·km angegeben, das angibt, bis zu welcher Kombination aus Bandbreite und Kabellänge eine fehlerfreie Übertragung möglich ist. Formel: <code>Bandbreite x Länge = const in MHz·km</code>. Beispiel: Ein Multimode Kabel mit dem Bandbreiten-Länge-Produkt 1500MHz·km kann 1500MHz (entspricht 1500Mbit/s) über 1000m oder z.B. 750 MHz über 2000m sauber übertragen, wenn das Kabel nur 500m lang ist, kann es 3000MHz übertragen.</li>
-<li>Die Dämpfung bezeichnet ein Maß für die Abnahme der Helligkeit des Signals pro Kilometer im Kabel.</li>
+<li>ARP arbeitet nur innerhalb eines Netzwerks und ist nicht zwischen verschiedenen Netzwerken aktiv.</li>
+<li>Es existiert eine <strong>ARP-Tabelle</strong> auf jedem Gerät, die die Zuordnungen von IP- zu MAC-Adressen speichert.</li>
 </ul>
-<h2 id="monomode-singlemode-kabel">Monomode (Singlemode) Kabel</h2>
-<ul>
-<li>Faser nur 9µm dick</li>
-<li>können über 100km lang sein, dann muss aber der Lichtstrahl verstärkt werden</li>
-<li>Laserdiode als Lichtquelle, ein einziger Lichtstrahl, absolut monochromatisches Licht</li>
-<li>Unterschiedliche Glasorten drücken den Lichtstrahl immer in die Mitte des Kabels, hier gibt es keine Dispersion, nur Dämpfung.</li>
-</ul>
-<h2 id="multimode-und-monomode-kabel">Multimode und Monomode Kabel</h2>
-<ul>
-<li>Multiplex: es werden verschiedene Lichtfarben(Wellenlängen) gleichzeitig durch die Faser geschickt -&gt; Erhöhung der Bandbreite des Kabels</li>
-<li>Dämpfung ist auch abhängig von der Lichtfarbe</li>
-<li>viele verschiedene Steckerformen</li>
-<li>eine Verbindung besteht immer aus einem Hin- und einem Rückleiter</li>
-</ul>
+<h2 id="beispiel-fur-eine-arp-anfrage">Beispiel für eine ARP-Anfrage</h2>
+<p>Ein Computer möchte Daten an die IP-Adresse 192.168.1.10 senden und fragt:<br />
+„Wer hat die IP-Adresse 192.168.1.10? Bitte melde deine MAC-Adresse.“</p>
+<hr />
+<p>Mit ARP wird sichergestellt, dass Geräte in einem lokalen Netzwerk Daten effizient und korrekt übertragen können.</p>
 
 
 
