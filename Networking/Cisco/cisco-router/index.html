@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../../assets/u1icofullSize.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.2afb09e1.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -1071,6 +1071,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#passwortwiederherstellung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Passwortwiederherstellung
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1258,6 +1267,15 @@
   <a href="#konfigurationen-auf-dem-router-zurucksetzen" class="md-nav__link">
     <span class="md-ellipsis">
       Konfigurationen auf dem Router zurücksetzen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nutzliche-befehle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nützliche Befehle
     </span>
   </a>
   
@@ -3635,6 +3653,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#passwortwiederherstellung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Passwortwiederherstellung
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3827,6 +3854,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#nutzliche-befehle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nützliche Befehle
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3885,6 +3921,7 @@
 </table>
 <h3 id="boot-prozess-unterbrechen">Boot Prozess unterbrechen</h3>
 <p>Die Unterbrechung des Boot Prozesses zum richtigen Zeitpunkt hat den Vorteil, dass man im  ROM Monitor Mode (Bootstraps CLI) stecken bleibt und Zugriff auf das Configuration Register bekommt.</p>
+<p><strong>Den Bootprozess über PuTTY unterbrechen:</strong> Nach dem Router-Neustart kann man in PuTTY oben auf das <strong>Computer-Icon</strong> klicken und unter <strong>"Special Command"</strong> das <code>Break</code><strong>-Kommando</strong> ausführen, um den Bootvorgang zu unterbrechen.</p>
 <h4 id="configuration-register">Configuration Register</h4>
 <p>Das Configuration Register im ROMmon-Modus eines Cisco-Routers ist eine spezielle 16-Bit-Einstellung in Hexadezimalform, die das Verhalten des Routers beim Booten steuert. Es kann verwendet werden, um verschiedene Startoptionen zu konfigurieren.</p>
 <p>Standard-Einstellung: <code>0x2102</code><br />
@@ -3898,6 +3935,34 @@ In binär: <code>0010 0001 0000 0010</code></p>
 </ul>
 <p>Wenn das siebte Bit von rechts auf <code>0</code> steht, dann bedeutet das, dass der Inhalt des NVRAMs ausgelesen wird und die Startup-Config geladen wird. Es wird die Startup-Config File in die Running-Config File kopiert.</p>
 <p>Falls das siebte Bit auf <code>1</code> gesetzt wird, dann heißt es, dass die Startup-Config nicht geladen wird.</p>
+<h3 id="passwortwiederherstellung">Passwortwiederherstellung</h3>
+<p>Nachdem man den Bootprozess unterbrochen hat:</p>
+<div class="highlight"><pre><span></span><code>confreg 0x2142
+reset
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>! Enter no
+en
+show startup-config
+copy startup-config running-config
+
+configure terminal
+! Enter new Privileged Mode Password
+enable secret &lt;YourPassword&gt;
+config-register 0x2102
+exit
+copy startup-config running-config
+
+! All physical ports are down because no shut is needed
+configure terminal
+do show ip interface brief
+interface &lt;InterfaceName&gt;
+no shut
+interface &lt;InterfaceName2&gt;
+no shut
+exit
+exit
+copy startup-config running-config
+</code></pre></div>
 <h2 id="internetworking-operating-system-ios">Internetworking Operating System (IOS)</h2>
 <p>Cisco IOS (Internetwork Operating System) ist das proprietäre Betriebssystem von Cisco für Router und Switches und wird im Flash Memory gespeichert (nicht RAM oder NVRAM!). An folgende Versionsstruktur hält sich Cisco:</p>
 <pre class="mermaid"><code>flowchart TB
@@ -4085,6 +4150,32 @@ erase startup-config
 
 reload
 </code></pre></div>
+<h3 id="nutzliche-befehle">Nützliche Befehle</h3>
+<p>Löscht alles auf dem Flash-Speicher (Befehl je nach Modell auswählen):</p>
+<div class="highlight"><pre><span></span><code>erase flash:
+reload
+! Enter yes
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>format flash:
+reload
+! Enter yes
+</code></pre></div>
+<p>Zeigt, ob die physischen Ports aktiv sind:</p>
+<div class="highlight"><pre><span></span><code>show ip interface brief
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Wenn <code>Status</code> "up" ist, aber <code>Protocol</code> "down", dann sollte man als erstes die Kabel überprüfen, ob sie auch korrekt angeschlossen wurden.</p>
+</div>
+<p>Deaktivierte einen Port, unabhängig davon, ob der Kabel in der Lage ist, Daten zu übertragen:</p>
+<div class="highlight"><pre><span></span><code>shutdown
+</code></pre></div>
+<p>Zeigt alle Informationen über ein Interface an:</p>
+<div class="highlight"><pre><span></span><code>show interface &lt;InterfaceName&gt;
+</code></pre></div>
+<p>Unbekannte Befehle werden nicht als Hostnamen aufgelöst:</p>
+<div class="highlight"><pre><span></span><code>no ip domain-lookup
+</code></pre></div>
 
 
 
@@ -4140,10 +4231,10 @@ reload
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.code.copy", "content.tabs.link", "header.autohide", "announce.dismiss", "navigation.indexes", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.code.copy", "content.tabs.link", "header.autohide", "announce.dismiss", "navigation.indexes", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
     
   </body>
