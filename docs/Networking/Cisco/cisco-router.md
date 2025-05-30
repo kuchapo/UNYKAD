@@ -21,6 +21,8 @@ Ein Cisco Router besitzt drei Modi:
 
 Die Unterbrechung des Boot Prozesses zum richtigen Zeitpunkt hat den Vorteil, dass man im  ROM Monitor Mode (Bootstraps CLI) stecken bleibt und Zugriff auf das Configuration Register bekommt.
 
+**Den Bootprozess über PuTTY unterbrechen:** Nach dem Router-Neustart kann man in PuTTY oben auf das **Computer-Icon** klicken und unter **"Special Command"** das `Break`**-Kommando** ausführen, um den Bootvorgang zu unterbrechen.
+
 #### Configuration Register
 
 Das Configuration Register im ROMmon-Modus eines Cisco-Routers ist eine spezielle 16-Bit-Einstellung in Hexadezimalform, die das Verhalten des Routers beim Booten steuert. Es kann verwendet werden, um verschiedene Startoptionen zu konfigurieren.
@@ -39,6 +41,40 @@ Wenn man nun diese Bits manipuliert, kann man folgende Ergebnisse erzielen:
 Wenn das siebte Bit von rechts auf `0` steht, dann bedeutet das, dass der Inhalt des NVRAMs ausgelesen wird und die Startup-Config geladen wird. Es wird die Startup-Config File in die Running-Config File kopiert.
 
 Falls das siebte Bit auf `1` gesetzt wird, dann heißt es, dass die Startup-Config nicht geladen wird.
+
+### Passwortwiederherstellung
+
+Nachdem man den Bootprozess unterbrochen hat:
+
+```rommon
+confreg 0x2142
+reset
+```
+
+```cli
+! Enter no
+en
+show startup-config
+copy startup-config running-config
+
+configure terminal
+! Enter new Privileged Mode Password
+enable secret <YourPassword>
+config-register 0x2102
+exit
+copy startup-config running-config
+
+! All physical ports are down because no shut is needed
+configure terminal
+do show ip interface brief
+interface <InterfaceName>
+no shut
+interface <InterfaceName2>
+no shut
+exit
+exit
+copy startup-config running-config
+```
 
 ## Internetworking Operating System (IOS)
 
@@ -291,4 +327,47 @@ enable
 erase startup-config
 
 reload
+```
+
+### Nützliche Befehle
+
+Löscht alles auf dem Flash-Speicher (Befehl je nach Modell auswählen):
+
+```cli
+erase flash:
+reload
+! Enter yes
+```
+
+```cli
+format flash:
+reload
+! Enter yes
+```
+
+Zeigt, ob die physischen Ports aktiv sind:
+
+```cli
+show ip interface brief
+```
+
+!!! info
+	Wenn `Status` "up" ist, aber `Protocol` "down", dann sollte man als erstes die Kabel überprüfen, ob sie auch korrekt angeschlossen wurden.
+
+Deaktivierte einen Port, unabhängig davon, ob der Kabel in der Lage ist, Daten zu übertragen:
+
+```cli
+shutdown
+```
+
+Zeigt alle Informationen über ein Interface an:
+
+```cli
+show interface <InterfaceName>
+```
+
+Unbekannte Befehle werden nicht als Hostnamen aufgelöst:
+
+```cli
+no ip domain-lookup
 ```
