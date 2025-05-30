@@ -352,9 +352,9 @@ show ip interface brief
 ```
 
 !!! info
-	Wenn `Status` "up" ist, aber `Protocol` "down", dann sollte man als erstes die Kabel überprüfen, ob sie auch korrekt angeschlossen wurden.
+	Wenn `Status` "up" ist, aber `Protocol` "down", dann sollte man als erstes die Kabel überprüfen, ob sie auch korrekt angeschlossen sind.
 
-Deaktivierte einen Port, unabhängig davon, ob der Kabel in der Lage ist, Daten zu übertragen:
+Deaktiviert einen Port, unabhängig davon, ob das Kabel in der Lage ist, Daten zu übertragen:
 
 ```cli
 shutdown
