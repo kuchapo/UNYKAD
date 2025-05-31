@@ -29,7 +29,7 @@ Bezeichnung nach ISO/IEC 11801 (2002): **X/Y**TP
 | Cat2      | 1,5 MHz       | nur als UTP erhältlich ISDN                          |
 | Cat3      | 16 MHz        | nur als UTP erhältlich, Telefonkabel, ISDN, 10Base-T |
 | Cat4      | 20 MHz        | in Deutschland kaum erhältlich                       |
-| Cat5      | 100 MHz       | 100 Base-T                                           |
+| Cat5      | 100 MHz       | 100Base-T                                            |
 | Cat5e     | 100 MHz       | höhere Anforderungen bei NEXT und FEXT, 1000Base-T   |
 | Cat6      | 250 MHz       | 5Gbase-T und 10Gbase-T < 55m                         |
 | Cat6A     | 500 MHz       | 10Gbase-T                                            |

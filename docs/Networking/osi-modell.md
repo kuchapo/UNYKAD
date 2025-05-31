@@ -14,6 +14,12 @@
 - Sicherstellen einer funktionierenden Verbindung zwischen zwei benachbarten Stationen (im selben LAN)
 - Überprüfung auf Fehler
 - Daten, die die Schicht 2 verlassen sind fehlerfrei
+- Technologien:
+    - Ethernet
+    - Wireless
+    - Digital Subscriber Line (DSL)
+    - Data Over Cable Service Interface Specification (DOCSIS)
+    - Satelite Internet
 
 ## Schicht 3
 

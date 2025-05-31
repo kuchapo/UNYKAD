@@ -1,10 +1,41 @@
 # Cisco Router
 
-Ein Cisco Router besitzt drei Modi:
+## Modi
 
 - User EXEC Mode (`Router>`)
 - Privileged EXEC Mode (`Router#`)
 - Global Configuration Mode (`Router(config)#`)
+
+## Speicherplätze
+
+**EEPROM (Electrically Erasable Programmable ROM)**
+
+- Enthält das Bootstrapping-Programm
+    - Ist ein kleines Startprogramm
+    - Beinhaltet das Configuration Register
+    - Aufgabe: das IOS-Betriebssystem aus dem Flash-Speicher zu laden
+    - ROMMON-Modus (=einfacher Bootoader) für Fehlerbehebung starten, falls das IOS nicht gefunden wird
+- Enthält die Firmware
+    - Steuert wichtige Hardware-Funktionen
+    - Besteht aus Low-Level-Code
+- kann im Gegensatz zu ROM beschrieben werden
+- Wird online in vielen Dokumentationen oft nur als "ROM" bezeichnet
+
+**NVRAM (Non-Volatile RAM)**
+
+- Speichert die `startup-config`
+- Bleibt auch nach einem Neustart erhalten
+
+**RAM (Random Access Memory)**
+
+- Enthält die `running-config`
+- Speichert temporäre Daten wie Routing-Tabellen
+- Geht beim Neustart verloren
+
+**FLASH**
+
+- Speichert das IOS-Betriebssystem
+- Kann auch zusätzliche Boot-Dateien oder Backups enthalten
 
 ## Boot Prozess
 

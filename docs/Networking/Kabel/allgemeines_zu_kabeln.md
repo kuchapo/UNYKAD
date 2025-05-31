@@ -1,5 +1,16 @@
 # Allgemeines zu Kabeln
 
+## Übersicht zu Kabeln
+
+| **Kategorie**          | **Speed**  | **Half Duplex?** | **Full Duplex?** | **Standard & Medium**                   |
+|-----------------------|------------|-----------------|-----------------|-----------------------------------------|
+| **Ethernet**         | 10 Mbps     | yes             | yes             | 10Base5 (Koaxial), 10Base2 (Koaxial), 10BaseT (Twisted-Pair Kat. 3) |
+| **Fast Ethernet**    | 100 Mbps    | yes             | yes             | 100Base-TX (Twisted-Pair Kat. 5), 100Base-FX (Multimode-Glasfaser), 100Base-T4 (Twisted-Pair Kat. 3) |
+| **Gigabit Ethernet** | 1 Gbps      | no              | yes             | 1000Base-T (Twisted-Pair Kat. 5e), 1000Base-SX (Multimode-Glasfaser), 1000Base-LX (Singlemode-Glasfaser), 1000Base-BX (Singlemode-Glasfaser bidirektional) |
+| **10G Ethernet**     | 10 Gbps     | no              | yes             | 10GBase-T (Twisted-Pair Kat. 6A), 10GBase-SR (Multimode-Glasfaser), 10GBase-LR (Singlemode-Glasfaser), 10GBase-BX (Singlemode-Glasfaser bidirektional) |
+| **40G Ethernet**     | 40 Gbps     | no              | yes             | 40GBase-SR4 (Multimode-Glasfaser), 40GBase-LR4 (Singlemode-Glasfaser), 40GBase-CR4 (Kupfer-DAC) |
+| **100G Ethernet**    | 100 Gbps    | no              | yes             | 100GBase-SR10 (Multimode-Glasfaser), 100GBase-LR4 (Singlemode-Glasfaser), 100GBase-ER4 (Singlemode-Glasfaser) |
+
 ## Kabelarten
 
 ### Wandkabel
