@@ -14,17 +14,15 @@
 - L3-Switches funktionieren auf Layer 2 & 3
 - L3-Switches werden häufig als Core-Switches verwendet
 
+## Modi
+
+Wie beim Router
+
 ## Speicherplätze
 
-EEPROM
-    - Bootstrap
-FLASH
-    - IOS
-    - config.txt
-NVRAM
-    - startup-config, welcher der Datei config.txt aus dem FLASH entspricht
-RAM
-    - running-config
+Wie beim Router, nur mit dem Unterschied, dass im Flash noch die config.txt existiert, welche den NVRAM darstellt.
+
+config.txt = NVRAM, also Startup-Config
 
 ## Konfiguration
 
@@ -60,10 +58,10 @@ no shutdown
 ### Passwortwiederherstellung
 
 - in den ROMMON-Modus booten
-    - Switch ausschaltet oder das Kabel raus zieht
+    - Switch ausschalten oder das Kabel raus ziehen
     - Mode-Taste gedrückt halten und Kabel wieder einstecken bzw. Switch wieder einschalten
 
-````cli
+```cli
 flash_init
 dir flash:
 rename flash:config.txt flash:config.bak
