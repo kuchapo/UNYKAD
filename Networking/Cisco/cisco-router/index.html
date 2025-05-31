@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../../assets/u1icofullSize.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
@@ -1029,6 +1029,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#modi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modi
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#speicherplatze" class="md-nav__link">
+    <span class="md-ellipsis">
+      Speicherplätze
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#boot-prozess" class="md-nav__link">
     <span class="md-ellipsis">
       Boot Prozess
@@ -1540,12 +1558,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ethernet/collision_domains/" class="md-nav__link">
+      <a href="../../Ethernet/collision_and_broadcast_domains/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Collision Domain
+    Collision and Broadcast Domains
     
   </span>
   
@@ -1586,12 +1604,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ethernet/duplex_and_ethernet_speed/" class="md-nav__link">
+      <a href="../../Ethernet/ethernet-frame/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Duplex and Ethernet Speed
+    Ethernet-Frame
     
   </span>
   
@@ -1609,12 +1627,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ethernet/ethernet-frame/" class="md-nav__link">
+      <a href="../../Ethernet/ethernet_speed_and_duplex/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Ethernet-Frame
+    Duplex and Ethernet Speed
     
   </span>
   
@@ -1898,6 +1916,8 @@
       
         
       
+        
+      
     
     
     
@@ -1968,6 +1988,29 @@
   
   <span class="md-ellipsis">
     Spanning Tree Protocol (STP)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Switching/switch_basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Switch Basics
     
   </span>
   
@@ -3611,6 +3654,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#modi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modi
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#speicherplatze" class="md-nav__link">
+    <span class="md-ellipsis">
+      Speicherplätze
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#boot-prozess" class="md-nav__link">
     <span class="md-ellipsis">
       Boot Prozess
@@ -3885,11 +3946,45 @@
 
 
 <h1 id="cisco-router">Cisco Router</h1>
-<p>Ein Cisco Router besitzt drei Modi:</p>
+<h2 id="modi">Modi</h2>
 <ul>
 <li>User EXEC Mode (<code>Router&gt;</code>)</li>
 <li>Privileged EXEC Mode (<code>Router#</code>)</li>
 <li>Global Configuration Mode (<code>Router(config)#</code>)</li>
+</ul>
+<h2 id="speicherplatze">Speicherplätze</h2>
+<p><strong>EEPROM (Electrically Erasable Programmable ROM)</strong></p>
+<ul>
+<li>Enthält das Bootstrapping-Programm<ul>
+<li>Ist ein kleines Startprogramm</li>
+<li>Beinhaltet das Configuration Register</li>
+<li>Aufgabe: das IOS-Betriebssystem aus dem Flash-Speicher zu laden</li>
+<li>ROMMON-Modus (=einfacher Bootoader) für Fehlerbehebung starten, falls das IOS nicht gefunden wird</li>
+</ul>
+</li>
+<li>Enthält die Firmware<ul>
+<li>Steuert wichtige Hardware-Funktionen</li>
+<li>Besteht aus Low-Level-Code</li>
+</ul>
+</li>
+<li>kann im Gegensatz zu ROM beschrieben werden</li>
+<li>Wird online in vielen Dokumentationen oft nur als "ROM" bezeichnet</li>
+</ul>
+<p><strong>NVRAM (Non-Volatile RAM)</strong></p>
+<ul>
+<li>Speichert die <code>startup-config</code></li>
+<li>Bleibt auch nach einem Neustart erhalten</li>
+</ul>
+<p><strong>RAM (Random Access Memory)</strong></p>
+<ul>
+<li>Enthält die <code>running-config</code></li>
+<li>Speichert temporäre Daten wie Routing-Tabellen</li>
+<li>Geht beim Neustart verloren</li>
+</ul>
+<p><strong>FLASH</strong></p>
+<ul>
+<li>Speichert das IOS-Betriebssystem</li>
+<li>Kann auch zusätzliche Boot-Dateien oder Backups enthalten</li>
 </ul>
 <h2 id="boot-prozess">Boot Prozess</h2>
 <h3 id="vergleich-zum-herkommlichen-pc">Vergleich zum herkömmlichen PC</h3>
@@ -4231,10 +4326,10 @@ reload
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.code.copy", "content.tabs.link", "header.autohide", "announce.dismiss", "navigation.indexes", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "search": "../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.code.copy", "content.tabs.link", "header.autohide", "announce.dismiss", "navigation.indexes", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
     
   </body>
