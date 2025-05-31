@@ -1737,6 +1737,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#modi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modi
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#speicherplatze" class="md-nav__link">
     <span class="md-ellipsis">
       Speicherplätze
@@ -3480,6 +3489,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#modi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modi
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#speicherplatze" class="md-nav__link">
     <span class="md-ellipsis">
       Speicherplätze
@@ -3617,16 +3635,11 @@
 <li>L3-Switches funktionieren auf Layer 2 &amp; 3</li>
 <li>L3-Switches werden häufig als Core-Switches verwendet</li>
 </ul>
+<h2 id="modi">Modi</h2>
+<p>Wie beim Router</p>
 <h2 id="speicherplatze">Speicherplätze</h2>
-<p>EEPROM
-    - Bootstrap
-FLASH
-    - IOS
-    - config.txt
-NVRAM
-    - startup-config, welcher der Datei config.txt aus dem FLASH entspricht
-RAM
-    - running-config</p>
+<p>Wie beim Router, nur mit dem Unterschied, dass im Flash noch die config.txt existiert, welche den NVRAM darstellt.</p>
+<p>config.txt = NVRAM, also Startup-Config</p>
 <h2 id="konfiguration">Konfiguration</h2>
 <ul>
 <li>Via Patchkabel zwischen Ethernet Port (PC) und Switch Port (Switch) verbinden</li>
@@ -3650,17 +3663,17 @@ no shutdown
 <h3 id="passwortwiederherstellung">Passwortwiederherstellung</h3>
 <ul>
 <li>in den ROMMON-Modus booten<ul>
-<li>Switch ausschaltet oder das Kabel raus zieht</li>
+<li>Switch ausschalten oder das Kabel raus ziehen</li>
 <li>Mode-Taste gedrückt halten und Kabel wieder einstecken bzw. Switch wieder einschalten</li>
 </ul>
 </li>
 </ul>
-<p>````cli
-flash_init
+<div class="highlight"><pre><span></span><code>flash_init
 dir flash:
 rename flash:config.txt flash:config.bak
-boot</p>
-<p>! Press Return
+boot
+
+! Press Return
 ! Enter no
 enable
 show flash
@@ -3669,13 +3682,12 @@ rename flash:config.bak flash:config.text
 show startup-config
 copy startup-config running-config
 configure terminal
-enable secret <YourPassword>
+enable secret &lt;YourPassword&gt;
 copy running-config startup-config
 ! Press Enter
-```</p>
+</code></pre></div>
 <h3 id="ios-upgrade">IOS-Upgrade</h3>
-<p><code>cli
-show version
+<div class="highlight"><pre><span></span><code>show version
 show flash
 ! The d in drwx stands for directory
 ! Look in FLASH for the directory that looks like an IOS
@@ -3695,11 +3707,12 @@ copy running-config startup-config
 ! Beide Werte müssen übereinstimmen
 verify /md5 flash:/&lt;New IOS File with Extension&gt;
 reload
-show version</code></p>
+show version
+</code></pre></div>
 <h2 id="wichtige-switch-befehle">Wichtige Switch Befehle</h2>
 <p>Zeigt die MAC Address Table an:</p>
-<p><code>cli
-show mac address-table</code></p>
+<div class="highlight"><pre><span></span><code>show mac address-table
+</code></pre></div>
 
 
 
