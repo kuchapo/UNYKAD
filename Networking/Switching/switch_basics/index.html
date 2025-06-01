@@ -1839,6 +1839,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#beispiel-lab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beispiel Lab
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#wichtige-switch-befehle" class="md-nav__link">
     <span class="md-ellipsis">
       Wichtige Switch Befehle
@@ -3591,6 +3600,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#beispiel-lab" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beispiel Lab
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#wichtige-switch-befehle" class="md-nav__link">
     <span class="md-ellipsis">
       Wichtige Switch Befehle
@@ -3625,7 +3643,7 @@
 <li>nicht programmierbar wie beim Mikrocontroller</li>
 </ul>
 </li>
-<li>Wenn zwei Geräte miteinander kommunizieren, dann bekomen es andere Geräte nicht mit</li>
+<li>Wenn zwei Geräte miteinander kommunizieren, dann bekommen es andere Geräte nicht mit</li>
 <li>Wenn ein Gerät für 300 Sekunden keine Daten in den Switch reinschickt, verwift der Switch die MAC-Adresse des Geräts</li>
 <li>Wenn ein Switch die MAC-Addresse des Zielgeräts nicht kennt, dann schickt er ein Broadcast (an alle Ports, außer dem Eingangsport) -&gt; Flooding<ul>
 <li>Zielgerät schickt dann antwort an den Sender, dass dieser bereit ist zu kommunizieren</li>
@@ -3639,7 +3657,7 @@
 <p>Wie beim Router</p>
 <h2 id="speicherplatze">Speicherplätze</h2>
 <p>Wie beim Router, nur mit dem Unterschied, dass im Flash noch die config.txt existiert, welche den NVRAM darstellt.</p>
-<p>config.txt = NVRAM, also Startup-Config</p>
+<p><code>config.txt</code> = NVRAM, also Startup-Config</p>
 <h2 id="konfiguration">Konfiguration</h2>
 <ul>
 <li>Via Patchkabel zwischen Ethernet Port (PC) und Switch Port (Switch) verbinden</li>
@@ -3709,6 +3727,8 @@ verify /md5 flash:/&lt;New IOS File with Extension&gt;
 reload
 show version
 </code></pre></div>
+<h2 id="beispiel-lab">Beispiel Lab</h2>
+<p><img alt="switch_beispiel" src="../assets/switch_beispiel.drawio.svg" /></p>
 <h2 id="wichtige-switch-befehle">Wichtige Switch Befehle</h2>
 <p>Zeigt die MAC Address Table an:</p>
 <div class="highlight"><pre><span></span><code>show mac address-table
