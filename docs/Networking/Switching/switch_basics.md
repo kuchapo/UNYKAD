@@ -126,32 +126,32 @@ Wenn jedoch eine oder mehrere virtuelle Maschinen (VMs) auf dem PC laufen und de
 
 Der Switch lernt dabei alle MAC-Adressen, von denen er aktiven Traffic empfängt – auch wenn dieser über denselben physikalischen Port kommt.
 
-Die folgende MAC-Adressentabelle zeigt, welche Adressen vom Switch gelernt wurden – sowohl von physischen Hosts mit USB-Netzwerkkarten als auch von virtuellen Maschinen.  
+Die folgende MAC-Adressentabelle zeigt, welche Adressen vom S1-Switch gelernt wurden – sowohl von physischen Hosts mit USB-Netzwerkkarten als auch von virtuellen Maschinen.  
 Letztere besitzen eigene virtuelle Netzwerkkarten, deren Datenverkehr über die physische Netzwerkkarte des Hosts weitergeleitet wird.
 
 === "Physische Hosts (über USB-Netzwerkkarten)"
-    | MAC Address     | Type    | Port |
-    | --------------- | ------- | ---- |
-    | 110C.29FC.70A06 | DYNAMIC | F0/3 |
-    | 110C.29FC.70A07 | DYNAMIC | F0/3 |
-    | 000C.29FC.70A5  | DYNAMIC | F0/1 |
-    | 000C.2982.4429  | DYNAMIC | F0/2 |
-    | 000C.292D.9200  | DYNAMIC | F0/3 |
-    | 000C.29CE.83BE  | DYNAMIC | F0/3 |
+    | MAC Address    | Type    | Port |
+    | -------------- | ------- | ---- |
+    | 110C.29FC.70A6 | DYNAMIC | F0/3 |
+    | 110C.29FC.70A7 | DYNAMIC | F0/3 |
+    | 000C.29FC.70A5 | DYNAMIC | F0/1 |
+    | 000C.2982.4429 | DYNAMIC | F0/2 |
+    | 000C.292D.9200 | DYNAMIC | F0/3 |
+    | 000C.29CE.83BE | DYNAMIC | F0/3 |
 
 === "Virtuelle Maschinen (über virtuelle NICs via USB-NICs der Hosts)"
-    | MAC Address     | Type    | Port |
-    | --------------- | ------- | ---- |
-    | 110C.29FC.70A06 | DYNAMIC | F0/3 |
-    | 110C.29FC.70A07 | DYNAMIC | F0/3 |
-    | 000C.29FC.70A5  | DYNAMIC | F0/1 |
-    | 000C.2982.4429  | DYNAMIC | F0/2 |
-    | 110C.29FC.70A01 | DYNAMIC | F0/1 |
-    | 110C.29FC.70A02 | DYNAMIC | F0/2 |
-    | 000C.292D.9200  | DYNAMIC | F0/3 |
-    | 000C.29CE.83BE  | DYNAMIC | F0/3 |
-    | 110C.29FC.70A03 | DYNAMIC | F0/3 |
-    | 110C.29FC.70A04 | DYNAMIC | F0/3 |
+    | MAC Address    | Type    | Port |
+    | -------------- | ------- | ---- |
+    | 110C.29FC.70A6 | DYNAMIC | F0/3 |
+    | 110C.29FC.70A7 | DYNAMIC | F0/3 |
+    | 000C.29FC.70A5 | DYNAMIC | F0/1 |
+    | 000C.2982.4429 | DYNAMIC | F0/2 |
+    | 110C.29FC.70A1 | DYNAMIC | F0/1 |
+    | 110C.29FC.70A2 | DYNAMIC | F0/2 |
+    | 000C.292D.9200 | DYNAMIC | F0/3 |
+    | 000C.29CE.83BE | DYNAMIC | F0/3 |
+    | 110C.29FC.70A3 | DYNAMIC | F0/3 |
+    | 110C.29FC.70A4 | DYNAMIC | F0/3 |
 
 
 !!! info
