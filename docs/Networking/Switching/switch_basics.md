@@ -3,9 +3,10 @@
 - Switches funktionieren auf Layer 2
 - An jedem physischen Port besitzt ein Switch ein ASIC
 - ASIC:
-    - ist eine integrierte Schaltung, welche den Frame Header ließt
-    - fügt die MAC-Adresse in die MAC Address Table hinzu
-    - nicht programmierbar wie beim Mikrocontroller
+    - Hardwarebasierte Logikschaltung an jedem Port
+    - Liest den Frame-Header (insbesondere die Quell-MAC-Adresse)
+    - Lernt und speichert MAC-Adressen in der MAC Address Table
+    - Nicht programmierbar wie ein Mikrocontroller
 - Wenn zwei Geräte miteinander kommunizieren, dann bekommen es andere Geräte nicht mit
 - Wenn ein Gerät für 300 Sekunden keine Daten in den Switch reinschickt, verwift der Switch die MAC-Adresse des Geräts
 - Wenn ein Switch die MAC-Addresse des Zielgeräts nicht kennt, dann schickt er ein Broadcast (an alle Ports, außer dem Eingangsport) -> Flooding
@@ -16,13 +17,16 @@
 
 ## Modi
 
-Wie beim Router
+- User EXEC Mode (`Router>`)
+- Privileged EXEC Mode (`Router#`)
+- Global Configuration Mode (`Router(config)#`)
 
 ## Speicherplätze
 
-Wie beim Router, nur mit dem Unterschied, dass im Flash noch die config.txt existiert, welche den NVRAM darstellt.
+Wie beim Router, nur mit dem Unterschied, dass im Flash zusätzlich die Datei `config.text` existiert.  
+Diese enthält die `startup-config`, die beim Booten in den NVRAM geladen wird.
 
-`config.txt` = NVRAM, also Startup-Config
+`config.text` im Flash = gespeicherte Startup-Konfiguration
 
 ## Konfiguration
 
@@ -31,21 +35,18 @@ Wie beim Router, nur mit dem Unterschied, dass im Flash noch die config.txt exis
 - PuTTY öffnen und verbinden
 - 'no' eingeben
 
-### Hostname vergeben
+### Wie beim Router
 
-Wie beim Router
-
-### Banner erstellen
-
-Wie beim Router
-
-### SSH aktivieren
-
-Wie beim Router
+- Hostnamen erstellen
+- Banner erstellen
+- SSH aktivieren
 
 ### IP-Adressen einrichten
 
 IPs werden bei Switches nicht geroutet, deshalb erstellt man sogenannte VLANs, also virtuelle Interfaces.
+
+- VLAN-Interfaces dienen nur der Verwaltung (Management)
+- Ein Layer-2-Switch routet nicht zwischen VLANs – das geht nur mit einem L3-Switch oder Router
 
 #### IPv4
 
@@ -107,14 +108,71 @@ reload
 show version
 ```
 
-## Beispiel Lab
+## MAC Address Table
 
 ![switch_beispiel](assets/switch_beispiel.drawio.svg)
 
-## Wichtige Switch Befehle
+Wenn man die MAC Address Table bzw. CAM Table von S1 anschaut, dann sieht man alle MAC-Adressen (sofern alle Geräte innerhalb von 300 Sekunden Traffic gesendet haben).
 
 Zeigt die MAC Address Table an:
 
 ```cli
-show mac address-table
+show mac address-table dynamic
 ```
+
+Wenn ein physischer PC über einen Netzwerkadapter mit einem Switch verbunden ist, erscheint in der MAC-Adresstabelle des Switches in der Regel nur die MAC-Adresse dieses Adapters.
+
+Wenn jedoch eine oder mehrere virtuelle Maschinen (VMs) auf dem PC laufen und deren virtuelle Netzwerkkarten über denselben physischen Adapter (z. B. im Bridged Mode) mit dem Netzwerk kommunizieren, können zusätzlich auch deren MAC-Adressen in der MAC-Tabelle erscheinen – nämlich die der virtuellen Netzwerkkarten.
+
+Der Switch lernt dabei alle MAC-Adressen, von denen er aktiven Traffic empfängt – auch wenn dieser über denselben physikalischen Port kommt.
+
+Die folgende MAC-Adressentabelle zeigt, welche Adressen vom Switch gelernt wurden – sowohl von physischen Hosts mit USB-Netzwerkkarten als auch von virtuellen Maschinen.  
+Letztere besitzen eigene virtuelle Netzwerkkarten, deren Datenverkehr über die physische Netzwerkkarte des Hosts weitergeleitet wird.
+
+=== "Physische Hosts (über USB-Netzwerkkarten)"
+    | MAC Address     | Type    | Port |
+    | --------------- | ------- | ---- |
+    | 110C.29FC.70A06 | DYNAMIC | F0/3 |
+    | 110C.29FC.70A07 | DYNAMIC | F0/3 |
+    | 000C.29FC.70A5  | DYNAMIC | F0/1 |
+    | 000C.2982.4429  | DYNAMIC | F0/2 |
+    | 000C.292D.9200  | DYNAMIC | F0/3 |
+    | 000C.29CE.83BE  | DYNAMIC | F0/3 |
+
+=== "Virtuelle Maschinen (über virtuelle NICs via USB-NICs der Hosts)"
+    | MAC Address     | Type    | Port |
+    | --------------- | ------- | ---- |
+    | 110C.29FC.70A06 | DYNAMIC | F0/3 |
+    | 110C.29FC.70A07 | DYNAMIC | F0/3 |
+    | 000C.29FC.70A5  | DYNAMIC | F0/1 |
+    | 000C.2982.4429  | DYNAMIC | F0/2 |
+    | 110C.29FC.70A01 | DYNAMIC | F0/1 |
+    | 110C.29FC.70A02 | DYNAMIC | F0/2 |
+    | 000C.292D.9200  | DYNAMIC | F0/3 |
+    | 000C.29CE.83BE  | DYNAMIC | F0/3 |
+    | 110C.29FC.70A03 | DYNAMIC | F0/3 |
+    | 110C.29FC.70A04 | DYNAMIC | F0/3 |
+
+
+!!! info
+    Da MAC-Adressen in der Switch-Tabelle nach einer gewissen Zeit (z. B. 300 Sekunden) automatisch gelöscht werden, kann es notwendig sein, erneut Netzwerktraffic (z. B. per `ping`) zu erzeugen, damit der Switch die MAC-Adresse wieder in die Tabelle aufnimmt.
+
+## MAC-Trace
+
+Mit den folgenden Befehlen kann man eine Layer-2-Pfadverfolgung durchführen, wenn man herausfinden möchte, an welchem Port sich eine MAC-Adresse an einem Switch befindet:
+
+```cli
+show mac address-table address <MAC-Adresse in US-Format>
+```
+
+Zeigt, welche Art von Gerät an welchem Port hängt, da der oben ausgegebene Port auch ein Switch sein könnte:
+
+=== "Cisco-Geräte"
+    ```cli
+    show cdp neighbors
+    ```
+
+=== "Nicht Cisco-Geräte"
+    ```cli
+    show lldp neighbors
+    ```
