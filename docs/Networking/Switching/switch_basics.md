@@ -6,7 +6,7 @@
     - ist eine integrierte Schaltung, welche den Frame Header ließt
     - fügt die MAC-Adresse in die MAC Address Table hinzu
     - nicht programmierbar wie beim Mikrocontroller
-- Wenn zwei Geräte miteinander kommunizieren, dann bekomen es andere Geräte nicht mit
+- Wenn zwei Geräte miteinander kommunizieren, dann bekommen es andere Geräte nicht mit
 - Wenn ein Gerät für 300 Sekunden keine Daten in den Switch reinschickt, verwift der Switch die MAC-Adresse des Geräts
 - Wenn ein Switch die MAC-Addresse des Zielgeräts nicht kennt, dann schickt er ein Broadcast (an alle Ports, außer dem Eingangsport) -> Flooding
     - Zielgerät schickt dann antwort an den Sender, dass dieser bereit ist zu kommunizieren
@@ -22,7 +22,7 @@ Wie beim Router
 
 Wie beim Router, nur mit dem Unterschied, dass im Flash noch die config.txt existiert, welche den NVRAM darstellt.
 
-config.txt = NVRAM, also Startup-Config
+`config.txt` = NVRAM, also Startup-Config
 
 ## Konfiguration
 
@@ -106,6 +106,10 @@ verify /md5 flash:/<New IOS File with Extension>
 reload
 show version
 ```
+
+## Beispiel Lab
+
+![switch_beispiel](assets/switch_beispiel.drawio.svg)
 
 ## Wichtige Switch Befehle
 

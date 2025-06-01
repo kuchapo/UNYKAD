@@ -360,7 +360,7 @@ erase startup-config
 reload
 ```
 
-### Nützliche Befehle
+### Wichtige Router Befehle
 
 Löscht alles auf dem Flash-Speicher (Befehl je nach Modell auswählen):
 
