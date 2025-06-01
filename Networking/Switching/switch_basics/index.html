@@ -1765,27 +1765,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#hostname-vergeben" class="md-nav__link">
+  <a href="#wie-beim-router" class="md-nav__link">
     <span class="md-ellipsis">
-      Hostname vergeben
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#banner-erstellen" class="md-nav__link">
-    <span class="md-ellipsis">
-      Banner erstellen
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ssh-aktivieren" class="md-nav__link">
-    <span class="md-ellipsis">
-      SSH aktivieren
+      Wie beim Router
     </span>
   </a>
   
@@ -1839,18 +1821,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#beispiel-lab" class="md-nav__link">
+  <a href="#mac-address-table" class="md-nav__link">
     <span class="md-ellipsis">
-      Beispiel Lab
+      MAC Address Table
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#wichtige-switch-befehle" class="md-nav__link">
+  <a href="#mac-trace" class="md-nav__link">
     <span class="md-ellipsis">
-      Wichtige Switch Befehle
+      MAC-Trace
     </span>
   </a>
   
@@ -3526,27 +3508,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#hostname-vergeben" class="md-nav__link">
+  <a href="#wie-beim-router" class="md-nav__link">
     <span class="md-ellipsis">
-      Hostname vergeben
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#banner-erstellen" class="md-nav__link">
-    <span class="md-ellipsis">
-      Banner erstellen
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ssh-aktivieren" class="md-nav__link">
-    <span class="md-ellipsis">
-      SSH aktivieren
+      Wie beim Router
     </span>
   </a>
   
@@ -3600,18 +3564,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#beispiel-lab" class="md-nav__link">
+  <a href="#mac-address-table" class="md-nav__link">
     <span class="md-ellipsis">
-      Beispiel Lab
+      MAC Address Table
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#wichtige-switch-befehle" class="md-nav__link">
+  <a href="#mac-trace" class="md-nav__link">
     <span class="md-ellipsis">
-      Wichtige Switch Befehle
+      MAC-Trace
     </span>
   </a>
   
@@ -3638,9 +3602,10 @@
 <li>Switches funktionieren auf Layer 2</li>
 <li>An jedem physischen Port besitzt ein Switch ein ASIC</li>
 <li>ASIC:<ul>
-<li>ist eine integrierte Schaltung, welche den Frame Header ließt</li>
-<li>fügt die MAC-Adresse in die MAC Address Table hinzu</li>
-<li>nicht programmierbar wie beim Mikrocontroller</li>
+<li>Hardwarebasierte Logikschaltung an jedem Port</li>
+<li>Liest den Frame-Header (insbesondere die Quell-MAC-Adresse)</li>
+<li>Lernt und speichert MAC-Adressen in der MAC Address Table</li>
+<li>Nicht programmierbar wie ein Mikrocontroller</li>
 </ul>
 </li>
 <li>Wenn zwei Geräte miteinander kommunizieren, dann bekommen es andere Geräte nicht mit</li>
@@ -3654,10 +3619,15 @@
 <li>L3-Switches werden häufig als Core-Switches verwendet</li>
 </ul>
 <h2 id="modi">Modi</h2>
-<p>Wie beim Router</p>
+<ul>
+<li>User EXEC Mode (<code>Router&gt;</code>)</li>
+<li>Privileged EXEC Mode (<code>Router#</code>)</li>
+<li>Global Configuration Mode (<code>Router(config)#</code>)</li>
+</ul>
 <h2 id="speicherplatze">Speicherplätze</h2>
-<p>Wie beim Router, nur mit dem Unterschied, dass im Flash noch die config.txt existiert, welche den NVRAM darstellt.</p>
-<p><code>config.txt</code> = NVRAM, also Startup-Config</p>
+<p>Wie beim Router, nur mit dem Unterschied, dass im Flash zusätzlich die Datei <code>config.text</code> existiert.<br />
+Diese enthält die <code>startup-config</code>, die beim Booten in den NVRAM geladen wird.</p>
+<p><code>config.text</code> im Flash = gespeicherte Startup-Konfiguration</p>
 <h2 id="konfiguration">Konfiguration</h2>
 <ul>
 <li>Via Patchkabel zwischen Ethernet Port (PC) und Switch Port (Switch) verbinden</li>
@@ -3665,14 +3635,18 @@
 <li>PuTTY öffnen und verbinden</li>
 <li>'no' eingeben</li>
 </ul>
-<h3 id="hostname-vergeben">Hostname vergeben</h3>
-<p>Wie beim Router</p>
-<h3 id="banner-erstellen">Banner erstellen</h3>
-<p>Wie beim Router</p>
-<h3 id="ssh-aktivieren">SSH aktivieren</h3>
-<p>Wie beim Router</p>
+<h3 id="wie-beim-router">Wie beim Router</h3>
+<ul>
+<li>Hostnamen erstellen</li>
+<li>Banner erstellen</li>
+<li>SSH aktivieren</li>
+</ul>
 <h3 id="ip-adressen-einrichten">IP-Adressen einrichten</h3>
 <p>IPs werden bei Switches nicht geroutet, deshalb erstellt man sogenannte VLANs, also virtuelle Interfaces.</p>
+<ul>
+<li>VLAN-Interfaces dienen nur der Verwaltung (Management)</li>
+<li>Ein Layer-2-Switch routet nicht zwischen VLANs – das geht nur mit einem L3-Switch oder Router</li>
+</ul>
 <h4 id="ipv4">IPv4</h4>
 <div class="highlight"><pre><span></span><code>interface vlan 1
 ip address &lt;IP-Address&gt; &lt;Subnet-Mask&gt;
@@ -3727,12 +3701,148 @@ verify /md5 flash:/&lt;New IOS File with Extension&gt;
 reload
 show version
 </code></pre></div>
-<h2 id="beispiel-lab">Beispiel Lab</h2>
+<h2 id="mac-address-table">MAC Address Table</h2>
 <p><img alt="switch_beispiel" src="../assets/switch_beispiel.drawio.svg" /></p>
-<h2 id="wichtige-switch-befehle">Wichtige Switch Befehle</h2>
+<p>Wenn man die MAC Address Table bzw. CAM Table von S1 anschaut, dann sieht man alle MAC-Adressen (sofern alle Geräte innerhalb von 300 Sekunden Traffic gesendet haben).</p>
 <p>Zeigt die MAC Address Table an:</p>
-<div class="highlight"><pre><span></span><code>show mac address-table
+<div class="highlight"><pre><span></span><code>show mac address-table dynamic
 </code></pre></div>
+<p>Wenn ein physischer PC über einen Netzwerkadapter mit einem Switch verbunden ist, erscheint in der MAC-Adresstabelle des Switches in der Regel nur die MAC-Adresse dieses Adapters.</p>
+<p>Wenn jedoch eine oder mehrere virtuelle Maschinen (VMs) auf dem PC laufen und deren virtuelle Netzwerkkarten über denselben physischen Adapter (z. B. im Bridged Mode) mit dem Netzwerk kommunizieren, können zusätzlich auch deren MAC-Adressen in der MAC-Tabelle erscheinen – nämlich die der virtuellen Netzwerkkarten.</p>
+<p>Der Switch lernt dabei alle MAC-Adressen, von denen er aktiven Traffic empfängt – auch wenn dieser über denselben physikalischen Port kommt.</p>
+<p>Die folgende MAC-Adressentabelle zeigt, welche Adressen vom Switch gelernt wurden – sowohl von physischen Hosts mit USB-Netzwerkkarten als auch von virtuellen Maschinen.<br />
+Letztere besitzen eigene virtuelle Netzwerkkarten, deren Datenverkehr über die physische Netzwerkkarte des Hosts weitergeleitet wird.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Physische Hosts (über USB-Netzwerkkarten)</label><label for="__tabbed_1_2">Virtuelle Maschinen (über virtuelle NICs via USB-NICs der Hosts)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>MAC Address</th>
+<th>Type</th>
+<th>Port</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>110C.29FC.70A06</td>
+<td>DYNAMIC</td>
+<td>F0/3</td>
+</tr>
+<tr>
+<td>110C.29FC.70A07</td>
+<td>DYNAMIC</td>
+<td>F0/3</td>
+</tr>
+<tr>
+<td>000C.29FC.70A5</td>
+<td>DYNAMIC</td>
+<td>F0/1</td>
+</tr>
+<tr>
+<td>000C.2982.4429</td>
+<td>DYNAMIC</td>
+<td>F0/2</td>
+</tr>
+<tr>
+<td>000C.292D.9200</td>
+<td>DYNAMIC</td>
+<td>F0/3</td>
+</tr>
+<tr>
+<td>000C.29CE.83BE</td>
+<td>DYNAMIC</td>
+<td>F0/3</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>MAC Address</th>
+<th>Type</th>
+<th>Port</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>110C.29FC.70A06</td>
+<td>DYNAMIC</td>
+<td>F0/3</td>
+</tr>
+<tr>
+<td>110C.29FC.70A07</td>
+<td>DYNAMIC</td>
+<td>F0/3</td>
+</tr>
+<tr>
+<td>000C.29FC.70A5</td>
+<td>DYNAMIC</td>
+<td>F0/1</td>
+</tr>
+<tr>
+<td>000C.2982.4429</td>
+<td>DYNAMIC</td>
+<td>F0/2</td>
+</tr>
+<tr>
+<td>110C.29FC.70A01</td>
+<td>DYNAMIC</td>
+<td>F0/1</td>
+</tr>
+<tr>
+<td>110C.29FC.70A02</td>
+<td>DYNAMIC</td>
+<td>F0/2</td>
+</tr>
+<tr>
+<td>000C.292D.9200</td>
+<td>DYNAMIC</td>
+<td>F0/3</td>
+</tr>
+<tr>
+<td>000C.29CE.83BE</td>
+<td>DYNAMIC</td>
+<td>F0/3</td>
+</tr>
+<tr>
+<td>110C.29FC.70A03</td>
+<td>DYNAMIC</td>
+<td>F0/3</td>
+</tr>
+<tr>
+<td>110C.29FC.70A04</td>
+<td>DYNAMIC</td>
+<td>F0/3</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Da MAC-Adressen in der Switch-Tabelle nach einer gewissen Zeit (z. B. 300 Sekunden) automatisch gelöscht werden, kann es notwendig sein, erneut Netzwerktraffic (z. B. per <code>ping</code>) zu erzeugen, damit der Switch die MAC-Adresse wieder in die Tabelle aufnimmt.</p>
+</div>
+<h2 id="mac-trace">MAC-Trace</h2>
+<p>Mit den folgenden Befehlen kann man eine Layer-2-Pfadverfolgung durchführen, wenn man herausfinden möchte, an welchem Port sich eine MAC-Adresse an einem Switch befindet:</p>
+<div class="highlight"><pre><span></span><code>show mac address-table address &lt;MAC-Adresse in US-Format&gt;
+</code></pre></div>
+<p>Zeigt, welche Art von Gerät an welchem Port hängt, da der oben ausgegebene Port auch ein Switch sein könnte:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Cisco-Geräte</label><label for="__tabbed_2_2">Nicht Cisco-Geräte</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>show cdp neighbors
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>show lldp neighbors
+</code></pre></div>
+</div>
+</div>
+</div>
 
 
 
