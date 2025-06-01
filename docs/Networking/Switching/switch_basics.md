@@ -58,9 +58,10 @@ no shutdown
 
 ### Passwortwiederherstellung
 
-- in den ROMMON-Modus booten
-    - Switch ausschalten oder das Kabel raus ziehen
-    - Mode-Taste gedrückt halten und Kabel wieder einstecken bzw. Switch wieder einschalten
+In den ROMMON-Modus booten
+
+- Switch ausschalten oder das Kabel raus ziehen
+- Mode-Taste gedrückt halten und Kabel wieder einstecken bzw. Switch wieder einschalten
 
 ```cli
 flash_init
