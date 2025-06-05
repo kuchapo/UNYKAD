@@ -14,7 +14,7 @@
     - Ist ein kleines Startprogramm
     - Beinhaltet das Configuration Register
     - Aufgabe: das IOS-Betriebssystem aus dem Flash-Speicher zu laden
-    - ROMMON-Modus (=einfacher Bootoader) für Fehlerbehebung starten, falls das IOS nicht gefunden wird
+    - ROMMON-Modus (=einfacher Bootloader) für Fehlerbehebung starten, falls das IOS nicht gefunden wird
 - Enthält die Firmware
     - Steuert wichtige Hardware-Funktionen
     - Besteht aus Low-Level-Code
