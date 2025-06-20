@@ -3,11 +3,11 @@
 ## Hilfe & Konfiguration ausgeben
 
 ```bash
-pironman5 -h | --help            # Zeigt alle Optionen
+sudo pironman5 -h         # Zeigt alle Optionen
 ```
 
 ```bash
-pironman5 -c | --config          # Zeigt aktuelle Konfiguration (JSON-Format)
+sudo pironman5 -c         # Zeigt aktuelle Konfiguration (JSON-Format)
 ```
 
 ## RGB-LED-Steuerung
