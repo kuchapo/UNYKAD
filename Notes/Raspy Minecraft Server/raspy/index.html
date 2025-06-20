@@ -20,7 +20,7 @@
     
     
       
-        <title>Raspberry Pi OS aufsetzen - UNYKAD</title>
+        <title>Raspy - UNYKAD</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#raspberry-pi-os-aufsetzen" class="md-skip">
+        <a href="#raspy" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Raspberry Pi OS aufsetzen
+              Raspy
             
           </span>
         </div>
@@ -3545,17 +3545,82 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Raspy
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Raspberry Pi OS aufsetzen
+    Raspy
     
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#raspberry-pi-os-aufsetzen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Raspberry Pi OS aufsetzen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#via-ssh-verbinden" class="md-nav__link">
+    <span class="md-ellipsis">
+      Via SSH verbinden
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Via SSH verbinden">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -3620,6 +3685,47 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#raspberry-pi-os-aufsetzen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Raspberry Pi OS aufsetzen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#via-ssh-verbinden" class="md-nav__link">
+    <span class="md-ellipsis">
+      Via SSH verbinden
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Via SSH verbinden">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debugging
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3634,13 +3740,30 @@
 
 
 
-<h1 id="raspberry-pi-os-aufsetzen">Raspberry Pi OS aufsetzen</h1>
+<h1 id="raspy">Raspy</h1>
+<h2 id="raspberry-pi-os-aufsetzen">Raspberry Pi OS aufsetzen</h2>
 <ul>
 <li>Raspberry Pi Imager herunterladen</li>
 <li>entsprechendes OS und SD-Karte auswählen</li>
 <li>Drücke <code>Strg</code> + <code>Shift</code> + <code>X</code></li>
 <li>Hostname, Benutzer, WLAN und SSH anpassen</li>
 </ul>
+<h2 id="via-ssh-verbinden">Via SSH verbinden</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">via IP</label><label for="__tabbed_1_2">via Hostname</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">ssh</span> <span class="p">&lt;</span><span class="n">Username</span><span class="p">&gt;@&lt;</span><span class="n">IP-Adresse</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">ssh</span> <span class="p">&lt;</span><span class="n">Username</span><span class="p">&gt;@&lt;</span><span class="n">Hostname</span><span class="p">&gt;.</span><span class="n">local</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="debugging">Debugging</h3>
+<div class="highlight"><pre><span></span><code><span class="n">ssh-keygen</span> <span class="n">-R</span> <span class="p">&lt;</span><span class="n">IP</span> <span class="n">des</span> <span class="n">Raspys</span><span class="p">&gt;</span>
+</code></pre></div>
 
 
 
