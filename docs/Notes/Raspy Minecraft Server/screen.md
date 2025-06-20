@@ -23,10 +23,14 @@ screen -S <Name der Sitzung>
 screen -r <Name der Sitzung>
 ```
 
-## Sitzung schließen
+## Sitzung schließen (ohne zu beenden)
+
+Strg + A, dann D
+
+## Sitzung beenden
 
 ```cli
-stop
+screen -S <Sitzungsname> -X quit
 ```
 
 ## Alle Sitzungen auflisten

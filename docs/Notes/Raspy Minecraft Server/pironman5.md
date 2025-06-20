@@ -138,5 +138,5 @@ pironman5 -c | --config          # Zeigt aktuelle Konfiguration (JSON-Format)
 ## Um Änderungen wirksam zu machen
 
 ```cli
-sudo pironman5 restart
+sudo systemctl restart pironman5.service
 ```
