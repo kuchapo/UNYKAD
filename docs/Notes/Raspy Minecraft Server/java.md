@@ -6,7 +6,7 @@
 
 ## Java dauerhaft verfügbar machen
 
-`.bashrc` öffnen:
+`.bashrc`-Datei öffnen:
 
 ```bash
 nano ~/.bashrc
