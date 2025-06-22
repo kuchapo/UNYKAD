@@ -68,3 +68,13 @@ Ganze Zahl >= 0, die angibt, wie gut die Route ist (kleinere Zahl -> besser)
 
 Abhilfe default route: Alles, was nicht in der Routingtabelle steht, schicke an next hop,...  
 Die Reihenfolge der Einträge ist egal.
+
+## Default Route einrichten
+
+**Gateway of last resort** (in Windows) = **Default Geteway**
+
+```cli
+ip route 0.0.0.0 0.0.0.0 <Routers IP>
+```
+
+Alle Netze die in der Routing Tabelle nicht gefunden werden, werden vom Router über den ISP-Provider in Richtung Internet weitergeleitet.
