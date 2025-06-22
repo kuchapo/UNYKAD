@@ -3,6 +3,7 @@
 ## Warum ohne Subnetzmaske?
 
 Allgemein gilt, dass man beim Pingen die Subnetzmaske nicht mit eingibt, weil:
+
 - Gerät selbst weiß, ob die IP im gleichen Netz ist oder nicht
 - entscheidet dann, ob es direkt pingt oder es über das Gateway geht
 
