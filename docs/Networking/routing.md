@@ -17,7 +17,7 @@ Der Router berechnet normalerweise die beste Route anhand von:
 
 ### Typ (Herkunft der Route)
 
-Typ der Route mit der jeweiligen Admin Distance in Cisco:
+Typ der Route mit der jeweiligen Administrative Distance in Cisco:
 
 | Kürzel | **Route Source**                         | **Admin Distance** |
 | ------ | ---------------------------------------- | ------------------ |
