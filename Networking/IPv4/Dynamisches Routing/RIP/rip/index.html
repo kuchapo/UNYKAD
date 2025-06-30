@@ -1562,12 +1562,7 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#beispiel-2" class="md-nav__link">
     <span class="md-ellipsis">
       Beispiel 2
@@ -1601,6 +1596,11 @@
       Router C Konfiguration
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -4093,12 +4093,7 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#beispiel-2" class="md-nav__link">
     <span class="md-ellipsis">
       Beispiel 2
@@ -4132,6 +4127,11 @@
       Router C Konfiguration
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -4233,9 +4233,9 @@ Der <code>network</code>-Befehl sagt dem Router nur, welche Interfaces bei RIP m
 <p>Der folgende Befehl listet alle aktiven Protokolle auf. Er zeigt ebenso die allgemeine Konfiguration an. Der Befehl <code>show ip rip database</code> zeigt genauere Informationen an zu den wirklich beworbenen Netzen.</p>
 <div class="highlight"><pre><span></span><code>show ip protocols
 </code></pre></div>
-<h2 id="beispiel-2">Beispiel 2</h2>
+<h3 id="beispiel-2">Beispiel 2</h3>
 <p><img alt="RIP" src="../assets/RIP.drawio.svg" /></p>
-<h3 id="router-a-konfiguration">Router A Konfiguration</h3>
+<h4 id="router-a-konfiguration">Router A Konfiguration</h4>
 <div class="highlight"><pre><span></span><code>router rip
 ver 2
 no auto-summary
@@ -4243,7 +4243,7 @@ network 10.10.0.0
 network 192.168.0.0
 </code></pre></div>
 <p>Der Befehl <code>do show run | b router rip</code> zeigt nun <code>network 10.0.0.0</code> an.</p>
-<h3 id="router-b-konfiguration">Router B Konfiguration</h3>
+<h4 id="router-b-konfiguration">Router B Konfiguration</h4>
 <div class="highlight"><pre><span></span><code>router rip
 ver 2
 no auto-summary
@@ -4348,7 +4348,7 @@ network 192.168.10.0
 </div>
 </div>
 <p>Man erkennt, dass Router A seine gesamte Routing Tabelle mit Router B geteilt hat und man erkennt durch die Metrik, dass dass beim RIP-Protokoll jeweils nur ein Hop bis zum Zielnetz benötigt wird.</p>
-<h3 id="router-c-konfiguration">Router C Konfiguration</h3>
+<h4 id="router-c-konfiguration">Router C Konfiguration</h4>
 <div class="highlight"><pre><span></span><code>router rip
 ver 2
 no auto-summary
