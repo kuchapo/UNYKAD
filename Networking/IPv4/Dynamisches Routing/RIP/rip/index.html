@@ -9,22 +9,22 @@
       
       
       
-        <link rel="prev" href="../../../vlsm/">
+        <link rel="prev" href="../../OSPF/ospf-alt/">
       
       
-        <link rel="next" href="../rip/">
+        <link rel="next" href="../../../../IPv6/default_gateway_des_routers/">
       
       
       <link rel="icon" href="../../../../../assets/u1icofullSize.svg">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
     
     
       
-        <title>OSPF Grundlagen - UNYKAD</title>
+        <title>Routing Information Protocol (RIP) - UNYKAD</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.2afb09e1.min.css">
       
         
         <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ospf-grundlagen" class="md-skip">
+        <a href="#routing-information-protocol-rip" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              OSPF Grundlagen
+              Routing Information Protocol (RIP)
             
           </span>
         </div>
@@ -1286,6 +1286,8 @@
       
         
       
+        
+      
     
     
     
@@ -1324,17 +1326,13 @@
                 
   
   
-    
   
   
-  
     
     
       
         
       
-        
-      
     
     
     
@@ -1342,11 +1340,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_15_4_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_15_4_1" >
         
           
           <label class="md-nav__link" for="__nav_3_15_4_1" id="__nav_3_15_4_1_label" tabindex="0">
@@ -1362,10 +1360,88 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_15_4_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_15_4_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_15_4_1">
             <span class="md-nav__icon md-icon"></span>
             OSPF
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OSPF/ospf-alt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OSPF - Alter Aufschrieb
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_15_4_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_15_4_2" id="__nav_3_15_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    RIP
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_15_4_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_15_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            RIP
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1385,31 +1461,20 @@
         
       
       
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
   
   
   <span class="md-ellipsis">
-    OSPF Grundlagen
+    Routing Information Protocol (RIP)
     
   </span>
   
 
-      </a>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../rip/" class="md-nav__link">
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1420,6 +1485,143 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rip-aktivieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      RIP aktivieren
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-advertising" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Advertising
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network Advertising">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#beispiel-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beispiel 1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Beispiel 1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anmerkung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anmerkung
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anzeigen-was-advertised-wird" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anzeigen, was advertised wird
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testen-ob-rip-aktiv-ist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testen, ob RIP aktiv ist
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beispiel-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beispiel 2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Beispiel 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#router-a-konfiguration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Router A Konfiguration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#router-b-konfiguration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Router B Konfiguration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#router-c-konfiguration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Router C Konfiguration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nachteil" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nachteil
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3824,6 +4026,131 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rip-aktivieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      RIP aktivieren
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-advertising" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Advertising
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network Advertising">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#beispiel-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beispiel 1
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Beispiel 1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anmerkung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anmerkung
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anzeigen-was-advertised-wird" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anzeigen, was advertised wird
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testen-ob-rip-aktiv-ist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testen, ob RIP aktiv ist
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beispiel-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beispiel 2
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Beispiel 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#router-a-konfiguration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Router A Konfiguration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#router-b-konfiguration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Router B Konfiguration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#router-c-konfiguration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Router C Konfiguration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nachteil" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nachteil
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -3838,10 +4165,325 @@
 
 
 
-<h1 id="ospf-grundlagen">OSPF Grundlagen</h1>
-<p><img alt="OSPF1" src="../pics/ospf1.jpg" />
-<img alt="OSPF2" src="../pics/ospf2.jpg" />
-<img alt="OSPF3" src="../pics/ospf3.jpg" /></p>
+<h1 id="routing-information-protocol-rip">Routing Information Protocol (RIP)</h1>
+<p><strong>RIP</strong> ist ein einfaches <strong>Routing-Protokoll</strong>, welches Routern hilft, den Weg zu Netzwerken zu finden.<br />
+Es benutzt als <strong>Metrik</strong> die <strong>Anzahl der Hops</strong> (also wie viele Router ein Paket durchqueren muss).</p>
+<p>→ <strong>Je weniger Hops</strong>, desto besser der Weg.</p>
+<h2 id="rip-aktivieren">RIP aktivieren</h2>
+<p><code>RIPv1</code> wird im <strong>Global Configuration Mode</strong> mit folgendem Befehl aktiviert:</p>
+<div class="highlight"><pre><span></span><code>router rip
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p><code>RIPv1</code> unterstützt <strong>kein CIDR</strong> (Classless Inter-Domain Routing), da es ein sogenanntes <strong>klassenbasiertes Routing-Protokoll</strong> (classful) ist. Das bedeutet, dass <strong>keine Subnetzmasken</strong> berücksichtigt werden – es geht immer von der Standardnetzmaske der IP-Adresse aus (z. B. /8, /16, /24). Die <strong>Subnetzmaske wird ignoriert</strong>, und stattdessen die <strong>Standardklasse der IP-Adresse</strong> (A, B, C) verwendet, um Netzwerke zu <em>bewerben</em>. Dies kann zu Routing-Problemen führen – deshalb verwendet man heute in der Regel das deutlich flexiblere <strong>klassenlose Routing-Protokoll</strong> (classless) <code>RIPv2</code>.</p>
+</div>
+<p>Um <code>RIPv2</code> zu aktivieren, ergänzt man:</p>
+<div class="highlight"><pre><span></span><code>version 2
+</code></pre></div>
+<p>Zusätzlich sollte man das Feature <code>auto-summary</code> deaktivieren:</p>
+<div class="highlight"><pre><span></span><code>no auto-summary
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Wenn <code>auto-summary</code> aktiviert ist, <strong>rundet der Router gelernte Netze auf die Standardklasse auf</strong>.<br />
+<strong>Beispiel</strong>: Ein Router lernt <code>192.168.1.0/24</code>, aber mit aktiviertem <code>auto-summary</code> sendet er es als <code>192.168.0.0/16</code>.<br />
+Das führt oft zu <strong>falschen oder ungenauen Routing-Informationen</strong> – deshalb wird <code>auto-summary</code> heute meist <strong>deaktiviert</strong>. </p>
+</div>
+<h2 id="network-advertising">Network Advertising</h2>
+<p>Nur Netzwerke, <strong>deren Interfaces eingeschaltet (up)</strong> sind und <strong>direkt mit dem Router verbunden</strong> sind, können mit RIP weitergegeben werden.</p>
+<h3 id="beispiel-1">Beispiel 1</h3>
+<p>Ein Router hat 3 Ports mit diesen IPs:</p>
+<ul>
+<li><strong>Port 1:</strong> <code>10.10.1.1/30</code></li>
+<li><strong>Port 2:</strong> <code>10.20.5.1/24</code></li>
+<li><strong>Port 3:</strong> <code>192.168.1.1/24</code></li>
+</ul>
+<p>Dann gibt man z. B. ein:</p>
+<div class="highlight"><pre><span></span><code>router rip
+version 2
+no auto-summary
+network 10.10.0.0
+</code></pre></div>
+<p>RIP schaut auf <code>10.10.0.0</code> und erkennt:</p>
+<blockquote>
+<p>„Das ist eine IP aus dem Class-A-Netz <code>10.0.0.0/8</code>. Ich aktiviere alle Interfaces mit IPs, die mit <code>10.</code> beginnen.“</p>
+</blockquote>
+<p>Ergebnis:</p>
+<ul>
+<li><strong>Port 1</strong> wird aktiviert ✅</li>
+<li><strong>Port 2</strong> wird aktiviert ✅</li>
+<li><strong>Port 3</strong> wird ignoriert ❌ (fällt nicht in den Bereich <code>10.0.0.0/8</code>)</li>
+</ul>
+<p>Jetzt sagt RIP zu anderen Routern:</p>
+<blockquote>
+<p>„Ich kenne <code>10.10.1.0/30</code> und <code>10.20.5.0/24</code> – über mich erreichbar!“</p>
+</blockquote>
+<p><strong>Diese Subnetze werden advertised</strong> – <strong>nicht</strong> das, was beim <code>network</code>-Befehl steht!<br />
+Der <code>network</code>-Befehl sagt dem Router nur, welche Interfaces bei RIP mitmachen sollen.</p>
+<h4 id="anmerkung">Anmerkung</h4>
+<p>Durch den <code>network</code>-Befehl erscheint in der Running Config das <strong>klassenbasierte Netz</strong> <code>10.0.0.0</code>, auch wenn ursprünglich <code>network 10.10.0.0</code> eingegeben wurde.</p>
+<p>Befehl, um die Konfiguration anzeigen zu lassen:</p>
+<div class="highlight"><pre><span></span><code>do show run | begin router rip
+</code></pre></div>
+<h4 id="anzeigen-was-advertised-wird">Anzeigen, was advertised wird</h4>
+<p>Mit folgendem Befehl kann man die tatsächlich beworbenen Netze sehen:</p>
+<div class="highlight"><pre><span></span><code>show ip rip database
+</code></pre></div>
+<h4 id="testen-ob-rip-aktiv-ist">Testen, ob RIP aktiv ist</h4>
+<p>Der folgende Befehl listet alle aktiven Protokolle auf. Er zeigt ebenso die allgemeine Konfiguration an. Der Befehl <code>show ip rip database</code> zeigt genauere Informationen an zu den wirklich beworbenen Netzen.</p>
+<div class="highlight"><pre><span></span><code>show ip protocols
+</code></pre></div>
+<h2 id="beispiel-2">Beispiel 2</h2>
+<p><img alt="RIP" src="assets/rip.drawio.svg" /></p>
+<h3 id="router-a-konfiguration">Router A Konfiguration</h3>
+<div class="highlight"><pre><span></span><code>router rip
+ver 2
+no auto-summary
+network 10.10.0.0
+network 192.168.0.0
+</code></pre></div>
+<p>Der Befehl <code>do show run | b router rip</code> zeigt nun <code>network 10.0.0.0</code> an.</p>
+<h3 id="router-b-konfiguration">Router B Konfiguration</h3>
+<div class="highlight"><pre><span></span><code>router rip
+ver 2
+no auto-summary
+network 10.0.0.0
+network 192.168.10.0
+</code></pre></div>
+<p>Wenn man nun <code>show ip route</code> auf Router B ausführt, sollte folgende Tabelle zu sehen sein:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Original</label><label for="__tabbed_1_2">Vereinfacht</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Kürzel</th>
+<th>Infos zum Zielnetz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C</td>
+<td>192.168.10.0/24 is directly connected, FastEthernet0/1</td>
+</tr>
+<tr>
+<td></td>
+<td>10.0.0.0/30 is subnetted, 3 subnets</td>
+</tr>
+<tr>
+<td>C</td>
+<td>10.10.0.0 is directy connected, Serial0/1/0</td>
+</tr>
+<tr>
+<td>R</td>
+<td>10.10.0.4 [120/1] via 10.10.0.1, 00:00:03, Serial0/1/0</td>
+</tr>
+<tr>
+<td>C</td>
+<td>10.10.0.8 is directly connected, Serial0/0/0</td>
+</tr>
+<tr>
+<td>R</td>
+<td>192.168.0.0 [120/1] via 10.10.0.1, 00:00:03, Serial0/1/0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Kürzel</th>
+<th>Zielnetz</th>
+<th>Subnetzmaske</th>
+<th>Administrative Distance</th>
+<th>Metrik</th>
+<th>Via</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C</td>
+<td>192.168.10.0</td>
+<td>/24</td>
+<td>0</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>C</td>
+<td>10.10.0.0</td>
+<td>/30</td>
+<td>0</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>R</td>
+<td>10.10.4.0</td>
+<td>/30</td>
+<td>120</td>
+<td>1</td>
+<td>10.10.0.1</td>
+</tr>
+<tr>
+<td>C</td>
+<td>10.10.8.0</td>
+<td>/30</td>
+<td>0</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>R</td>
+<td>192.168.0.0</td>
+<td>/24</td>
+<td>120</td>
+<td>1</td>
+<td>10.10.0.1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>Man erkennt, dass Router A seine gesamte Routing Tabelle mit Router B geteilt hat und man erkennt durch die Metrik, dass dass beim RIP-Protokoll jeweils nur ein Hop bis zum Zielnetz benötigt wird.</p>
+<h3 id="router-c-konfiguration">Router C Konfiguration</h3>
+<div class="highlight"><pre><span></span><code>router rip
+ver 2
+no auto-summary
+network 10.0.0.0
+network 192.168.20.0
+</code></pre></div>
+<p>Wenn man nun <code>show ip route</code> auf Router B ausführt, sollte folgende Tabelle zu sehen sein:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Original</label><label for="__tabbed_2_2">Vereinfacht</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Kürzel</th>
+<th>Infos zum Zielnetz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R</td>
+<td>192.168.10.0/24 [120/1] via 10.10.0.9, 00:00:02, Serial0/1/0</td>
+</tr>
+<tr>
+<td>C</td>
+<td>192.168.20.0/24 is directly connected, FastEthernet0/1</td>
+</tr>
+<tr>
+<td></td>
+<td>10.0.0.0/30 is subnetted, 3 subnets</td>
+</tr>
+<tr>
+<td>R</td>
+<td>10.10.0.0 [120/1] via 10.10.0.9, 00:00:02, Serial0/1/0</td>
+</tr>
+<tr>
+<td></td>
+<td>10.10.0.0 [120/1] via 10.10.0.5, 00:00:20, Serial0/0/0</td>
+</tr>
+<tr>
+<td>C</td>
+<td>10.10.0.4 is directly connected, Serial0/0/0</td>
+</tr>
+<tr>
+<td>C</td>
+<td>10.10.0.8 is directy connected, Serial0/1/0</td>
+</tr>
+<tr>
+<td>R</td>
+<td>192.168.0.0/24 [120/1] via 10.10.0.5, 00:00:20, Serial0/0/0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Kürzel</th>
+<th>Zielnetz</th>
+<th>Subnetzmaske</th>
+<th>Aministrative Distance</th>
+<th>Metrik</th>
+<th>Via</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R</td>
+<td>192.168.10.0</td>
+<td>/24</td>
+<td>120</td>
+<td>1</td>
+<td>10.10.0.9</td>
+</tr>
+<tr>
+<td>C</td>
+<td>192.168.20.0</td>
+<td>/24</td>
+<td>0</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>R</td>
+<td>10.10.0.0</td>
+<td>/30</td>
+<td>120</td>
+<td>1</td>
+<td>10.10.0.9</td>
+</tr>
+<tr>
+<td>R</td>
+<td>10.10.0.0</td>
+<td>/30</td>
+<td>120</td>
+<td>1</td>
+<td>10.10.0.5</td>
+</tr>
+<tr>
+<td>C</td>
+<td>10.10.0.4</td>
+<td>/30</td>
+<td>0</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>C</td>
+<td>10.10.0.8</td>
+<td>/30</td>
+<td>0</td>
+<td>--</td>
+<td>--</td>
+</tr>
+<tr>
+<td>R</td>
+<td>192.168.0.0</td>
+<td>/24</td>
+<td>120</td>
+<td>1</td>
+<td>10.10.0.5</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>Hier erkennt man nun dass ein Kürzel R zwei Mal das identische Zielnetz hat. Hier findet ein Load Balancing statt. Es wird also zuerst über das eine Interface (<code>10.10.0.9</code>) Daten geschickt und dann über das andere (<code>10.10.0.5</code>).</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>In RIP hat man nicht die Möglichkeit einen eindeutigen Pfad ins Zielnetz zu wählen, wenn mehrere Routen in dasselbe Zielnetz führen. Das limitiert die Möglichkeiten dieses Protokolls.</p>
+</div>
+<h2 id="nachteil">Nachteil</h2>
+<p>RIP gilt heute als veraltet, da es im Vergleich zu modernen Protokollen wie OSPF oder EIGRP <strong>langsam</strong> ist und nur <strong>einfache Routing-Entscheidungen</strong> trifft.<br />
+Bei mehreren gleichwertigen Routen zum selben Ziel nutzt RIP automatisch <strong>Load Balancing</strong>, ohne eine gezielte Pfadauswahl zu ermöglichen.</p>
 
 
 
@@ -3925,10 +4567,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["content.code.annotate", "content.code.copy", "content.tabs.link", "header.autohide", "announce.dismiss", "navigation.indexes", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "search": "../../../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../../../..", "features": ["content.code.annotate", "content.code.copy", "content.tabs.link", "header.autohide", "announce.dismiss", "navigation.indexes", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "search": "../../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
     
   </body>
