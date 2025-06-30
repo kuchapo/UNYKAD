@@ -1610,9 +1610,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#nachteil" class="md-nav__link">
+  <a href="#nachteile" class="md-nav__link">
     <span class="md-ellipsis">
-      Nachteil
+      Nachteile
     </span>
   </a>
   
@@ -4141,9 +4141,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#nachteil" class="md-nav__link">
+  <a href="#nachteile" class="md-nav__link">
     <span class="md-ellipsis">
-      Nachteil
+      Nachteile
     </span>
   </a>
   
@@ -4481,9 +4481,18 @@ network 192.168.20.0
 <p class="admonition-title">Info</p>
 <p>In RIP hat man nicht die Möglichkeit einen eindeutigen Pfad ins Zielnetz zu wählen, wenn mehrere Routen in dasselbe Zielnetz führen. Das limitiert die Möglichkeiten dieses Protokolls.</p>
 </div>
-<h2 id="nachteil">Nachteil</h2>
-<p>RIP gilt heute als veraltet, da es im Vergleich zu modernen Protokollen wie OSPF oder EIGRP <strong>langsam</strong> ist und nur <strong>einfache Routing-Entscheidungen</strong> trifft.<br />
-Bei mehreren gleichwertigen Routen zum selben Ziel nutzt RIP automatisch <strong>Load Balancing</strong>, ohne eine gezielte Pfadauswahl zu ermöglichen.</p>
+<h2 id="nachteile">Nachteile</h2>
+<p>RIP gilt heute als veraltet, da es im Vergleich zu modernen Routing-Protokollen wie OSPF oder EIGRP <strong>langsamer</strong> arbeitet und nur <strong>einfache Routing-Entscheidungen</strong> treffen kann.</p>
+<p>Ein großes Manko ist, dass RIP <strong>alle 30 Sekunden seine komplette Routing-Tabelle</strong> an alle Nachbarrouter sendet – <strong>unabhängig davon, ob sich etwas geändert hat oder nicht</strong>.<br />
+Das führt zu:</p>
+<ul>
+<li><strong>unnötigem Datenverkehr</strong> im Netzwerk  </li>
+<li><strong>langsamer Reaktion</strong> auf Netzwerkänderungen  </li>
+<li>einem höheren Risiko für <strong>Routing-Loops</strong></li>
+</ul>
+<p>Zwar bietet RIP Mechanismen wie <strong>Split Horizon</strong>, <strong>Route Poisoning</strong> und <strong>Hold-Down-Timer</strong>, um Loops zu verhindern – dennoch ist es gegenüber modernen Protokollen technisch unterlegen.</p>
+<p>Zusätzlich unterstützt RIP nur eine <strong>maximale Hop-Anzahl von 15</strong>, was es in größeren Netzwerken <strong>unbrauchbar macht</strong>.</p>
+<p>Außerdem nutzt RIP bei mehreren gleichwertigen Routen automatisch <strong>Load Balancing</strong>, ohne dabei gezielt den besten Pfad auszuwählen.</p>
 
 
 
