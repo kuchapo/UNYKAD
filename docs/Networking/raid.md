@@ -35,5 +35,9 @@ um höhere Geschwindigkeit und höhere Ausfallsicherheit zu erhalten.
   Platte kann im laufenden Betrieb getauscht werden
 
 - **Hot Fix Platte, Hot Spare Platte**:  
-  - Platte läuft leer im System mit  
-  - Wenn eine Platte ausfällt, werden deren Daten auf die Hot-Fix-Platte überspielt
+    - Platte läuft leer im System mit  
+    - Wenn eine Platte ausfällt, werden deren Daten auf die Hot-Fix-Platte überspielt
+
+---
+
+![RAID](assets/RAID.jpg)
