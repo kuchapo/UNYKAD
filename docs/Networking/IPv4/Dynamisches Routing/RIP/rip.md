@@ -99,7 +99,7 @@ show ip protocols
 
 ## Beispiel 2
 
-![RIP](pics/rip.drawio.svg)
+![RIP](assets/rip.drawio.svg)
 
 ### Router A Konfiguration
 
