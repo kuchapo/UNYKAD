@@ -190,7 +190,19 @@ Hier erkennt man nun dass ein Kürzel R zwei Mal das identische Zielnetz hat. Hi
 !!! info
 	In RIP hat man nicht die Möglichkeit einen eindeutigen Pfad ins Zielnetz zu wählen, wenn mehrere Routen in dasselbe Zielnetz führen. Das limitiert die Möglichkeiten dieses Protokolls.
 
-## Nachteil
+## Nachteile
 
-RIP gilt heute als veraltet, da es im Vergleich zu modernen Protokollen wie OSPF oder EIGRP **langsam** ist und nur **einfache Routing-Entscheidungen** trifft.  
-Bei mehreren gleichwertigen Routen zum selben Ziel nutzt RIP automatisch **Load Balancing**, ohne eine gezielte Pfadauswahl zu ermöglichen.
+RIP gilt heute als veraltet, da es im Vergleich zu modernen Routing-Protokollen wie OSPF oder EIGRP **langsamer** arbeitet und nur **einfache Routing-Entscheidungen** treffen kann.
+
+Ein großes Manko ist, dass RIP **alle 30 Sekunden seine komplette Routing-Tabelle** an alle Nachbarrouter sendet – **unabhängig davon, ob sich etwas geändert hat oder nicht**.  
+Das führt zu:
+
+- **unnötigem Datenverkehr** im Netzwerk  
+- **langsamer Reaktion** auf Netzwerkänderungen  
+- einem höheren Risiko für **Routing-Loops**
+
+Zwar bietet RIP Mechanismen wie **Split Horizon**, **Route Poisoning** und **Hold-Down-Timer**, um Loops zu verhindern – dennoch ist es gegenüber modernen Protokollen technisch unterlegen.
+
+Zusätzlich unterstützt RIP nur eine **maximale Hop-Anzahl von 15**, was es in größeren Netzwerken **unbrauchbar macht**.
+
+Außerdem nutzt RIP bei mehreren gleichwertigen Routen automatisch **Load Balancing**, ohne dabei gezielt den besten Pfad auszuwählen.
