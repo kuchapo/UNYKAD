@@ -97,11 +97,11 @@ Der folgende Befehl listet alle aktiven Protokolle auf. Er zeigt ebenso die allg
 show ip protocols
 ```
 
-## Beispiel 2
+### Beispiel 2
 
 ![RIP](assets/RIP.drawio.svg)
 
-### Router A Konfiguration
+#### Router A Konfiguration
 
 ```cli
 router rip
@@ -113,7 +113,7 @@ network 192.168.0.0
 
 Der Befehl `do show run | b router rip` zeigt nun `network 10.0.0.0` an.
 
-### Router B Konfiguration
+#### Router B Konfiguration
 
 ```cli
 router rip
@@ -148,7 +148,7 @@ Wenn man nun `show ip route` auf Router B ausführt, sollte folgende Tabelle zu 
 
 Man erkennt, dass Router A seine gesamte Routing Tabelle mit Router B geteilt hat und man erkennt durch die Metrik, dass dass beim RIP-Protokoll jeweils nur ein Hop bis zum Zielnetz benötigt wird.
 
-### Router C Konfiguration
+#### Router C Konfiguration
 
 ```cli
 router rip
