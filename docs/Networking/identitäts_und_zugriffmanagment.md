@@ -1,4 +1,4 @@
-# Identitäts und Zugriffsmanagment (IAM)
+# IAM – Identitäts und Zugriffsmanagment
 
 Identity and Access Managment (IAM) ist ein Sicherheits- und Verwaltungsprozess, der sicherstellt, dass die richtigen Personen (Identität) auf die richtigen Ressourcen (Zugriff) zur richtigen Zeit und unter den richtigen Bedingungen zugreifen können.
 

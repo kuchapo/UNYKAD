@@ -1,4 +1,4 @@
-# Dynamic Host Configuration Protocol (DHCP)
+# DHCP – Dynamic Host Configuration Protocol
 
 DHCP dient zur automatischen IP-Konfiguration. Betroffen sind:
 
