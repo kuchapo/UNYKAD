@@ -47,7 +47,7 @@ Der Ausgangsport kann, muss allerdings nicht in der Routingtabelle stehen.
 
 Ganze Zahl >= 0, die angibt, wie gut die Route ist (kleinere Zahl -> besser)
 
-### Beispiel einer Routingtabelle
+## Beispiel einer Routingtabelle
 
 === "IPv4"
     | Typ | Zielnetz    | Subnetzmaske  | Ausgangsport   | next Hop     | Metrik |
@@ -74,14 +74,14 @@ Die Reihenfolge der Einträge ist egal.
 Ein Routing-Loop entsteht, **wenn zwei (oder mehr) Router sich gegenseitig Pakete zurückschicken**, weil:
 
 - Sie eine Route zum Ziel über den jeweils anderen Router sehen
-		- Beispiel bei Latenzen im dynamischen Routing wie RIP:
-				- Ein Link fällt aus, aber durch die **30-Sekunden-Update-Intervalle** weiß ein Router noch nichts davon.
-				- Er denkt weiterhin, dass der andere Router den Weg kennt – dieser jedoch schickt es wieder zurück.
-				- Das führt zu einem **temporären Routing-Loop**, bis die Routing-Tabellen beim nächsten Update **neu berechnet werden**.
+	- Beispiel bei Latenzen im dynamischen Routing wie RIP:
+		- Ein Link fällt aus, aber durch die **30-Sekunden-Update-Intervalle** weiß ein Router noch nichts davon.
+		- Er denkt weiterhin, dass der andere Router den Weg kennt – dieser jedoch schickt es wieder zurück.
+		- Das führt zu einem **temporären Routing-Loop**, bis die Routing-Tabellen beim nächsten Update **neu berechnet werden**.
 - Oder durch falsch konfigurierte statische Routen ohne gültigen Exit
-		- Beispielhafter Loop bei Fehlkonfiguration:
-				1. Router A: Route zu `10.1.1.0/24` via Router B
-				2. Router B: Route zu `10.1.1.0/24` via Router A → Ergebnis: Endloses Hin und Her
+	- Beispielhafter Loop bei Fehlkonfiguration:
+		1. Router A: Route zu `10.1.1.0/24` via Router B
+		2. Router B: Route zu `10.1.1.0/24` via Router A → Ergebnis: Endloses Hin und Her
 
 !!! info
 	Ein Paket, dessen Ziel die Loopback-Adresse ist, wird vom Router selbst verarbeitet. Es wird nicht weitergeleitet, deswegen können auch keine Loops entstehen.
@@ -97,7 +97,6 @@ Ein Routing-Loop entsteht, **wenn zwei (oder mehr) Router sich gegenseitig Paket
 
 **Gateway of last resort** (in Windows) = **Default Geteway**
 
-> [!CAUTION]
 > **Default Gateway** ist das für den **Client**,  
 **Default Route** ist das für den **Router** –  
 **beide erfüllen aber denselben Zweck**: Pakete für unbekannte Ziele weiterzuleiten.
