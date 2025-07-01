@@ -1040,17 +1040,17 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#beispiel-einer-routingtabelle" class="md-nav__link">
     <span class="md-ellipsis">
       Beispiel einer Routingtabelle
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -4075,17 +4075,17 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#beispiel-einer-routingtabelle" class="md-nav__link">
     <span class="md-ellipsis">
       Beispiel einer Routingtabelle
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -4229,7 +4229,7 @@
 </ul>
 <h3 id="metrik">Metrik</h3>
 <p>Ganze Zahl &gt;= 0, die angibt, wie gut die Route ist (kleinere Zahl -&gt; besser)</p>
-<h3 id="beispiel-einer-routingtabelle">Beispiel einer Routingtabelle</h3>
+<h2 id="beispiel-einer-routingtabelle">Beispiel einer Routingtabelle</h2>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">IPv4</label><label for="__tabbed_1_2">IPv6</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -4319,15 +4319,23 @@ Die Reihenfolge der Einträge ist egal.</p>
 <h2 id="routing-loops">Routing-Loops</h2>
 <p>Ein Routing-Loop entsteht, <strong>wenn zwei (oder mehr) Router sich gegenseitig Pakete zurückschicken</strong>, weil:</p>
 <ul>
-<li>Sie eine Route zum Ziel über den jeweils anderen Router sehen
-        - Beispiel bei Latenzen im dynamischen Routing wie RIP:
-                - Ein Link fällt aus, aber durch die <strong>30-Sekunden-Update-Intervalle</strong> weiß ein Router noch nichts davon.
-                - Er denkt weiterhin, dass der andere Router den Weg kennt – dieser jedoch schickt es wieder zurück.
-                - Das führt zu einem <strong>temporären Routing-Loop</strong>, bis die Routing-Tabellen beim nächsten Update <strong>neu berechnet werden</strong>.</li>
-<li>Oder durch falsch konfigurierte statische Routen ohne gültigen Exit
-        - Beispielhafter Loop bei Fehlkonfiguration:
-                1. Router A: Route zu <code>10.1.1.0/24</code> via Router B
-                2. Router B: Route zu <code>10.1.1.0/24</code> via Router A → Ergebnis: Endloses Hin und Her</li>
+<li>Sie eine Route zum Ziel über den jeweils anderen Router sehen<ul>
+<li>Beispiel bei Latenzen im dynamischen Routing wie RIP:<ul>
+<li>Ein Link fällt aus, aber durch die <strong>30-Sekunden-Update-Intervalle</strong> weiß ein Router noch nichts davon.</li>
+<li>Er denkt weiterhin, dass der andere Router den Weg kennt – dieser jedoch schickt es wieder zurück.</li>
+<li>Das führt zu einem <strong>temporären Routing-Loop</strong>, bis die Routing-Tabellen beim nächsten Update <strong>neu berechnet werden</strong>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Oder durch falsch konfigurierte statische Routen ohne gültigen Exit<ul>
+<li>Beispielhafter Loop bei Fehlkonfiguration:<ol>
+<li>Router A: Route zu <code>10.1.1.0/24</code> via Router B</li>
+<li>Router B: Route zu <code>10.1.1.0/24</code> via Router A → Ergebnis: Endloses Hin und Her</li>
+</ol>
+</li>
+</ul>
+</li>
 </ul>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -4358,8 +4366,7 @@ Die Reihenfolge der Einträge ist egal.</p>
 </table>
 <p><strong>Gateway of last resort</strong> (in Windows) = <strong>Default Geteway</strong></p>
 <blockquote>
-<p>[!CAUTION]
-<strong>Default Gateway</strong> ist das für den <strong>Client</strong>,<br />
+<p><strong>Default Gateway</strong> ist das für den <strong>Client</strong>,<br />
 <strong>Default Route</strong> ist das für den <strong>Router</strong> –<br />
 <strong>beide erfüllen aber denselben Zweck</strong>: Pakete für unbekannte Ziele weiterzuleiten.</p>
 </blockquote>
