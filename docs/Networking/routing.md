@@ -30,24 +30,24 @@ Typ der Route mit der jeweiligen Administrative Distance in Cisco:
 | iB     | iBGP (dynamisch)                         | 200                |
 |        | **Unreachable (nicht vertrauenswürdig)** | **255**            |
 
-## Zielnetz mit entsprechender Subnetzmaske
+### Zielnetz mit entsprechender Subnetzmaske
 
 - Netz! Nicht einzelne Hosts!
 
-## Ausgangsport
+### Ausgangsport
 
 Der Ausgangsport kann, muss allerdings nicht in der Routingtabelle stehen.
 
-## next Hop
+### next Hop
 
 - IP der nächsten Routerschnittstelle (anderer Router) auf dem Weg zum Ziel
 - Bei direkten Routen kann man den next Hop auslassen, wenn der Ausgangsport eingetragen ist
 
-## Metrik
+### Metrik
 
 Ganze Zahl >= 0, die angibt, wie gut die Route ist (kleinere Zahl -> besser)
 
-## Beispiel einer Routingtabelle
+### Beispiel einer Routingtabelle
 
 === "IPv4"
     | Typ | Zielnetz    | Subnetzmaske  | Ausgangsport   | next Hop     | Metrik |
@@ -66,12 +66,43 @@ Ganze Zahl >= 0, die angibt, wie gut die Route ist (kleinere Zahl -> besser)
 !!! info
     Letzte Route ist die Default Route. Dort steht normalerweise meistens nur der Ausgangsport oder nur der next Hop. Beides, Ausgangsport und next Hop in der Default Route gilt als eher ungewöhnlich.
 
-Abhilfe default route: Alles, was nicht in der Routingtabelle steht, schicke an next hop,...  
+Abhilfe zur Default Route: Alles, was nicht in der Routingtabelle steht, schicke an next hop,...  
 Die Reihenfolge der Einträge ist egal.
 
-## Default Route einrichten
+## Routing-Loops
+
+Ein Routing-Loop entsteht, **wenn zwei (oder mehr) Router sich gegenseitig Pakete zurückschicken**, weil:
+
+- Sie eine Route zum Ziel über den jeweils anderen Router sehen
+		- Beispiel bei Latenzen im dynamischen Routing wie RIP:
+				- Ein Link fällt aus, aber durch die **30-Sekunden-Update-Intervalle** weiß ein Router noch nichts davon.
+				- Er denkt weiterhin, dass der andere Router den Weg kennt – dieser jedoch schickt es wieder zurück.
+				- Das führt zu einem **temporären Routing-Loop**, bis die Routing-Tabellen beim nächsten Update **neu berechnet werden**.
+- Oder durch falsch konfigurierte statische Routen ohne gültigen Exit
+		- Beispielhafter Loop bei Fehlkonfiguration:
+				1. Router A: Route zu `10.1.1.0/24` via Router B
+				2. Router B: Route zu `10.1.1.0/24` via Router A → Ergebnis: Endloses Hin und Her
+
+!!! info
+	Ein Paket, dessen Ziel die Loopback-Adresse ist, wird vom Router selbst verarbeitet. Es wird nicht weitergeleitet, deswegen können auch keine Loops entstehen.
+
+## Default Route
+
+### Default Gateway vs Default Route
+
+|Begriff|Wer nutzt das?|Bedeutung|
+|---|---|---|
+|**Default Gateway**|**Endgerät (z. B. PC)**|Der Router, an den ein Gerät **alle Pakete für unbekannte Ziele** schickt.|
+|**Default Route**|**Router**|Eine Regel in der Routing-Tabelle: "**Wenn Zielnetz nicht bekannt → dahin!**"|
 
 **Gateway of last resort** (in Windows) = **Default Geteway**
+
+> [!CAUTION]
+> **Default Gateway** ist das für den **Client**,  
+**Default Route** ist das für den **Router** –  
+**beide erfüllen aber denselben Zweck**: Pakete für unbekannte Ziele weiterzuleiten.
+
+### Default Route einrichten
 
 ```cli
 ip route 0.0.0.0 0.0.0.0 <Routers IP>

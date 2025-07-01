@@ -10,6 +10,8 @@ Loopback-Interface (z. B. Loopback0) != Loopback-Adresse (z. B. 127.0.0.1)
 
 Das Loopback-Interface auf einem Router ist immer aktiv, es sei denn es wird explizit ausgeschaltet. Dieses Interface sollte somit immer pingbar sein.
 
+Wenn ein Router ein Loopback-Interface mit z. B. `192.168.1.1/32` hat, und gleichzeitig eine statische Route für `192.168.1.0/24` vorliegt, dann wird ein Paket an `192.168.1.1` **vom Router verarbeitet** und nicht vom /24-er Netz , weil die `/32`-Route **präziser** (spezifischer) ist als `/24`.
+
 Loopback Interface erstellen:
 
 ```cli
