@@ -34,7 +34,7 @@ Mit `scp` hat man die Möglichkeit Dateien auf den Raspberry Pi herunterzuladen 
 ### Manuelles Backup vom Raspberry Pi
 
 ```powershell
-scp -r "xozah@raspy.local:'/home/xozah/MC UNYKAD'" "C:\Users\Xozah\Documents\Minecraft Backup"
+scp -r "xozah@raspy.local:/home/xozah/MC UNYKAD" "C:\Users\Xozah\Documents\Minecraft Backup"
 ```
 
 ### Datapacks updaten
