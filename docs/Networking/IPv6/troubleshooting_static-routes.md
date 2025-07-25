@@ -4,7 +4,7 @@ IPv6 Troubleshooting funktioniert größtenteils genauso wie IPv4 Troubleshootin
 
 ## Beispiel
 
-![routing_troubleshooting](ipv4_ospf.drawio.svg)
+![routing_troubleshooting](assets/routing_troubleshooting.drawio.svg)
 
 | Router A<br>Routing Tabelle                                      | Router B<br>Routing Tabelle                                          |
 | ---------------------------------------------------------------- | -------------------------------------------------------------------- |
