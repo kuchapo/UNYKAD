@@ -1,4 +1,4 @@
-# Routing
+# Statisches Routing
 
 - Dient dazu, den besten Weg von einem Netz in ein anderes Netz zu finden.
 - Findet auf Layer 3 im OSI-Modell statt.

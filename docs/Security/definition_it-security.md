@@ -1,4 +1,4 @@
-# IT-Security
+# Definition IT-Security
 
 IT-Sicherheit bezieht sich auf den Schutz von Informationen und IT-Systemen vor unbefugtem Zugriff, Missbrauch, Veränderung oder Zerstörung.
 
