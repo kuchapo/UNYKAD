@@ -12,7 +12,7 @@ Diese Datei listet die gängigen SQL-Datentypen **pro Datenbank-Dialekt** – gr
 
 ## 🔢 Numerische Datentypen (Ganzzahlen & Genau/ungefähr)
 
-==="MySQL / MariaDB"
+=== "MySQL / MariaDB"
 
     |Datentyp|Beschreibung|
     |---|---|
@@ -27,7 +27,7 @@ Diese Datei listet die gängigen SQL-Datentypen **pro Datenbank-Dialekt** – gr
     |`BIT(m)`|Bit-Feld mit `m` Bits (0/1-Muster).|
     |`SERIAL`|Alias für `BIGINT UNSIGNED NOT NULL AUTO_INCREMENT UNIQUE`.|
 
-==="PostgreSQL"
+=== "PostgreSQL"
 
     |Datentyp|Beschreibung|
     |---|---|
@@ -40,7 +40,7 @@ Diese Datei listet die gängigen SQL-Datentypen **pro Datenbank-Dialekt** – gr
     |`SMALLSERIAL` / `SERIAL` / `BIGSERIAL`|Autoinkrement-Pseudotypen (ganzzahlig).|
     |`MONEY`|Währungstyp (regional formatiert; Vorsicht bei Rechenlogik).|
 
-==="SQL Server"
+=== "SQL Server"
 
     |Datentyp|Beschreibung|
     |---|---|
@@ -54,7 +54,7 @@ Diese Datei listet die gängigen SQL-Datentypen **pro Datenbank-Dialekt** – gr
     |`REAL`|`FLOAT(24)` Alias.|
     |`BIT`|0/1.|
 
-==="SQLite"
+=== "SQLite"
 
     |Datentyp|Beschreibung|
     |---|---|
@@ -64,7 +64,7 @@ Diese Datei listet die gängigen SQL-Datentypen **pro Datenbank-Dialekt** – gr
     |`NUMERIC` / `DECIMAL(p,s)`|Numerische Affinität (Werte oft **exakt** gespeichert, je nach Eingabe).|
     |_(Bool/Geld)_|Es gibt keinen speziellen `BOOLEAN`/`MONEY`; üblich sind `INTEGER` (0/1) bzw. `NUMERIC`.|
 
-==="Oracle Database"
+=== "Oracle Database"
 
     | Datentyp                             | Beschreibung                                              |
     | ------------------------------------ | --------------------------------------------------------- |
@@ -77,7 +77,7 @@ Diese Datei listet die gängigen SQL-Datentypen **pro Datenbank-Dialekt** – gr
 
 ## 📝 Zeichen- und Text-Datentypen
 
-==="MySQL / MariaDB"
+=== "MySQL / MariaDB"
 
     |Datentyp|Beschreibung|
     |---|---|
@@ -86,7 +86,7 @@ Diese Datei listet die gängigen SQL-Datentypen **pro Datenbank-Dialekt** – gr
     |`TINYTEXT` / `TEXT` / `MEDIUMTEXT` / `LONGTEXT`|Sehr lange Texte, gestaffelte Maximalgrößen.|
     |`NCHAR(n)` / `NVARCHAR(n)`|„National Character“ Varianten (Unicode).|
 
-==="PostgreSQL"
+=== "PostgreSQL"
 
     |Datentyp|Beschreibung|
     |---|---|
@@ -94,7 +94,7 @@ Diese Datei listet die gängigen SQL-Datentypen **pro Datenbank-Dialekt** – gr
     |`VARCHAR(n)`|Variable Länge.|
     |`TEXT`|Unbegrenzt (praktisch). Alle Strings sind UTF‑8 (je nach Cluster-Encoding).|
 
-==="SQL Server"
+=== "SQL Server"
 
     |Datentyp|Beschreibung|
     |---|---|
@@ -104,14 +104,14 @@ Diese Datei listet die gängigen SQL-Datentypen **pro Datenbank-Dialekt** – gr
     |`NVARCHAR(MAX)`|Bis 2 GB Unicode-Text.|
     |_(veraltet)_ `TEXT`/`NTEXT`|Alte Large-Text-Typen (nicht mehr verwenden).|
 
-==="SQLite"
+=== "SQLite"
 
     |Datentyp|Beschreibung|
     |---|---|
     |`TEXT`|Beliebige Länge, UTF‑8/16. Längen werden nicht hart erzwungen.|
     |Synonyme|Namen wie `VARCHAR(255)` werden als `TEXT`-Affinity behandelt.|
 
-==="Oracle Database"
+=== "Oracle Database"
 
     |Datentyp|Beschreibung|
     |---|---|
@@ -124,7 +124,7 @@ Diese Datei listet die gängigen SQL-Datentypen **pro Datenbank-Dialekt** – gr
 
 ## 📅 Datums- und Zeit-Datentypen
 
-==="MySQL / MariaDB"
+=== "MySQL / MariaDB"
 
     |Datentyp|Beschreibung|
     |---|---|
@@ -134,7 +134,7 @@ Diese Datei listet die gängigen SQL-Datentypen **pro Datenbank-Dialekt** – gr
     |`TIMESTAMP[(fsp)]`|Datum+Zeit, intern UTC, Konvertierung nach Session-TZ.|
     |`YEAR`|Jahr (z. B. `YEAR(4)`).|
 
-==="PostgreSQL"
+=== "PostgreSQL"
 
     |Datentyp|Beschreibung|
     |---|---|
@@ -143,7 +143,7 @@ Diese Datei listet die gängigen SQL-Datentypen **pro Datenbank-Dialekt** – gr
     |`TIMESTAMP [WITHOUT/WITH TIME ZONE]`|Zeitstempel (mit/ohne TZ).|
     |`INTERVAL`|Zeitspanne.|
 
-==="SQL Server"
+=== "SQL Server"
 
     |Datentyp|Beschreibung|
     |---|---|
@@ -154,13 +154,13 @@ Diese Datei listet die gängigen SQL-Datentypen **pro Datenbank-Dialekt** – gr
     |`SMALLDATETIME`|Minuten-genau, kleiner Bereich.|
     |`DATETIMEOFFSET(p)`|Datum+Zeit **mit** Zeitzone.|
 
-==="SQLite"
+=== "SQLite"
 
     |Datentyp|Beschreibung|
     |---|---|
     |_(kein eigener Typ)_|Speicherung als `TEXT` (ISO‑8601), `REAL` (Julian Day) oder `INTEGER` (Unix-Zeit). Funktionen kümmern sich um Umrechnung.|
 
-==="Oracle Database"
+=== "Oracle Database"
 
     |Datentyp|Beschreibung|
     |---|---|
@@ -173,7 +173,7 @@ Diese Datei listet die gängigen SQL-Datentypen **pro Datenbank-Dialekt** – gr
 
 ## ✅ Boolesche & Mengen-Typen
 
-==="MySQL / MariaDB"
+=== "MySQL / MariaDB"
 
     |Datentyp|Beschreibung|
     |---|---|
@@ -181,26 +181,26 @@ Diese Datei listet die gängigen SQL-Datentypen **pro Datenbank-Dialekt** – gr
     |`ENUM('A','B',...)`|Einer aus vordefinierten Werten.|
     |`SET('A','B',...)`|**Mehrere** vordefinierte Werte kombinierbar.|
 
-==="PostgreSQL"
+=== "PostgreSQL"
 
     |Datentyp|Beschreibung|
     |---|---|
     |`BOOLEAN`|`TRUE`/`FALSE`/`NULL`.|
     |`ENUM` (benutzerdefiniert)|`CREATE TYPE ... AS ENUM`.|
 
-==="SQL Server"
+=== "SQL Server"
 
     |Datentyp|Beschreibung|
     |---|---|
     |`BIT`|0/1/`NULL`. _(Kein `ENUM`; per `CHECK`-Constraint modellieren.)_|
 
-==="SQLite"
+=== "SQLite"
 
     |Datentyp|Beschreibung|
     |---|---|
     |_(kein eigener Bool)_|Üblich: `INTEGER` 0/1. `CHECK (col IN (0,1))` empfehlenswert.|
 
-==="Oracle Database"
+=== "Oracle Database"
 
     |Datentyp|Beschreibung|
     |---|---|
@@ -210,7 +210,7 @@ Diese Datei listet die gängigen SQL-Datentypen **pro Datenbank-Dialekt** – gr
 
 ## 💾 Binär- & Bit-String-Typen
 
-==="MySQL / MariaDB"
+=== "MySQL / MariaDB"
 
     |Datentyp|Beschreibung|
     |---|---|
@@ -218,14 +218,14 @@ Diese Datei listet die gängigen SQL-Datentypen **pro Datenbank-Dialekt** – gr
     |`TINYBLOB` / `BLOB` / `MEDIUMBLOB` / `LONGBLOB`|Große Binärobjekte.|
     |`BIT(m)`|Bit-Felder (auch für Flags).|
 
-==="PostgreSQL"
+=== "PostgreSQL"
 
     |Datentyp|Beschreibung|
     |---|---|
     |`BYTEA`|Binärdaten.|
     |`BIT(n)` / `BIT VARYING(n)`|Bit-Strings fester/variabler Länge.|
 
-==="SQL Server"
+=== "SQL Server"
 
     | Datentyp                   | Beschreibung                                           |
     | -------------------------- | ------------------------------------------------------ |
@@ -233,13 +233,13 @@ Diese Datei listet die gängigen SQL-Datentypen **pro Datenbank-Dialekt** – gr
     | _(veraltet)_ `IMAGE`       | Alter Large-Binary-Typ.                                |
     | `ROWVERSION` (`TIMESTAMP`) | Automatische Versionsnummer (8‑Byte, **kein** Datum!). |
 
-==="SQLite"
+=== "SQLite"
 
     |Datentyp|Beschreibung|
     |---|---|
     |`BLOB`|Beliebige Binärdaten.|
 
-==="Oracle Database"
+=== "Oracle Database"
 
     |Datentyp|Beschreibung|
     |---|---|
@@ -252,14 +252,14 @@ Diese Datei listet die gängigen SQL-Datentypen **pro Datenbank-Dialekt** – gr
 
 ## 🧩 JSON, XML & semistrukturiert
 
-==="MySQL / MariaDB"
+=== "MySQL / MariaDB"
 
     |Datentyp|Beschreibung|
     |---|---|
     |`JSON`|Nativer JSON-Typ mit Validierung & Funktionen.|
     |_(XML)_|Kein eigener XML-Typ; Speicherung als Text/Blob.|
 
-==="PostgreSQL"
+=== "PostgreSQL"
 
     |Datentyp|Beschreibung|
     |---|---|
@@ -267,21 +267,21 @@ Diese Datei listet die gängigen SQL-Datentypen **pro Datenbank-Dialekt** – gr
     |`JSONB`|Binärrepräsentation (indizierbar, schneller für Abfragen).|
     |`XML`|XML-Datentyp + XPath/XQuery-Funktionen.|
 
-==="SQL Server"
+=== "SQL Server"
 
     |Datentyp|Beschreibung|
     |---|---|
     |`XML`|XML mit Schema-Unterstützung.|
     |_(JSON)_|Kein eigener Typ; Speicherung als `NVARCHAR` + `ISJSON()` und JSON‑Funktionen.|
 
-==="SQLite"
+=== "SQLite"
 
     |Datentyp|Beschreibung|
     |---|---|
     |_(JSON)_|Kein eigener Typ; Speicherung als `TEXT` + JSON1‑Funktionen (`json_valid()` usw.).|
     |_(XML)_|Als `TEXT` speichern.|
 
-==="Oracle Database"
+=== "Oracle Database"
 
     |Datentyp|Beschreibung|
     |---|---|
@@ -292,7 +292,7 @@ Diese Datei listet die gängigen SQL-Datentypen **pro Datenbank-Dialekt** – gr
 
 ## 📐 Geodaten & Geometrie
 
-==="MySQL / MariaDB (OpenGIS)"
+=== "MySQL / MariaDB (OpenGIS)"
 
     |Datentyp|Beschreibung|
     |---|---|
@@ -300,14 +300,14 @@ Diese Datei listet die gängigen SQL-Datentypen **pro Datenbank-Dialekt** – gr
     |`POINT` / `LINESTRING` / `POLYGON`|Grundformen.|
     |`MULTIPOINT` / `MULTILINESTRING` / `MULTIPOLYGON` / `GEOMETRYCOLLECTION`|Sammlungen.|
 
-==="PostgreSQL"
+=== "PostgreSQL"
 
     |Datentyp|Beschreibung|
     |---|---|
     |_(Kern)_ `POINT`, `LINE`, `LSEG`, `BOX`, `PATH`, `POLYGON`, `CIRCLE`|Geometrische Typen (rein geometrisch).|
     |_(Erweiterung: PostGIS)_ `GEOMETRY`, `GEOGRAPHY`, `RASTER`, …|Vollwertige GIS-Typen & Funktionen.|
 
-==="SQL Server"
+=== "SQL Server"
 
     |Datentyp|Beschreibung|
     |---|---|
@@ -315,13 +315,13 @@ Diese Datei listet die gängigen SQL-Datentypen **pro Datenbank-Dialekt** – gr
     |`GEOGRAPHY`|Geodätische Koordinaten (ellipsoidisch).|
     |`HIERARCHYID`|Baum-/Hierarchiepfade (kein Geo, aber „räumlich“ strukturiert).|
 
-==="SQLite"
+=== "SQLite"
 
     |Datentyp|Beschreibung|
     |---|---|
     |_(SpatiaLite)_|Über Erweiterung: GIS‑Typen/Funktionen. Im Kern: Speicherung als `BLOB`/`TEXT`.|
 
-==="Oracle Database"
+=== "Oracle Database"
 
     |Datentyp|Beschreibung|
     |---|---|
@@ -331,13 +331,13 @@ Diese Datei listet die gängigen SQL-Datentypen **pro Datenbank-Dialekt** – gr
 
 ## 🌐 Netzwerk, UUID & Spezialtypen
 
-==="MySQL / MariaDB"
+=== "MySQL / MariaDB"
 
     |Datentyp|Beschreibung|
     |---|---|
     |_(UUID)_|Kein eigener Typ; `CHAR(36)` (String) oder `BINARY(16)` (kompakt). Funktionen wie `UUID()`, `UUID_TO_BIN()`.|
 
-==="PostgreSQL"
+=== "PostgreSQL"
 
     |Datentyp|Beschreibung|
     |---|---|
@@ -350,7 +350,7 @@ Diese Datei listet die gängigen SQL-Datentypen **pro Datenbank-Dialekt** – gr
     |`ARRAY`|Arrays jeden Basistyps (`integer[]` etc.).|
     |`DOMAIN` / `COMPOSITE`|Eigene abgeleitete/zusammengesetzte Typen.|
 
-==="SQL Server"
+=== "SQL Server"
 
     |Datentyp|Beschreibung|
     |---|---|
@@ -360,14 +360,14 @@ Diese Datei listet die gängigen SQL-Datentypen **pro Datenbank-Dialekt** – gr
     |`HIERARCHYID`|Hierarchiepfade.|
     |_(Netzwerk)_|Kein eigener `INET`/`CIDR`; per `VARCHAR` + Constraints.|
 
-==="SQLite"
+=== "SQLite"
 
     |Datentyp|Beschreibung|
     |---|---|
     |_(UUID)_|Als `TEXT` (36) oder `BLOB` (16).|
     |_(Netzwerk)_|Als `TEXT` + `CHECK`.|
 
-==="Oracle Database"
+=== "Oracle Database"
 
     |Datentyp|Beschreibung|
     |---|---|

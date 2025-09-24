@@ -20,13 +20,13 @@ MySQL/MariaDB haben eine Server-Variable `lower_case_table_names`, die das Verha
 
 Man kann auf zwei Wege eine neue Datenbank erstellen. Beim ersten kommt eine Fehlermeldung, falls die Datenbank bereits existiert. Beim zweiten kommt keine.
 
-==="mit Fehlermeldung"
+=== "mit Fehlermeldung"
 	```sql
 	CREATE DATABASE shop;
 	USE shop;
 	```
 
-==="ohne Fehlermeldung"
+=== "ohne Fehlermeldung"
 	```sql
 	CREATE DATABASE IF NOT EXISTS shop;
 	USE shop;
