@@ -12,3 +12,8 @@
 ![Projektmanagement10](pics/projektmanagement10.jpg)
 ![Projektmanagement11](pics/projektmanagement11.jpg)
 ![Projektmanagement12](pics/projektmanagement12.jpg)
+
+## Projekte planen und durchführen
+
+![Projektmanagement Übung](pics/projektmanagement_uebung.png)
+![Projektmanagement Übung2](pics/projektmanagement_uebung2.png)
