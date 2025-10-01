@@ -126,7 +126,7 @@ Diese Übungsaufgaben kommen von der Webseite [SQL Island](https://sql-island.in
 === "Lösung"
 	
 	```
-	INSERT INTO BEWOHNER (name, dorfnr, geschlecht, beruf, gold, status) VALUES ('Karl', 1, '?', '?', 0, '?')
+	INSERT INTO BEWOHNER (name, dorfnr, geschlecht, beruf, gold, status) VALUES ('Karl', 1, '?', '?', 0, '?');
 	```
 
 ## Übung 7
@@ -415,7 +415,7 @@ Diese Übungsaufgaben kommen von der Webseite [SQL Island](https://sql-island.in
 === "Lösung"
 	
 	```
-	SELECT DORF.name FROM DORF, BEWOHNER WHERE DORF.dorfnr = BEWOHNER.dorfnr AND BEWOHNER.name = 'Dirty Dieter'
+	SELECT DORF.name FROM DORF, BEWOHNER WHERE DORF.dorfnr = BEWOHNER.dorfnr AND BEWOHNER.name = 'Dirty Dieter';
 	```
 	
 	|name|
@@ -607,7 +607,7 @@ Diese Übungsaufgaben kommen von der Webseite [SQL Island](https://sql-island.in
 === "Lösung"
 	
 	```
-	DELETE FROM BEWOHNER WHERE name = 'Dirty Dieter'
+	DELETE FROM BEWOHNER WHERE name = 'Dirty Dieter';
 	```
 	
 ## Übung 32
