@@ -58,7 +58,7 @@ Es gibt einen geheimen Schlüssel, welcher die Nachrichten verschlüsseln und en
 
 ## Asymmetrisches Verschlüsseln
 
-Es gibt einen öffentlichen und einen privaten Schlüssel. Nachrichten werden immer mit dem öffentlichen Schlüssel des Empfängers verschlüsselt und können nur mit dessen privatem Schlüssel entschlüsselt werden. Der private Schlüssel bleibt dabei stets geheim und verlässt das Gerät nicht.
+Es gibt einen öffentlichen und einen privaten Schlüssel. Nachrichten werden immer mit dem öffentlichen Schlüssel des Empfängers verschlüsselt und können nur mit dessen privatem Schlüssel entschlüsselt werden. Der private Schlüssel bleibt dabei stets geheim und verlässt das Gerät nicht. Der private Schlüssel kann aus dem öffentlichen Schlüssel nicht berechnet werden.
 
 **Vorteil**: Sicher
 **Nachteil**: Langsam, etwa 10.000 mal langsamer als asymmetrische Verschlüsselung
@@ -94,7 +94,7 @@ Es gibt einen öffentlichen und einen privaten Schlüssel. Nachrichten werden im
 
 ## Hybrides Verschlüsseln
 
-Der öffentliche Schlüssel der Symmetrischen Verschlüsselung wird über Asymmetrische Verschlüsselung übermittelt. Danach wird nur noch über Symmetrische Verschlüsselung kommuniziert.
+Der öffentliche Schlüssel der Symmetrischen Verschlüsselung wird über Asymmetrische Verschlüsselung übermittelt. Danach wird nur noch über Symmetrische Verschlüsselung kommuniziert. Beispiele: `SSL` & `TSL`
 
 Vorteil: Sicher und schnell
 Nachteil: hat keinen
