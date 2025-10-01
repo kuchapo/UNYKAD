@@ -3476,6 +3476,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#datei-mit-standard-programm-offnen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Datei mit Standard-Programm öffnen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#alle-cmdlets-mit-dem-jeweiligen-parameter-finden" class="md-nav__link">
     <span class="md-ellipsis">
       Alle Cmdlets mit dem jeweiligen Parameter finden
@@ -4801,6 +4810,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#datei-mit-standard-programm-offnen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Datei mit Standard-Programm öffnen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#alle-cmdlets-mit-dem-jeweiligen-parameter-finden" class="md-nav__link">
     <span class="md-ellipsis">
       Alle Cmdlets mit dem jeweiligen Parameter finden
@@ -4877,6 +4895,19 @@
 <h2 id="windows-ereignisprotokolle-anzeigen">Windows-Ereignisprotokolle anzeigen</h2>
 <div class="highlight"><pre><span></span><code><span class="nb">get-winevent</span> <span class="n">-logname</span> <span class="n">system</span> <span class="p">|</span> <span class="nb">select-object</span> <span class="n">-first</span> <span class="n">5</span>
 </code></pre></div>
+<h2 id="datei-mit-standard-programm-offnen">Datei mit Standard-Programm öffnen</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Alias</label><label for="__tabbed_1_2">Ausgeschrieben</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nb">ii </span><span class="s2">&quot;C:\Users\Xozah\Documents\UNYKAD\bitcoin.svg&quot;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nb">Invoke-Item</span> <span class="s2">&quot;C:\Users\Xozah\Documents\UNYKAD\bitcoin.svg&quot;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
 <h2 id="alle-cmdlets-mit-dem-jeweiligen-parameter-finden">Alle Cmdlets mit dem jeweiligen Parameter finden</h2>
 <div class="highlight"><pre><span></span><code><span class="nb">Get-command</span> <span class="n">-CommandType</span> <span class="n">Cmdlet</span> <span class="n">-ParameterName</span> <span class="n">Computername</span>
 </code></pre></div>
@@ -4884,7 +4915,7 @@
 <div class="highlight"><pre><span></span><code><span class="nb">Get-Help</span> <span class="nb">Join-Path</span> <span class="n">-Parameter</span> <span class="p">*</span>
 </code></pre></div>
 <h2 id="verzeichniserstellung">Verzeichniserstellung</h2>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">New (PowerShell)</label><label for="__tabbed_1_2">Old (CMD)</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">New (PowerShell)</label><label for="__tabbed_2_2">Old (CMD)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="nb">new-item</span> <span class="n">-itemtype</span> <span class="n">directory</span> <span class="p">&lt;</span><span class="n">Name</span> <span class="n">des</span> <span class="n">Ordners</span><span class="p">&gt;</span>
