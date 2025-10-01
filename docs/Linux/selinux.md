@@ -33,6 +33,7 @@ Systemressourcen (Dateien, Sockets, Ports, etc.) und Prozesse werden gelabelt un
 ## Praxis
 
 Umgebung:
+
 - Root-Rechte
 - AlmaLinux 9.5
 
@@ -50,6 +51,7 @@ systemctl enable --now httpd
 ### Status überprüfen und setzen
 
 Insgesamt gibt es 3 verschiedene States, welche SELinux haben kann.
+
 - Enforcing: Läuft. Wenn ein System auf eine Ressource zugreifen will, dann kann er dieses blockieren.
 - Permissive: Hört im Hintergrund mit, aber blockiert nichts.
 - Disabled: Hört im Hintergrund nicht mit und blockiert auch nichts.
