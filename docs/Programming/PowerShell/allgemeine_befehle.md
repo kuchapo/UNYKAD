@@ -12,6 +12,18 @@ Get-ChildItem -Path C:\ -Recurse -ErrorAction SilentlyContinue | Where-Object { 
 get-winevent -logname system | select-object -first 5
 ```
 
+## Datei mit Standard-Programm öffnen
+
+=== "Alias"
+    ```powershell
+    ii "C:\Users\Xozah\Documents\UNYKAD\bitcoin.svg"
+    ```
+
+=== "Ausgeschrieben"
+    ```powershell
+    Invoke-Item "C:\Users\Xozah\Documents\UNYKAD\bitcoin.svg"
+    ```
+
 ## Alle Cmdlets mit dem jeweiligen Parameter finden
 
 ```powershell
