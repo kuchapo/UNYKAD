@@ -4856,20 +4856,26 @@
 <span class="nb">ft</span>
 </code></pre></div>
 <h3 id="benutzer-nach-letztem-anmeldedatum-sortieren">Benutzer nach letztem Anmeldedatum sortieren</h3>
-<p>==="Möglichkeit 1"
-    <div class="highlight"><pre><span></span><code><span class="nb">Get-ADUser</span> <span class="n">-Filter</span> <span class="p">*</span> <span class="n">-Property</span> <span class="n">lastLogon</span> <span class="p">|</span>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Möglichkeit 1</label><label for="__tabbed_1_2">Möglichkeit 2</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nb">Get-ADUser</span> <span class="n">-Filter</span> <span class="p">*</span> <span class="n">-Property</span> <span class="n">lastLogon</span> <span class="p">|</span>
 <span class="nb">Select-Object</span> <span class="n">DistinguishedName</span><span class="p">,</span> <span class="n">Name</span><span class="p">,</span> <span class="n">SamAccountName</span><span class="p">,</span> <span class="n">lastLogon</span> <span class="p">|</span>
 <span class="nb">Sort-Object</span> <span class="n">lastLogon</span> <span class="p">|</span>
 <span class="nb">Select-Object</span> <span class="p">*,</span> <span class="p">@{</span><span class="n">Name</span><span class="p">=</span><span class="s1">&#39;LastLogOnFormatiert&#39;</span><span class="p">;</span> <span class="n">Expression</span><span class="p">={</span><span class="no">[datetime]</span><span class="p">::</span><span class="n">FromFileTime</span><span class="p">(</span><span class="nv">$_</span><span class="p">.</span><span class="n">lastLogon</span><span class="p">)}}</span> <span class="p">|</span>
 <span class="nb">ft</span>
-</code></pre></div></p>
-<p>==="Möglichkeit 2"
-    <div class="highlight"><pre><span></span><code><span class="nb">Get-ADUser</span> <span class="n">-Filter</span> <span class="p">*</span> <span class="n">-Property</span> <span class="n">lastLogon</span> <span class="p">|</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="nb">Get-ADUser</span> <span class="n">-Filter</span> <span class="p">*</span> <span class="n">-Property</span> <span class="n">lastLogon</span> <span class="p">|</span>
 <span class="nb">Select-Object</span> <span class="n">DistinguishedName</span><span class="p">,</span> <span class="n">Name</span><span class="p">,</span> <span class="n">SamAccountName</span><span class="p">,</span> <span class="n">lastLogon</span> <span class="p">|</span>
 <span class="nb">Sort-Object</span> <span class="n">lastLogon</span> <span class="p">|</span>
 <span class="nb">Select-Object</span> <span class="n">DistinguishedName</span><span class="p">,</span><span class="n">Name</span><span class="p">,</span><span class="n">SamAccountName</span><span class="p">,@{</span><span class="n">Name</span><span class="p">=</span><span class="s1">&#39;LastLogOn&#39;</span><span class="p">;</span> <span class="n">Expression</span><span class="p">={</span><span class="no">[datetime]</span><span class="p">::</span><span class="n">FromFileTime</span><span class="p">(</span><span class="nv">$_</span><span class="p">.</span><span class="n">lastLogon</span><span class="p">)}}</span> <span class="p">|</span>
 <span class="nb">ft</span>
-</code></pre></div></p>
+</code></pre></div>
+</div>
+</div>
+</div>
 <h3 id="ad-user-die-enabled-true-sind">AD-User, die "Enabled = True" sind</h3>
 <div class="highlight"><pre><span></span><code><span class="nb">get-aduser</span> <span class="n">-Filter</span> <span class="p">*</span> <span class="p">|</span> <span class="nb">where-object</span> <span class="n">enabled</span> <span class="o">-eq</span> <span class="n">true</span>
 </code></pre></div>
