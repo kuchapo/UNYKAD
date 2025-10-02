@@ -13,7 +13,7 @@ ft
 ```
 ### Benutzer nach letztem Anmeldedatum sortieren
 
-==="Möglichkeit 1"
+=== "Möglichkeit 1"
 	```powershell
 	Get-ADUser -Filter * -Property lastLogon |
 	Select-Object DistinguishedName, Name, SamAccountName, lastLogon |
@@ -22,7 +22,7 @@ ft
 	ft
 	```
 
-==="Möglichkeit 2"
+=== "Möglichkeit 2"
 	```powershell
 	Get-ADUser -Filter * -Property lastLogon |
 	Select-Object DistinguishedName, Name, SamAccountName, lastLogon |
