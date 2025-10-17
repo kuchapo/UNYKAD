@@ -17,3 +17,4 @@
 
 ![Projektmanagement Übung](pics/projektmanagement_uebung.png)
 ![Projektmanagement Übung2](pics/projektmanagement_uebung2.png)
+![Projektmanagement Übung3](pics/projektmanagement_uebung3.png)

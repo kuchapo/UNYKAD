@@ -3,3 +3,4 @@
 ![Marktformen](pics/marktformen.png)
 ![Marktformen2](pics/marktformen2.png)
 ![Marktformen3](pics/marktformen3.png)
+![Marktformen4](pics/beispiele_fuer_marktformen.png)
