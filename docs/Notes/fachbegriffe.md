@@ -1,5 +1,9 @@
 # IT Glossar
 
+## Auto-MDI/MDIX
+
+Auto-MDI/MDIX ist eine Technologie in Netzwerkgeräten, die automatisch erkennt, ob ein Straight-Through- oder Crossover-Kabel verwendet wird, und die Verbindung entsprechend anpasst. Sie basiert auf den Schnittstellen MDI (Medium Dependent Interface), die normalerweise für Straight-Through-Kabel genutzt wird, und MDIX (Medium Dependent Interface Crossover), die für Crossover-Kabel vorgesehen ist. Durch Auto-MDI/MDIX können Geräte somit unabhängig vom Kabeltyp miteinander kommunizieren, ohne dass eine manuelle Umkonfiguration nötig ist.
+
 ## Proprietär
 
 Software oder Systeme, die von einem bestimmten Unternehmen kontrolliert werden, wobei der Quellcode und interne Details nicht öffentlich zugänglich sind.
