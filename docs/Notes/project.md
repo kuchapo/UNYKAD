@@ -1,4 +1,4 @@
-# Auswahl eines geeigneten Patch-Managementsystems
+# Auswahl eines geeigneten Patch-Managementsystems anhand einer Nutzwertanalyse
 
 ![](./Projektfolien/projekt1.png)
 ![](./Projektfolien/projekt2.png)
