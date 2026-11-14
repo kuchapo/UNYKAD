@@ -12,7 +12,7 @@
         <link rel="prev" href="../../Programming/rust/data_types/">
       
       
-        <link rel="next" href="../../Notes/fachbegriffe/">
+        <link rel="next" href="../docker_compose/">
       
       
         
@@ -4813,6 +4813,16 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
     
     
     
@@ -4976,15 +4986,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
+  <a href="#basic-commands" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Commands
+        Basic Commands
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Commands">
+    <nav class="md-nav" aria-label="Basic Commands">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -5546,506 +5556,150 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#docker-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Docker File
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Docker File">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#docker-image-layers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Docker Image Layers
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Docker Image Layers">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#best-practice-tips" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Best Practice Tips
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-file-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Docker File Structure
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Docker File Structure">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#run" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        RUN
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cmd" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CMD
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#expose" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        EXPOSE
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#copy" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        COPY
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#workdir" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        WORKDIR
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#env" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ENV
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#label" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        LABEL
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-file-examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Docker File Examples
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#docker-registry" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Docker Registry
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Docker Registry">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#docker-image-naming-convention" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Docker Image Naming Convention
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Docker Image Naming Convention">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#examples_19" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Examples
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-push_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Docker Push
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#docker-networking" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Docker Networking
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Docker Networking">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#docker-network-modes-drivers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Docker Network Modes (Drivers)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Docker Network Modes (Drivers)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#bridge-mode-driver" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Bridge Mode (Driver)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Bridge Mode (Driver)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#default-bridge-docker0" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Default Bridge (docker0)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#network-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Network Commands
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#persisting-data-in-containers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Persisting Data in Containers
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Persisting Data in Containers">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#benefits" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Benefits
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ways-to-persist-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ways to persist data
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Ways to persist data">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#docker-volumes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Docker Volumes
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-bind-mounts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Docker Bind Mounts
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#docker-compose" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Docker Compose
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Docker Compose">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#file-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        File Structure
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="File Structure">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#services" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        services
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="services">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#image" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        image
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#build" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        build
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#container_name" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        container_name
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ports" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ports
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#volumes-bind-mount" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        volumes (bind mount)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#volumes-named-volume" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        volumes (named Volume)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#volumes-anonymous-volume" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        volumes (anonymous Volume)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-compose-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Docker Compose Commands
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-compose-network" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Docker Compose Network
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker_compose/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker Compose
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker_data_persisting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Persisting Data in Containers
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker_file/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker File
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker_networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker Networking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker_registry/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docker Registry
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -6616,15 +6270,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
+  <a href="#basic-commands" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Commands
+        Basic Commands
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Commands">
+    <nav class="md-nav" aria-label="Basic Commands">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -7186,502 +6840,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#docker-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Docker File
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Docker File">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#docker-image-layers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Docker Image Layers
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Docker Image Layers">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#best-practice-tips" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Best Practice Tips
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-file-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Docker File Structure
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Docker File Structure">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#run" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        RUN
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cmd" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CMD
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#expose" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        EXPOSE
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#copy" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        COPY
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#workdir" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        WORKDIR
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#env" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ENV
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#label" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        LABEL
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-file-examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Docker File Examples
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#docker-registry" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Docker Registry
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Docker Registry">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#docker-image-naming-convention" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Docker Image Naming Convention
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Docker Image Naming Convention">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#examples_19" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Examples
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-push_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Docker Push
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#docker-networking" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Docker Networking
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Docker Networking">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#docker-network-modes-drivers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Docker Network Modes (Drivers)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Docker Network Modes (Drivers)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#bridge-mode-driver" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Bridge Mode (Driver)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Bridge Mode (Driver)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#default-bridge-docker0" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Default Bridge (docker0)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#network-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Network Commands
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#persisting-data-in-containers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Persisting Data in Containers
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Persisting Data in Containers">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#benefits" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Benefits
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ways-to-persist-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Ways to persist data
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Ways to persist data">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#docker-volumes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Docker Volumes
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-bind-mounts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Docker Bind Mounts
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#docker-compose" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Docker Compose
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Docker Compose">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#file-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        File Structure
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="File Structure">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#services" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        services
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="services">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#image" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        image
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#build" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        build
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#container_name" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        container_name
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ports" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        ports
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#volumes-bind-mount" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        volumes (bind mount)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#volumes-named-volume" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        volumes (named Volume)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#volumes-anonymous-volume" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        volumes (anonymous Volume)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-compose-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Docker Compose Commands
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#docker-compose-network" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Docker Compose Network
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -7716,7 +6874,7 @@
 <div class="highlight"><pre><span></span><code>ps<span class="w"> </span>aux<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>&lt;container-name&gt;
 <span class="w">    </span><span class="c1"># Works e.g. on RHEL and Ubuntu</span>
 </code></pre></div>
-<h2 id="commands">Commands</h2>
+<h2 id="basic-commands">Basic Commands</h2>
 <h3 id="docker-version">docker version</h3>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>version
 <span class="w">    </span><span class="c1"># Detailed information.</span>
@@ -8033,656 +7191,6 @@ You can choose between relative (e.g. like "files/test.txt") and absolute (e.g. 
 </code></pre></div>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>push<span class="w"> </span>myapp<span class="w"> </span>registry.mycorp.com/myusername/myapp:1.0.0
 <span class="w">    </span><span class="c1"># If not Docker Hub</span>
-</code></pre></div>
-<h2 id="docker-file">Docker File</h2>
-<p>A Docker File is a text document that contains all commands a user could use manuelly on the CLI to build an application. It builds the image automatically. One Docker File means one image!</p>
-<p>Example DOCKERFILE:</p>
-<div class="highlight"><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">ubuntu</span>
-<span class="k">MAINTAINER</span><span class="w"> </span><span class="s">John Doe</span>
-<span class="k">RUN</span><span class="w"> </span>apt-get<span class="w"> </span>update
-<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;echo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Hello World!&quot;</span><span class="p">]</span>
-</code></pre></div>
-<p>The command <code>docker build</code> reads the instructions in a docker file and creates a docker image.</p>
-<h3 id="docker-image-layers">Docker Image Layers</h3>
-<p>During container runtime, image layers are read-only. To modify the image layers, you have to rebuild the image using the Dockerfile.</p>
-<p>However, changes made inside a running container (e.g. installing <code>vim</code> via <code>apt install vim</code>) are stored in the container's writable layer. These changes do not modify the original image and are lost when the container is removed.</p>
-<ul>
-<li><code>FROM</code> specifies the base image, which already contains layers.</li>
-<li><code>RUN</code>, <code>COPY</code> and <code>ADD</code> typically create new layers.</li>
-<li>Each layer has its own SHA256 digest.</li>
-<li>Not every instruction creates a layer (e.g. <code>CMD</code>, <code>ENV</code>).</li>
-</ul>
-<h4 id="best-practice-tips">Best Practice Tips</h4>
-<ul>
-<li>Group COPY and RUN wisely to improve layer caching</li>
-<li>Put less frequently changed lines early (like installing dependencies)</li>
-<li>Avoid unnecessary RUN commands to reduce layer count and image size</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Goal</th>
-<th>What's Better?</th>
-<th>Why?</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Fast builds</td>
-<td>More layers (smart caching)</td>
-<td>Docker can skip unchanged layers</td>
-</tr>
-<tr>
-<td>Smaller images</td>
-<td>Fewer layers, clean builds</td>
-<td>Fewer intermediate files/layers</td>
-</tr>
-<tr>
-<td>Maintainability</td>
-<td>Readable layers</td>
-<td>Easier debugging and edits</td>
-</tr>
-<tr>
-<td>Layer reuseability</td>
-<td>Split steps logically</td>
-<td>Base images can be reused/cached</td>
-</tr>
-</tbody>
-</table>
-<h3 id="docker-file-structure">Docker File Structure</h3>
-<h4 id="run">RUN</h4>
-<ul>
-<li>Runs one or more commands.</li>
-<li>Is executed during the image build.</li>
-<li>Used for updating &amp; installing.</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="c"># NOT RECOMMENDED</span>
-<span class="c"># USES SEPERATE RUN INSTRUCTIONS IN ONE FILE</span>
-<span class="c"># ADDS MULTIPLE LAYERS</span>
-<span class="c"># BUT SOMETIMES REQUIRED</span>
-<span class="k">RUN</span><span class="w"> </span>apt-get<span class="w"> </span>update
-<span class="k">RUN</span><span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>vim
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c"># RECOMMENDED</span>
-<span class="k">RUN</span><span class="w"> </span>apt-get<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>vim<span class="w"> </span>git
-</code></pre></div>
-<h4 id="cmd">CMD</h4>
-<ul>
-<li>Is executed after the image build.</li>
-<li>Will be executed after the RUN instruction.</li>
-<li>Only the last CMD instruction will take effect.</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;&lt;EXECUTABLE&gt;&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;param1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;param2&quot;</span><span class="p">]</span>
-
-<span class="c"># Example 1</span>
-<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;echo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Hello World&quot;</span><span class="p">]</span>
-
-<span class="c"># Example 2</span>
-<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;echo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Hello World,&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;I&#39;m ready to learn.&quot;</span><span class="p">]</span>
-</code></pre></div>
-<h4 id="expose">EXPOSE</h4>
-<ul>
-<li>Documents which port the container listens on.</li>
-<li>Is only informational and does not publish the port to the host.</li>
-<li>It is useful for tools that auto generate configurations (Docker Compose, Swarm, K8s)</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="k">EXPOSE</span><span class="w"> </span><span class="s">&lt;PORT&gt;</span>
-
-<span class="c"># Example 1</span>
-<span class="k">EXPOSE</span><span class="w"> </span><span class="s">80</span>
-
-<span class="c"># Exampe 2</span>
-<span class="k">EXPOSE</span><span class="w"> </span><span class="s">80 443</span>
-</code></pre></div>
-<h4 id="copy">COPY</h4>
-<ul>
-<li>Copies files or directories from <code>&lt;SRC&gt;</code> and adds them to the filesystem of the image at the path <code>&lt;DEST&gt;</code>.</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="k">COPY</span><span class="w"> </span>&lt;SRC&gt;<span class="w"> </span>&lt;DEST&gt;
-<span class="w">    </span>#<span class="w"> </span>Copies<span class="w"> </span>files<span class="w"> </span>ONLY<span class="w"> </span>from<span class="w"> </span>the<span class="w"> </span>Build<span class="w"> </span>Context<span class="w"> </span>!
-<span class="w">    </span>#<span class="w"> </span>If<span class="w"> </span>&lt;DEST&gt;<span class="w"> </span>isn<span class="err">&#39;</span>t<span class="w"> </span>available,<span class="w"> </span>it<span class="w"> </span>will<span class="w"> </span>create<span class="w"> </span>the<span class="w"> </span>path
-
-<span class="c"># .</span>
-<span class="c"># ├── Dockerfile</span>
-<span class="c"># └── app/</span>
-<span class="c">#    ├── main.py</span>
-<span class="c">#    └── utils/</span>
-<span class="c">#        └── helper.py</span>
-
-<span class="c"># Example 1</span>
-<span class="k">COPY</span><span class="w"> </span>app/utils<span class="w"> </span>/app/code/utils
-
-<span class="c"># Example 2</span>
-<span class="k">COPY</span><span class="w"> </span>app/utils<span class="w"> </span>/app/code/utils
-<span class="k">COPY</span><span class="w"> </span>app/main.py<span class="w"> </span>/app/code/
-
-<span class="c"># Example 3</span>
-<span class="k">COPY</span><span class="w"> </span>package*.json<span class="w"> </span>/app/
-<span class="k">RUN</span><span class="w"> </span>npm<span class="w"> </span>install
-<span class="k">COPY</span><span class="w"> </span>src/<span class="w"> </span>/app/src/
-</code></pre></div>
-<blockquote>
-<p>[!CAUTION] Caution: Order matters for the build cache
-Docker caches most instructions as a layer. If the input of an instruction changes (e.g. a copied file), that layer and all following layers are rebuilt. -&gt; Put what rarely changes first, what often changes last.
-In Example 3, <code>RUN npm install</code> only depends on <code>package*.json</code>, so only that file is copied before it. Changes to <code>src/</code> then don't trigger a new <code>npm install</code>.</p>
-</blockquote>
-<h4 id="workdir">WORKDIR</h4>
-<ul>
-<li>Defines the current working directory of the docker container.</li>
-<li><code>&lt;PATH&gt;</code> will be resulting in the image during build time and in the container during runtime</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="k">WORKDIR</span><span class="w"> </span><span class="s">&lt;PATH&gt;</span>
-<span class="w">    </span>#<span class="w"> </span>Is<span class="w"> </span>equivalent<span class="w"> </span>to<span class="w"> </span><span class="s2">&quot;cd &lt;PATH&gt;&quot;</span><span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>container
-<span class="w">    </span>#<span class="w"> </span>If<span class="w"> </span><span class="s2">&quot;PATH&quot;</span><span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>available,<span class="w"> </span><span class="k">then</span><span class="w"> </span>it<span class="w"> </span>becomes<span class="w"> </span>equivalent<span class="w"> </span>to<span class="w"> </span><span class="s2">&quot;mkdir &lt;PATH&gt;&quot;</span>
-
-<span class="c"># .</span>
-<span class="c"># ├── Dockerfile</span>
-<span class="c"># └── app/</span>
-<span class="c">#    ├── main.py</span>
-<span class="c">#    └── utils/</span>
-<span class="c">#        └── helper.py</span>
-
-<span class="k">FROM</span><span class="w"> </span><span class="s">python:3.10-slim</span>
-
-<span class="c"># Example 1</span>
-<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/usr</span>
-<span class="k">COPY</span><span class="w"> </span>app/utils<span class="w"> </span>/usr/src/app/code/utils
-<span class="k">COPY</span><span class="w"> </span>app/main.py<span class="w"> </span>/usr/src/app/code
-<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;python3&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;src/app/code/main.py&quot;</span><span class="p">]</span>
-
-<span class="c"># Example 2</span>
-<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/usr/src/app/code</span>
-<span class="k">COPY</span><span class="w"> </span>app/utils<span class="w"> </span>utils
-<span class="k">COPY</span><span class="w"> </span>app/main.py<span class="w"> </span>.
-<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;python3&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;main.py&quot;</span><span class="p">]</span>
-</code></pre></div>
-<blockquote>
-<p>[!INFO]
-The last <code>WORKDIR</code> instruction determines the working directory when the container starts.
-For example, commands executed using <code>docker exec</code> will use this directory as their working directory by default.</p>
-</blockquote>
-<h4 id="env">ENV</h4>
-<ul>
-<li>Allows to set environment variables for the Docker container</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="k">ENV</span><span class="w"> </span>&lt;KEY&gt;<span class="o">=</span>&lt;VALUE&gt;
-
-<span class="k">FROM</span><span class="w"> </span><span class="s">alpine</span>
-
-<span class="c"># Example 1</span>
-<span class="k">ENV</span><span class="w"> </span><span class="nv">name</span><span class="o">=</span>EXAMPLE-NAME
-<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;echo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;$name&quot;</span><span class="p">]</span>
-
-<span class="c"># Example 2</span>
-<span class="c"># Installs ping and curl, sets variables and uses shell as execution</span>
-<span class="c"># &quot;-c&quot; lets the string interpret as a command</span>
-<span class="c"># &quot;exec&quot; is not a docker command in this case!</span>
-<span class="k">RUN</span><span class="w"> </span>apk<span class="w"> </span>add<span class="w"> </span>--no-cache<span class="w"> </span>iputils<span class="w"> </span>curl
-<span class="k">ENV</span><span class="w"> </span><span class="nv">action</span><span class="o">=</span>ping
-<span class="k">ENV</span><span class="w"> </span><span class="nv">target</span><span class="o">=</span><span class="m">8</span>.8.8.8
-<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;sh&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-c&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;exec $action $target&quot;</span><span class="p">]</span>
-</code></pre></div>
-<blockquote>
-<p>[!INFO]
-After building Example 2, you can override the environment variables when starting the container. For example: <code>docker run -e action=curl -e target=9.9.9.9 mybuiltimage</code>. The <code>-e</code> flag allows you to set or override individual environment variables.</p>
-</blockquote>
-<h4 id="label">LABEL</h4>
-<ul>
-<li>Used to add metadata to an image.</li>
-<li>Metadata can include information about the image, such as author, version, description, environment or custom data.</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="k">LABEL</span><span class="w"> </span>&lt;KEY&gt;<span class="o">=</span><span class="s2">&quot;&lt;VALUE&gt;&quot;</span>
-
-<span class="c"># Example 1</span>
-<span class="k">LABEL</span><span class="w"> </span><span class="nv">Owner</span><span class="o">=</span><span class="s2">&quot;Example Academy Team team@support.example.com&quot;</span>
-</code></pre></div>
-<h3 id="docker-file-examples">Docker File Examples</h3>
-<div class="highlight"><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">ubuntu</span>
-<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
-<span class="k">RUN</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;This is the /app directory&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>app.txt
-<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app/code</span>
-<span class="k">RUN</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;This is the /code directory&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>app-code.txt
-<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;ls&quot;</span><span class="p">]</span>
-
-<span class="c"># On Docker Host: &quot;docker build -t imageworkdir .&quot;</span>
-<span class="c"># On Docker Host: &quot;docker run -it imageworkdir bash&quot;</span>
-<span class="c"># In container you can check now with &quot;ls&quot; and &quot;cat&quot;</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">ubuntu</span>
-<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
-<span class="k">RUN</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;This is the /app directory&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>app.txt
-<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app/code</span>
-<span class="k">RUN</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;This is the /code directory&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>app-code.txt
-<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app/database</span>
-<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;ls&quot;</span><span class="p">]</span>
-
-<span class="c"># On Docker Host: &quot;docker build -t imageworkdir2 .&quot;</span>
-<span class="c"># On Docker Host: &quot;docker run -it imageworkdir2 bash&quot;</span>
-<span class="c"># In container you can check now with &quot;ls&quot; and &quot;cat&quot;</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="k">FROM</span><span class="w"> </span><span class="s">ubuntu</span>
-<span class="k">RUN</span><span class="w"> </span>apt-get<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>iputils-ping
-<span class="k">ENV</span><span class="w"> </span><span class="nv">action</span><span class="o">=</span>ping<span class="w"> </span><span class="nv">target</span><span class="o">=</span><span class="m">8</span>.8.8.8
-<span class="k">LABEL</span><span class="w"> </span><span class="nv">maintainer</span><span class="o">=</span><span class="s2">&quot;John Doe&quot;</span><span class="w"> </span><span class="nv">team</span><span class="o">=</span><span class="s2">&quot;Academy Team&quot;</span><span class="w"> </span><span class="nv">version</span><span class="o">=</span><span class="s2">&quot;1.0&quot;</span>
-<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;sh&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-c&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;$action $target&quot;</span><span class="p">]</span>
-
-<span class="c"># On Docker Host: &quot;docker build -t correct .&quot;</span>
-<span class="c"># On Docker Host: &quot;docker run correct&quot;</span>
-</code></pre></div>
-<h2 id="docker-registry">Docker Registry</h2>
-<p>A Docker registry is a storage location or service where Docker images are stored, managed, and distributed.</p>
-<ul>
-<li>Most common one ist Docker Hub.</li>
-<li>There are public and private repos.</li>
-</ul>
-<h3 id="docker-image-naming-convention">Docker Image Naming Convention</h3>
-<ul>
-<li>Docker Hub has a specific naming convention for Docker images that helps with organization, versioning and discovery.</li>
-</ul>
-<div class="highlight"><pre><span></span><code>[registry/][username_or_org/]repository[:tag]
-
-# Registry (Optional): Domain of the container registry - default to &quot;docker.io&quot;
-# Username or organization: Name of the user or organization (required for non-official images only)
-# Repository: Name of the image or the project
-# Tag (Optional): Version - defaults to latest if not included
-</code></pre></div>
-<h4 id="examples_19">Examples</h4>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>tag<span class="w"> </span>myapp<span class="w"> </span>registry.my.corp.com/devops/myapp:1.0.0
-<span class="w">    </span>#<span class="w"> </span>Image<span class="w"> </span>is<span class="w"> </span>ready<span class="w"> </span>to<span class="w"> </span>be<span class="w"> </span>pushed<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>private<span class="w"> </span>registry
-<span class="w">    </span>#<span class="w"> </span>If<span class="w"> </span>it<span class="w"> </span>should<span class="w"> </span>be<span class="w"> </span>pushed<span class="w"> </span>on<span class="w"> </span>Docker<span class="w"> </span>Hub<span class="w"> </span>-&gt;<span class="w"> </span>leave<span class="w"> </span>the<span class="w"> </span>registry<span class="w"> </span>part<span class="w"> </span>empty
-</code></pre></div>
-<h3 id="docker-push_1">Docker Push</h3>
-<p>How it works:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Create Account on Docker Hub</span>
-<span class="c1"># Create a Repository in Docker Hub (e.g. &quot;app&quot;)</span>
-<span class="c1"># Choose the Docker image you want to push (e.g. &quot;app&quot;)</span>
-
-docker<span class="w"> </span>login<span class="w"> </span>-u<span class="w"> </span>labuser701
-
-docker<span class="w"> </span>tag<span class="w"> </span>app<span class="w"> </span>labuser701/app:v1
-nano<span class="w"> </span>Dockerfile
-<span class="c1"># Make changes</span>
-docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>app:v2<span class="w"> </span>.
-docker<span class="w"> </span>tag<span class="w"> </span>app:v2<span class="w"> </span>labuser701/app:v2
-
-docker<span class="w"> </span>push<span class="w"> </span>labuser701/app:v1
-docker<span class="w"> </span>push<span class="w"> </span>labuser701/app:v2
-</code></pre></div>
-<h2 id="docker-networking">Docker Networking</h2>
-<h3 id="docker-network-modes-drivers">Docker Network Modes (Drivers)</h3>
-<ul>
-<li><strong>Bridge (default)</strong>: The default network driver.</li>
-<li><strong>Host</strong>: Remove network isolation between the container and the Docker Host.</li>
-<li><strong>None</strong>: Completly isolate a container from the host and other containers.</li>
-<li><strong>Overlay</strong>: Overlay networks connect multiple Docker daemons together.</li>
-<li><strong>Ipvlan</strong>: IPvlan networks provide full control over both IPv4 and IPv6 adressing.</li>
-<li><strong>Macvlan</strong>: Assign a MAC address to a container.</li>
-<li><strong>Userdefined</strong>: Custom network.</li>
-</ul>
-<h4 id="bridge-mode-driver">Bridge Mode (Driver)</h4>
-<blockquote>
-<p>[!NOTE] Short recap: Network Bridges
-A bridge is a data link-layer (OSI layer 2) physical or virtual  device that forwards traffic between two or more network segments.</p>
-</blockquote>
-<ul>
-<li>In Docker, a bridge network uses a software bridge to allow containers to communicate inside the docker host.</li>
-<li>By default, when you start Docker, a bridge (docker0) is created automatically.</li>
-<li>Containers are connected to this bridge by default.</li>
-<li>It isolates its containers from other containers on other bridges</li>
-<li>A container can connect to multiple bridge networks at the same time.</li>
-<li>The ports owner are the bridges.</li>
-<li>Each container created in bridge mode has an eth0 with assigned IP address</li>
-<li>Docker Host maintains NAT entries in Iptables. (e.g. Iptable NAT: 172.17.0.2 &lt;-&gt; 192.168.112.50)</li>
-</ul>
-<p>Example:</p>
-<pre class="mermaid"><code>flowchart LR
-    subgraph docker_host["Docker Host (192.168.112.50)"]
-        Docker_Bridge["&lt;b&gt;docker0&lt;/b&gt;&lt;br&gt;veth: 172.17.0.1"]
-        Container1["&lt;b&gt;Container 1&lt;/b&gt;&lt;br&gt;eth0: 172.17.0.2"]
-        Container2["&lt;b&gt;Container 2&lt;/b&gt;&lt;br&gt;eth0: 172.17.0.3&lt;br&gt;eth1: 172.18.0.4"]
-        Container1 &lt;--&gt; |Port 1| Docker_Bridge
-        Container2 &lt;--&gt; |Port 2| Docker_Bridge
-        
-        Container2 &lt;--&gt; |Port 3| Custom_Bridge1
-        
-        Custom_Bridge1["&lt;b&gt;bridge1&lt;/b&gt;&lt;br&gt;veth: 172.18.0.1"]
-        Container3["&lt;b&gt;Container 3&lt;/b&gt;&lt;br&gt;eth0: 172.18.0.2"]
-        Container4["&lt;b&gt;Container 4&lt;/b&gt;&lt;br&gt;eth0: 172.18.0.3"]
-        Container3 &lt;--&gt; |Port 1| Custom_Bridge1
-        Container4 &lt;--&gt; |Port 2| Custom_Bridge1
-        
-        Iptables["&lt;b&gt;Iptables (NAT)&lt;/b&gt;&lt;br&gt;&lt;br&gt;Outbound:&lt;br&gt;172.17.0.0/16, 172.18.0.0/16&lt;br&gt;→ 192.168.112.50&lt;br&gt;&lt;br&gt;Inbound (DNAT,&lt;br&gt;e.g. -p 8080:80)&lt;br&gt;192.168.112.50:8080&lt;br&gt;→ 172.17.0.2:80"]
-        Docker_Bridge &lt;--&gt; Iptables
-        Custom_Bridge1 &lt;--&gt; Iptables
-    end
-    subgraph external_network["External Network"]
-    end
-    external_network &lt;--&gt; Iptables
-</code></pre>
-<blockquote>
-<p>[!IMPORTANT] Network interfaces on the Docker Host
-<code>ip a</code> on the Docker Host shows one <code>vethXXXX</code> interface for every container connection. Each <code>vethXXXX</code> is the host end of a virtual cable and is plugged into a bridge (<code>docker0</code> or <code>bridge1</code>), which you can see from <code>master docker0</code> / <code>master bridge1</code>. The other end of the cable is the <code>eth0</code> interface inside the container. A container in two networks (Container 2) has two cables and therefore two <code>veth</code> interfaces on the host.</p>
-</blockquote>
-<div class="highlight"><pre><span></span><code><span class="c1"># On the Docker Host</span>
-ip<span class="w"> </span>a
-
-<span class="m">1</span>:<span class="w"> </span>lo:<span class="w"> </span>&lt;LOOPBACK,UP,LOWER_UP&gt;<span class="w"> </span>mtu<span class="w"> </span><span class="m">65536</span><span class="w"> </span>state<span class="w"> </span>UNKNOWN
-<span class="w">    </span>inet<span class="w"> </span><span class="m">127</span>.0.0.1/8<span class="w"> </span>scope<span class="w"> </span>host<span class="w"> </span>lo
-<span class="m">2</span>:<span class="w"> </span>eth0:<span class="w"> </span>&lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt;<span class="w"> </span>mtu<span class="w"> </span><span class="m">1500</span><span class="w"> </span>state<span class="w"> </span>UP
-<span class="w">    </span>link/ether<span class="w"> </span><span class="m">00</span>:50:56:aa:bb:cc<span class="w"> </span>brd<span class="w"> </span>ff:ff:ff:ff:ff:ff
-<span class="w">    </span>inet<span class="w"> </span><span class="m">192</span>.168.112.50/24<span class="w"> </span>brd<span class="w"> </span><span class="m">192</span>.168.112.255<span class="w"> </span>scope<span class="w"> </span>global<span class="w"> </span>eth0
-<span class="m">3</span>:<span class="w"> </span>docker0:<span class="w"> </span>&lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt;<span class="w"> </span>mtu<span class="w"> </span><span class="m">1500</span><span class="w"> </span>state<span class="w"> </span>UP
-<span class="w">    </span>link/ether<span class="w"> </span><span class="m">02</span>:42:11:22:33:44<span class="w"> </span>brd<span class="w"> </span>ff:ff:ff:ff:ff:ff
-<span class="w">    </span>inet<span class="w"> </span><span class="m">172</span>.17.0.1/16<span class="w"> </span>brd<span class="w"> </span><span class="m">172</span>.17.255.255<span class="w"> </span>scope<span class="w"> </span>global<span class="w"> </span>docker0
-<span class="m">4</span>:<span class="w"> </span>bridge1:<span class="w"> </span>&lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt;<span class="w"> </span>mtu<span class="w"> </span><span class="m">1500</span><span class="w"> </span>state<span class="w"> </span>UP
-<span class="w">    </span>link/ether<span class="w"> </span><span class="m">02</span>:42:55:66:77:88<span class="w"> </span>brd<span class="w"> </span>ff:ff:ff:ff:ff:ff
-<span class="w">    </span>inet<span class="w"> </span><span class="m">172</span>.18.0.1/16<span class="w"> </span>brd<span class="w"> </span><span class="m">172</span>.18.255.255<span class="w"> </span>scope<span class="w"> </span>global<span class="w"> </span>bridge1
-<span class="m">5</span>:<span class="w"> </span>veth1a2b3c4@if10:<span class="w"> </span>&lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt;<span class="w"> </span>mtu<span class="w"> </span><span class="m">1500</span><span class="w"> </span>master<span class="w"> </span>docker0<span class="w"> </span>state<span class="w"> </span>UP
-<span class="w">    </span>link/ether<span class="w"> </span>6a:01:02:03:04:05<span class="w"> </span>brd<span class="w"> </span>ff:ff:ff:ff:ff:ff<span class="w"> </span>link-netnsid<span class="w"> </span><span class="m">0</span>
-<span class="m">6</span>:<span class="w"> </span>veth5d6e7f8@if12:<span class="w"> </span>&lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt;<span class="w"> </span>mtu<span class="w"> </span><span class="m">1500</span><span class="w"> </span>master<span class="w"> </span>docker0<span class="w"> </span>state<span class="w"> </span>UP
-<span class="w">    </span>link/ether<span class="w"> </span>6a:11:12:13:14:15<span class="w"> </span>brd<span class="w"> </span>ff:ff:ff:ff:ff:ff<span class="w"> </span>link-netnsid<span class="w"> </span><span class="m">1</span>
-<span class="m">7</span>:<span class="w"> </span>veth9a8b7c6@if14:<span class="w"> </span>&lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt;<span class="w"> </span>mtu<span class="w"> </span><span class="m">1500</span><span class="w"> </span>master<span class="w"> </span>bridge1<span class="w"> </span>state<span class="w"> </span>UP
-<span class="w">    </span>link/ether<span class="w"> </span>6a:21:22:23:24:25<span class="w"> </span>brd<span class="w"> </span>ff:ff:ff:ff:ff:ff<span class="w"> </span>link-netnsid<span class="w"> </span><span class="m">1</span>
-<span class="m">8</span>:<span class="w"> </span>vethd4e5f6a@if16:<span class="w"> </span>&lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt;<span class="w"> </span>mtu<span class="w"> </span><span class="m">1500</span><span class="w"> </span>master<span class="w"> </span>bridge1<span class="w"> </span>state<span class="w"> </span>UP
-<span class="w">    </span>link/ether<span class="w"> </span>6a:31:32:33:34:35<span class="w"> </span>brd<span class="w"> </span>ff:ff:ff:ff:ff:ff<span class="w"> </span>link-netnsid<span class="w"> </span><span class="m">2</span>
-<span class="m">9</span>:<span class="w"> </span>veth0b1c2d3@if18:<span class="w"> </span>&lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt;<span class="w"> </span>mtu<span class="w"> </span><span class="m">1500</span><span class="w"> </span>master<span class="w"> </span>bridge1<span class="w"> </span>state<span class="w"> </span>UP
-<span class="w">    </span>link/ether<span class="w"> </span>6a:41:42:43:44:45<span class="w"> </span>brd<span class="w"> </span>ff:ff:ff:ff:ff:ff<span class="w"> </span>link-netnsid<span class="w"> </span><span class="m">3</span>
-</code></pre></div>
-<blockquote>
-<p>[!INFO]
-When a container is not running, the <code>veth</code> port of the container disappears on side of the Docker Host.</p>
-</blockquote>
-<h5 id="default-bridge-docker0">Default Bridge (docker0)</h5>
-<ul>
-<li>IP subnet of docker0: <code>172.17.0.0/16</code></li>
-<li>docker0 has the default gateway: <code>172.17.0.1</code></li>
-<li>Unless other specified, all newly created containers attach to docker0.</li>
-<li>Each container created in bridge mode has an eth0 with an assigned IP address.</li>
-</ul>
-<h3 id="network-commands">Network Commands</h3>
-<div class="highlight"><pre><span></span><code>ip<span class="w"> </span>a
-<span class="w">    </span><span class="c1"># Shows network interfaces and their associated IP on Linux</span>
-docker<span class="w"> </span>network<span class="w"> </span>ls
-<span class="w">    </span><span class="c1"># List all available networks</span>
-docker<span class="w"> </span>network<span class="w"> </span>create<span class="w"> </span>&lt;NAME&gt;
-<span class="w">    </span><span class="c1"># Creates a new network with a specific name</span>
-<span class="w">    </span><span class="c1"># Without specifying the subnet, it will go one higher, e.g. from</span>
-<span class="w">    </span><span class="c1"># 172.17.0.0/16 to 172.18.0.0/16, then .19, .20, ...</span>
-docker<span class="w"> </span>network<span class="w"> </span>create<span class="w"> </span>--subnet<span class="w"> </span><span class="m">10</span>.0.0.0/16<span class="w"> </span>&lt;NETWORK-NAME&gt;
-<span class="w">    </span><span class="c1"># Create a new network with a custom subnet range</span>
-docker<span class="w"> </span>network<span class="w"> </span>inspect<span class="w"> </span>&lt;NETWORK-NAME<span class="w"> </span>or<span class="w"> </span>ID&gt;
-<span class="w">    </span><span class="c1"># Get details to a network</span>
-docker<span class="w"> </span>run<span class="w"> </span>--network<span class="w"> </span>&lt;NETWORK-NAME&gt;<span class="w"> </span>&lt;IMAGE&gt;
-<span class="w">    </span><span class="c1"># Run a new container and connect it to a Docker network</span>
-docker<span class="w"> </span>network<span class="w"> </span>connect<span class="w"> </span>&lt;NETWORK-NAME&gt;<span class="w"> </span>&lt;CONTAINER&gt;
-<span class="w">    </span><span class="c1"># Connect a running container to a Docker network</span>
-docker<span class="w"> </span>network<span class="w"> </span>disconnect<span class="w"> </span>&lt;NETWORK-NAME&gt;<span class="w"> </span>&lt;CONTAINER&gt;
-<span class="w">    </span><span class="c1"># Disconnect a running container from a Docker network</span>
-<span class="w">    </span><span class="c1"># Does not work with none and host network modes</span>
-</code></pre></div>
-<h2 id="persisting-data-in-containers">Persisting Data in Containers</h2>
-<p>Normally data in a container is lost if the container is deleted.</p>
-<h3 id="benefits">Benefits</h3>
-<ul>
-<li>Persistant data (e.g., database files, logs)</li>
-<li>Share data between containers</li>
-<li>Seperate app code from user data</li>
-<li>Avoid losing data when a container stops or is deleted</li>
-</ul>
-<h3 id="ways-to-persist-data">Ways to persist data</h3>
-<h4 id="docker-volumes">Docker Volumes</h4>
-<p><strong>Volumes</strong>: Storage areas on the Docker Host that are managed by Docker (stored under <code>/var/lib/docker/volumes/</code>)
-- Each volume gets its own volume path as follows:
-    - <code>/var/lib/docker/volumes/&lt;VOLUME-NAME&gt;/_data</code>
-- Multiple containers can be mounted in one volume.
-- Isolated from the container layers and its file system.
-- Persists independent of the containers.
-- Is mounted into the containers at runtime.
-- Allows data to survive restarts, deletion and image rebuilds.
-- IMPORTANT: If Docker Host has a problem, then data is in danger.</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>volume<span class="w"> </span>create<span class="w"> </span>&lt;VOLUME-NAME&gt;
-<span class="w">    </span><span class="c1"># Creates a new named docker volume</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>volume<span class="w"> </span>ls
-<span class="w">    </span><span class="c1"># Listing existing docker volumes</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>volume<span class="w"> </span>inspect<span class="w"> </span>&lt;VOLUME-NAME&gt;
-<span class="w">    </span><span class="c1"># Shows detailed info about a volume</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>volume<span class="w"> </span>rm<span class="w"> </span>&lt;VOLUME-NAME&gt;
-<span class="w">    </span><span class="c1"># Delete a docker volume</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span>&lt;VOLUME-NAME&gt;:&lt;CONTAINER-DIRECTORY&gt;<span class="w"> </span>&lt;IMAGE&gt;
-<span class="w">    </span><span class="c1"># Example: &quot;docker run -v mydata:/app/data ubuntu&quot;</span>
-<span class="w">    </span><span class="c1"># You can also give the container read access only to the volume</span>
-<span class="w">        </span><span class="c1"># &quot;docker run -v mydata:/app/data:ro ubuntu&quot;</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>--volumes-from<span class="w"> </span>&lt;CONTAINER-FROM<span class="w"> </span><span class="o">(</span>EXISTS<span class="o">)</span>&gt;<span class="w"> </span>&lt;CONTAINER-TO<span class="w"> </span><span class="o">(</span>NEW<span class="o">)</span>&gt;
-<span class="w">    </span><span class="c1"># Create a container and allow it to inherit all volumes from another container</span>
-<span class="w">    </span><span class="c1"># Example: &quot;docker run -it --volumes-from cont1 ubuntu&quot;</span>
-</code></pre></div>
-<h4 id="docker-bind-mounts">Docker Bind Mounts</h4>
-<p><strong>Bind mounts</strong>: Any file or directory on the Docker Host that is mounted into the container. Docker does not manage it.
-- It is used with docker run commands (not in a Dockerfile).
-- Used for development and testing, because in Docker volumes its highly not recommended to touch the file system (in Bind Mounts can the container directly access host files).</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span>&lt;HOST-PATH&gt;:&lt;CONTAINER-DIRECTORY&gt;<span class="w"> </span>&lt;IMAGE&gt;
-<span class="w">    </span><span class="c1"># &quot;/app&quot; in the container is mapped directly to the host path</span>
-<span class="w">    </span><span class="c1"># Example 1: &quot;docker run -v /home/user/project:/app my-dev-image&quot;</span>
-<span class="w">    </span><span class="c1"># Example 2: &quot;docker run -v $(pwd):/app my-dev-image&quot;</span>
-<span class="w">    </span><span class="c1"># Example 3: &quot;docker run -v /home/user/nginx.conf:/etc/nginx/nginx.conf nginx&quot;</span>
-</code></pre></div>
-<h2 id="docker-compose">Docker Compose</h2>
-<p>Docker Compose can simultaneously create, start, stop or delete multiple containers on the same Docker Host.
-- Allows you to define the entire environment (services, networks, volumes, dependencies, etc.) in a single YAML file (docker-compose.yml).
-- Using a single docker command, you can execute the YAML file to run a project of multiple containers (on a single Docker Host).
-- Docker Compose can build the images using the Docker Files or pull them from a registry.</p>
-<h3 id="file-structure">File Structure</h3>
-<h4 id="services">services</h4>
-<ul>
-<li>Defines all the different containers we need to create.</li>
-<li>The names of the services (containers) have significance to Docker Compose configuration only.</li>
-</ul>
-<div class="highlight"><pre><span></span><code>services:
-  &lt;CONTAINER-NAME1&gt;:
-  &lt;CONTAINER-NAME2&gt;:
-  &lt;CONTAINER-NAME3&gt;:
-</code></pre></div>
-<h5 id="image">image</h5>
-<ul>
-<li>For the database container, we need to create it from a mysql image (from Docker Hub).<ul>
-<li><code>image: mysql</code></li>
-</ul>
-</li>
-</ul>
-<div class="highlight"><pre><span></span><code>services:
-  database:
-    image: mysql
-  frontend:
-  backend:
-</code></pre></div>
-<h5 id="build">build</h5>
-<ul>
-<li>For the frontend container, we need Docker Compose to build the image from a file named <code>Dockerfile</code> available in the same directory as the docker-compose.yml file.<ul>
-<li><code>build: .</code></li>
-</ul>
-</li>
-</ul>
-<div class="highlight"><pre><span></span><code>services:
-  database:
-    image: mysql
-  frontend:
-    build: .
-  backend:
-</code></pre></div>
-<ul>
-<li>For the backend container, we need Docker Compose to build the image from a file named <code>fileconfig</code> available in the /app directory.<ul>
-<li><code>build:</code><ul>
-<li><code>context: /usr/project/app</code>: Defines the full path of the Dockerfile</li>
-<li><code>dockerfile: fileconfig</code>: Defines the file's name to use</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<div class="highlight"><pre><span></span><code>services:
-  database:
-    image: mysql
-  frontend:
-    build: .
-  backend:
-    build:
-      context: /usr/project/app
-      dockerfile: fileconfig
-</code></pre></div>
-<h5 id="container_name">container_name</h5>
-<ul>
-<li>We can use the container_name to define a name for the container.</li>
-</ul>
-<div class="highlight"><pre><span></span><code>services:
-  database:
-    image: mysql
-    container_name: cont1
-  frontend:
-    build: .
-  backend:
-    build:
-      context: /usr/project/app
-      dockerfile: fileconfig
-</code></pre></div>
-<h5 id="ports">ports</h5>
-<ul>
-<li>Defines the host-port:container-port mapping.</li>
-</ul>
-<div class="highlight"><pre><span></span><code>services:
-  database:
-    image: mysql
-    container_name: cont1
-  frontend:
-    build: .
-    ports:
-      - &quot;3000:5000&quot;
-  backend:
-    build:
-      context: /usr/project/app
-      dockerfile: fileconfig
-</code></pre></div>
-<h5 id="volumes-bind-mount">volumes (bind mount)</h5>
-<ul>
-<li>The "volumes:" under a service is used to create a bind mount (HostPath) mapping between a hostPath and a containerPath.</li>
-</ul>
-<div class="highlight"><pre><span></span><code>services:
-  database:
-    image: mysql
-    container_name: cont1
-    volumes:
-      - hostPath:containerPath
-  frontend:
-    build: .
-    ports:
-      - &quot;3000:5000&quot;
-  backend:
-    build:
-      context: /usr/project/app
-      dockerfile: fileconfig
-</code></pre></div>
-<h5 id="volumes-named-volume">volumes (named Volume)</h5>
-<ul>
-<li>The <code>volumes:</code> can also be used to mount a named volume (volumeName) to a containerPath.<ul>
-<li>Requires volume to be created seperately as shown in the <code>volumes:</code> section at the bottom</li>
-</ul>
-</li>
-</ul>
-<div class="highlight"><pre><span></span><code>services:
-  database:
-    image: mysql
-    container_name: cont1
-    volumes:
-      - volumeName:containerPath
-  frontend:
-    build: .
-    ports:
-      - &quot;3000:5000&quot;
-  backend:
-    build:
-      context: /usr/project/app
-      dockerfile: fileconfig
-
-volumes:
-  - volumeName:
-</code></pre></div>
-<h5 id="volumes-anonymous-volume">volumes (anonymous Volume)</h5>
-<ul>
-<li>Mounts an anonymous volume to the container.<ul>
-<li>In this case we don't need the <code>volumes:</code> section outside the <code>services:</code></li>
-</ul>
-</li>
-</ul>
-<div class="highlight"><pre><span></span><code>services:
-  database:
-    image: mysql
-    container_name: cont1
-    volumes:
-      - containerPath
-  frontend:
-    build: .
-    ports:
-      - &quot;3000:5000&quot;
-  backend:
-    build:
-      context: /usr/project/app
-      dockerfile: fileconfig
-</code></pre></div>
-<h3 id="docker-compose-commands">Docker Compose Commands</h3>
-<p>Requirement: Docker Compose File should be in the same directory unless you specify it in the command.</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>build
-<span class="w">    </span><span class="c1"># Builds the images for the services</span>
-
-docker<span class="w"> </span>compose<span class="w"> </span>run<span class="w"> </span>&lt;SERVICE-NAME<span class="w"> </span><span class="o">(</span>Container<span class="o">)</span>&gt;
-<span class="w">    </span><span class="c1"># Creates a specific Container included in the docker-compose.yml file</span>
-
-docker<span class="w"> </span>compose<span class="w"> </span>up
-<span class="w">    </span><span class="c1"># Builds the images if they are not located locally and starts the containers</span>
-<span class="w">    </span><span class="c1"># So even when &quot;docker compose build&quot; wasn&#39;t done, it builds the images</span>
-
-docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
-<span class="w">    </span><span class="c1"># Runs the containers in detached mode</span>
-
-docker<span class="w"> </span>compose<span class="w"> </span>-f<span class="w"> </span>&lt;FILE-NAME&gt;<span class="w"> </span>up
-<span class="w">    </span><span class="c1"># Specifies a different compose file (with path),</span>
-<span class="w">    </span><span class="c1"># builds the images, and starts the containers</span>
-
-docker<span class="w"> </span>compose<span class="w"> </span>down
-<span class="w">    </span><span class="c1"># Stops and deletes all containers created by &quot;docker compose up&quot;</span>
-
-docker<span class="w"> </span>compose<span class="w"> </span>down<span class="w"> </span>--volumes
-<span class="w">    </span><span class="c1"># Stops and deletes all containers created by &quot;docker compose up&quot;</span>
-<span class="w">    </span><span class="c1"># Also deletes the volumes (named and anonymous)</span>
-
-docker<span class="w"> </span>compose<span class="w"> </span>down<span class="w"> </span>--remove-orphans
-<span class="w">    </span><span class="c1"># Stops and deletes all current Compose containers and any old (orphan) containers that are no longer referenced by Compose yaml file</span>
-
-docker<span class="w"> </span>compose<span class="w"> </span>down<span class="w"> </span>--volumes<span class="w"> </span>--remove-orphans
-<span class="w">    </span><span class="c1"># Combines the both commands above</span>
-
-docker<span class="w"> </span>compose<span class="w"> </span>stop
-<span class="w">    </span><span class="c1"># Stops the containers</span>
-
-docker<span class="w"> </span>compose<span class="w"> </span>start
-<span class="w">    </span><span class="c1"># Starts the containers</span>
-
-docker<span class="w"> </span>compose<span class="w"> </span>ps
-<span class="w">    </span><span class="c1"># Shows running Docker Compose containers</span>
-
-docker<span class="w"> </span>compose<span class="w"> </span>ps<span class="w"> </span>-a
-<span class="w">    </span><span class="c1"># Shows all Docker Compose containers (also not running ones)</span>
-</code></pre></div>
-<h3 id="docker-compose-network">Docker Compose Network</h3>
-<p>By default, Docker Compose sets up a bridge network for your app
-- Each container for a service joins the default network and is reachable by other compose services (containers) on that network</p>
-<div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
-docker<span class="w"> </span>network<span class="w"> </span>ls
-<span class="w">    </span><span class="c1"># Will show the new bridge network</span>
-<span class="w">    </span><span class="c1"># Docker Network will take the name of the current folder</span>
 </code></pre></div>
 
 
