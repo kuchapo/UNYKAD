@@ -5727,14 +5727,14 @@
 <h2 id="ways-to-persist-data">Ways to persist data</h2>
 <h3 id="docker-volumes">Docker Volumes</h3>
 <p><strong>Volumes</strong>: Storage areas on the Docker Host that are managed by Docker (stored under <code>/var/lib/docker/volumes/</code>)
-- Each volume gets its own volume path as follows:
-    - <code>/var/lib/docker/volumes/&lt;VOLUME-NAME&gt;/_data</code>
-- Multiple containers can be mounted in one volume.
-- Isolated from the container layers and its file system.
-- Persists independent of the containers.
-- Is mounted into the containers at runtime.
-- Allows data to survive restarts, deletion and image rebuilds.
-- IMPORTANT: If Docker Host has a problem, then data is in danger.</p>
+    - Each volume gets its own volume path as follows:
+        - <code>/var/lib/docker/volumes/&lt;VOLUME-NAME&gt;/_data</code>
+    - Multiple containers can be mounted in one volume.
+    - Isolated from the container layers and its file system.
+    - Persists independent of the containers.
+    - Is mounted into the containers at runtime.
+    - Allows data to survive restarts, deletion and image rebuilds.
+    - IMPORTANT: If Docker Host has a problem, then data is in danger.</p>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>volume<span class="w"> </span>create<span class="w"> </span>&lt;VOLUME-NAME&gt;
 <span class="w">    </span><span class="c1"># Creates a new named docker volume</span>
 </code></pre></div>
@@ -5758,8 +5758,8 @@
 </code></pre></div>
 <h3 id="docker-bind-mounts">Docker Bind Mounts</h3>
 <p><strong>Bind mounts</strong>: Any file or directory on the Docker Host that is mounted into the container. Docker does not manage it.
-- It is used with docker run commands (not in a Dockerfile).
-- Used for development and testing, because in Docker volumes its highly not recommended to touch the file system (in Bind Mounts can the container directly access host files).</p>
+    - It is used with docker run commands (not in a Dockerfile).
+    - Used for development and testing, because in Docker volumes its highly not recommended to touch the file system (in Bind Mounts can the container directly access host files).</p>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>run<span class="w"> </span>-v<span class="w"> </span>&lt;HOST-PATH&gt;:&lt;CONTAINER-DIRECTORY&gt;<span class="w"> </span>&lt;IMAGE&gt;
 <span class="w">    </span><span class="c1"># &quot;/app&quot; in the container is mapped directly to the host path</span>
 <span class="w">    </span><span class="c1"># Example 1: &quot;docker run -v /home/user/project:/app my-dev-image&quot;</span>

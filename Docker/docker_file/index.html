@@ -6008,11 +6008,11 @@
 <span class="k">RUN</span><span class="w"> </span>npm<span class="w"> </span>install
 <span class="k">COPY</span><span class="w"> </span>src/<span class="w"> </span>/app/src/
 </code></pre></div>
-<blockquote>
-<p>[!CAUTION] Caution: Order matters for the build cache
-Docker caches most instructions as a layer. If the input of an instruction changes (e.g. a copied file), that layer and all following layers are rebuilt. -&gt; Put what rarely changes first, what often changes last.
+<div class="admonition warning">
+<p class="admonition-title">Caution: Order matters for the build cache</p>
+<p>Docker caches most instructions as a layer. If the input of an instruction changes (e.g. a copied file), that layer and all following layers are rebuilt. -&gt; Put what rarely changes first, what often changes last.
 In Example 3, <code>RUN npm install</code> only depends on <code>package*.json</code>, so only that file is copied before it. Changes to <code>src/</code> then don't trigger a new <code>npm install</code>.</p>
-</blockquote>
+</div>
 <h3 id="workdir">WORKDIR</h3>
 <ul>
 <li>Defines the current working directory of the docker container.</li>
@@ -6043,11 +6043,11 @@ In Example 3, <code>RUN npm install</code> only depends on <code>package*.json</
 <span class="k">COPY</span><span class="w"> </span>app/main.py<span class="w"> </span>.
 <span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;python3&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;main.py&quot;</span><span class="p">]</span>
 </code></pre></div>
-<blockquote>
-<p>[!INFO]
-The last <code>WORKDIR</code> instruction determines the working directory when the container starts.
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The last <code>WORKDIR</code> instruction determines the working directory when the container starts.
 For example, commands executed using <code>docker exec</code> will use this directory as their working directory by default.</p>
-</blockquote>
+</div>
 <h3 id="env">ENV</h3>
 <ul>
 <li>Allows to set environment variables for the Docker container</li>
@@ -6069,10 +6069,10 @@ For example, commands executed using <code>docker exec</code> will use this dire
 <span class="k">ENV</span><span class="w"> </span><span class="nv">target</span><span class="o">=</span><span class="m">8</span>.8.8.8
 <span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;sh&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-c&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;exec $action $target&quot;</span><span class="p">]</span>
 </code></pre></div>
-<blockquote>
-<p>[!INFO]
-After building Example 2, you can override the environment variables when starting the container. For example: <code>docker run -e action=curl -e target=9.9.9.9 mybuiltimage</code>. The <code>-e</code> flag allows you to set or override individual environment variables.</p>
-</blockquote>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>After building Example 2, you can override the environment variables when starting the container. For example: <code>docker run -e action=curl -e target=9.9.9.9 mybuiltimage</code>. The <code>-e</code> flag allows you to set or override individual environment variables.</p>
+</div>
 <h3 id="label">LABEL</h3>
 <ul>
 <li>Used to add metadata to an image.</li>
