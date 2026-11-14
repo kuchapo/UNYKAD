@@ -5882,10 +5882,11 @@
 
 
 <h1 id="docker-compose">Docker Compose</h1>
-<p>Docker Compose can simultaneously create, start, stop or delete multiple containers on the same Docker Host.
-    - Allows you to define the entire environment (services, networks, volumes, dependencies, etc.) in a single YAML file (docker-compose.yml).
-    - Using a single docker command, you can execute the YAML file to run a project of multiple containers (on a single Docker Host).
-    - Docker Compose can build the images using the Docker Files or pull them from a registry.</p>
+<p>Docker Compose can simultaneously create, start, stop or delete multiple containers on the same Docker Host.</p>
+<pre><code>- Allows you to define the entire environment (services, networks, volumes, dependencies, etc.) in a single YAML file (docker-compose.yml).
+- Using a single docker command, you can execute the YAML file to run a project of multiple containers (on a single Docker Host).
+- Docker Compose can build the images using the Docker Files or pull them from a registry.
+</code></pre>
 <h2 id="file-structure">File Structure</h2>
 <h3 id="services">services</h3>
 <ul>
@@ -6087,8 +6088,9 @@ docker<span class="w"> </span>compose<span class="w"> </span>ps<span class="w"> 
 <span class="w">    </span><span class="c1"># Shows all Docker Compose containers (also not running ones)</span>
 </code></pre></div>
 <h2 id="docker-compose-network">Docker Compose Network</h2>
-<p>By default, Docker Compose sets up a bridge network for your app
-    - Each container for a service joins the default network and is reachable by other compose services (containers) on that network</p>
+<p>By default, Docker Compose sets up a bridge network for your app</p>
+<pre><code>- Each container for a service joins the default network and is reachable by other compose services (containers) on that network
+</code></pre>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
 docker<span class="w"> </span>network<span class="w"> </span>ls
 <span class="w">    </span><span class="c1"># Will show the new bridge network</span>
