@@ -5883,10 +5883,11 @@
 
 <h1 id="docker-compose">Docker Compose</h1>
 <p>Docker Compose can simultaneously create, start, stop or delete multiple containers on the same Docker Host.</p>
-<pre><code>- Allows you to define the entire environment (services, networks, volumes, dependencies, etc.) in a single YAML file (docker-compose.yml).
-- Using a single docker command, you can execute the YAML file to run a project of multiple containers (on a single Docker Host).
-- Docker Compose can build the images using the Docker Files or pull them from a registry.
-</code></pre>
+<ul>
+<li>Allows you to define the entire environment (services, networks, volumes, dependencies, etc.) in a single YAML file (docker-compose.yml).</li>
+<li>Using a single docker command, you can execute the YAML file to run a project of multiple containers (on a single Docker Host).</li>
+<li>Docker Compose can build the images using the Docker Files or pull them from a registry.</li>
+</ul>
 <h2 id="file-structure">File Structure</h2>
 <h3 id="services">services</h3>
 <ul>
@@ -6089,8 +6090,9 @@ docker<span class="w"> </span>compose<span class="w"> </span>ps<span class="w"> 
 </code></pre></div>
 <h2 id="docker-compose-network">Docker Compose Network</h2>
 <p>By default, Docker Compose sets up a bridge network for your app</p>
-<pre><code>- Each container for a service joins the default network and is reachable by other compose services (containers) on that network
-</code></pre>
+<ul>
+<li>Each container for a service joins the default network and is reachable by other compose services (containers) on that network</li>
+</ul>
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
 docker<span class="w"> </span>network<span class="w"> </span>ls
 <span class="w">    </span><span class="c1"># Will show the new bridge network</span>
