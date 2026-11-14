@@ -2,9 +2,9 @@
 
 Docker Compose can simultaneously create, start, stop or delete multiple containers on the same Docker Host.
 
-    - Allows you to define the entire environment (services, networks, volumes, dependencies, etc.) in a single YAML file (docker-compose.yml).
-    - Using a single docker command, you can execute the YAML file to run a project of multiple containers (on a single Docker Host).
-    - Docker Compose can build the images using the Docker Files or pull them from a registry.
+- Allows you to define the entire environment (services, networks, volumes, dependencies, etc.) in a single YAML file (docker-compose.yml).
+- Using a single docker command, you can execute the YAML file to run a project of multiple containers (on a single Docker Host).
+- Docker Compose can build the images using the Docker Files or pull them from a registry.
 
 ## File Structure
 
@@ -220,7 +220,7 @@ docker compose ps -a
 
 By default, Docker Compose sets up a bridge network for your app
 
-    - Each container for a service joins the default network and is reachable by other compose services (containers) on that network
+- Each container for a service joins the default network and is reachable by other compose services (containers) on that network
 
 ```bash
 docker compose up -d
