@@ -14,6 +14,7 @@ Normally data in a container is lost if the container is deleted.
 ### Docker Volumes
 
 **Volumes**: Storage areas on the Docker Host that are managed by Docker (stored under `/var/lib/docker/volumes/`)
+
     - Each volume gets its own volume path as follows:
 	    - `/var/lib/docker/volumes/<VOLUME-NAME>/_data`
     - Multiple containers can be mounted in one volume.
@@ -59,6 +60,7 @@ docker run -it --volumes-from <CONTAINER-FROM (EXISTS)> <CONTAINER-TO (NEW)>
 ### Docker Bind Mounts
 
 **Bind mounts**: Any file or directory on the Docker Host that is mounted into the container. Docker does not manage it.
+
     - It is used with docker run commands (not in a Dockerfile).
     - Used for development and testing, because in Docker volumes its highly not recommended to touch the file system (in Bind Mounts can the container directly access host files).
 

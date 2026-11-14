@@ -491,8 +491,8 @@ docker build -f files/test.txt -t image3 /imagefiles
 	# As you can see, the Dockerfile can be located outside the build context
 ```
 
-> [!TIP]
-> You can choose between relative (e.g. like "files/test.txt") and absolute (e.g. like "/imagefiles") paths for the Dockerfile and for the Build Context.
+!!! tip
+    You can choose between relative (e.g. like "files/test.txt") and absolute (e.g. like "/imagefiles") paths for the Dockerfile and for the Build Context.
 
 ### docker tag
 
