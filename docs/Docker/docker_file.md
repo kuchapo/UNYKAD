@@ -120,9 +120,9 @@ RUN npm install
 COPY src/ /app/src/
 ```
 
-> [!CAUTION] Caution: Order matters for the build cache
-> Docker caches most instructions as a layer. If the input of an instruction changes (e.g. a copied file), that layer and all following layers are rebuilt. -> Put what rarely changes first, what often changes last.
-> In Example 3, `RUN npm install` only depends on `package*.json`, so only that file is copied before it. Changes to `src/` then don't trigger a new `npm install`.
+!!! warning "Caution: Order matters for the build cache"
+    Docker caches most instructions as a layer. If the input of an instruction changes (e.g. a copied file), that layer and all following layers are rebuilt. -> Put what rarely changes first, what often changes last.
+    In Example 3, `RUN npm install` only depends on `package*.json`, so only that file is copied before it. Changes to `src/` then don't trigger a new `npm install`.
 
 ### WORKDIR
 
@@ -156,9 +156,9 @@ COPY app/main.py .
 CMD ["python3", "main.py"]
 ```
 
-> [!INFO]
-> The last `WORKDIR` instruction determines the working directory when the container starts.
-> For example, commands executed using `docker exec` will use this directory as their working directory by default.
+!!! info
+    The last `WORKDIR` instruction determines the working directory when the container starts.
+    For example, commands executed using `docker exec` will use this directory as their working directory by default.
 
 ### ENV
 
@@ -183,8 +183,8 @@ ENV target=8.8.8.8
 CMD ["sh", "-c", "exec $action $target"]
 ```
 
-> [!INFO]
-> After building Example 2, you can override the environment variables when starting the container. For example: `docker run -e action=curl -e target=9.9.9.9 mybuiltimage`. The `-e` flag allows you to set or override individual environment variables.
+!!! info
+    After building Example 2, you can override the environment variables when starting the container. For example: `docker run -e action=curl -e target=9.9.9.9 mybuiltimage`. The `-e` flag allows you to set or override individual environment variables.
 
 ### LABEL
 
